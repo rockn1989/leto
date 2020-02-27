@@ -1,0 +1,74 @@
+body,
+table {
+  font-family: $mainFont;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s linear;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+svg {
+  transition: fill .3s linear;
+}
+
+html.uk-touch {
+	body {
+		*.uk-invisible {
+			display: block !important;
+			opacity: 1 !important;
+			animation: none !important;
+			visibility: visible !important;
+		}
+		[class*=uk-animation-] {
+			@media (min-width: $mob-xs) {
+				animation: none;
+			};
+		}
+	}
+}
+
+.uk-container {
+  margin: 0 auto;
+  max-width: $containerWidth;
+  box-sizing: border-box;
+  &--small {
+  	max-width: $containerWidthSmall;
+  }
+  &--large {
+  	max-width: $containerWidthLarge
+  }
+  @media (min-width: $mob-xs) {
+  	padding: 0 15px;
+  };
+  @media (min-width: $tablet-w) {
+  	padding: 0 30px;
+  };
+}
+
+.uk-grid {
+	@media (min-width: $mob-xs) {
+		margin-left: -15px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-left: -30px;
+	};
+	&>* {
+		@media (min-width: $mob-xs) {
+			padding-left: 15px;
+		};
+		@media (min-width: $tablet-w) {
+			padding-left: 30px;
+		};
+	}
+}

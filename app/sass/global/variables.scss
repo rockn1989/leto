@@ -1,0 +1,25 @@
+/* $mob-xs: 0px;
+$mob-s: 480px;
+$tablet-w: 768px;
+$desk-w: 960px;
+ */
+
+$mob-xs: 0px;
+$mob-s: 640px;
+$tablet-w: 960px;
+$desk-w: 1200px;
+
+$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
+
+$retina-dpi: (min-resolution: 144dpi);
+$retina-ppx: (min-resolution: 1.5dppx);
+
+$mainFont: "MuseoSansCyrl";
+$secondFont: "Regular";
+$fontSize: 16px;
+$lineHeight: 18px;
+$fontWeight: 400;
+
+$containerWidth: 1360px;
+$containerWidthSmall: 1020px;
+$containerWidthLarge: 1440px;

@@ -1,0 +1,35 @@
+/*______ Main Fonts ______*/
+
+@font-face {
+	font-family: "OpenSans";
+	src: url("../fonts/main-font/OpenSans-Regular.woff2"),url("../fonts/main-font/OpenSans-Regular.ttf");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "OpenSans";
+	src: url("../fonts/main-font/OpenSans-SemiBold.woff2"),url("../fonts/main-font/OpenSans-SemiBold.ttf");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "TT";
+	src: url("../fonts/main-font/TTNorms-Medium.woff2"),url("../fonts/main-font/TTNorms-Medium.woff");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "TT";
+	src: url("../fonts/main-font/TTNorms-ExtraBold.woff2"),url("../fonts/main-font/TTNorms-ExtraBold.woff");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+/*______ Icomoon ______*/

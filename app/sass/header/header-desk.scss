@@ -1,0 +1,238 @@
+.header__desk {
+	margin-top: 150px;
+}
+
+
+/*______ Main Nav ______*/
+
+.main-nav {
+	@include list-reset;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90px;
+	li {
+		padding: 8px 15px;
+		//border: 1px solid #000;
+		
+		&.green {
+
+		}
+		a {
+			display: block;
+			text-transform: uppercase;
+			font-weight: bold;
+			img {
+				//border: 5px solid #ffffff;
+				//border-radius: 50%;
+			}
+		}
+	}
+}
+
+
+
+.logo1 {
+	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: #ffa722;
+	background: linear-gradient(75deg, #ff9300 0%, #ffc90e 100%);
+	a {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			right: 5px;
+			bottom: 5px;
+			background-color: #ffb422;
+			background: linear-gradient(75deg, #ff8100 0%, #ffb906 100%);
+			z-index: 141;
+			border-radius: 75px 70px 60px 65px;
+			animation: egg 5s linear infinite;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			right: 15px;
+			bottom: 15px;
+			background-color: #ffb422;
+			background: linear-gradient(75deg, #ff6e00 0%, #ffad02 100%);
+			z-index: 141;
+			border-radius: 75px 70px 60px 65px;
+			animation: egg 4.5s linear infinite;
+		}
+	}
+	img {
+		position: relative;
+		border: none;
+		z-index: 150;
+	}
+}
+
+.logo2 {
+	position: relative;
+	display: block;
+	width: 150px;
+	height: 150px;
+	a {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	  span {
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	width: 100%;
+	  	height: 100%;
+	  	border-radius: 50%;
+	  	z-index: 100;
+	  	&:before {
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				right: 5px;
+				bottom: 5px;
+				z-index: 141;
+				border-radius: 75px 70px 60px 65px;
+				animation: egg 7s linear infinite;
+	  		background: linear-gradient(75deg, #ff9300 0%, #ffc90e 100%);
+	  	}
+	  }
+		&:before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			background: linear-gradient(75deg, #ff8100 0%, #ffb906 100%);
+			z-index: 141;
+			border-radius: 75px 70px 60px 65px;
+			animation: egg 5s linear infinite;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			right: 15px;
+			bottom: 15px;
+			background: linear-gradient(75deg, #ff6e00 0%, #ffad02 100%);
+			z-index: 141;
+			border-radius: 75px 70px 60px 65px;
+			animation: egg 4.5s linear infinite;
+		}
+	}
+	img {
+		position: relative;
+		border: none;
+		z-index: 150;
+	}
+}
+
+.logo3 {
+	position: relative;
+	display: block;
+	width: 150px;
+	height: 150px;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border-radius: 50%;
+		background-color: #ffa722;
+		background: linear-gradient(75deg, #ff9300 0%, #ffc90e 100%);
+		animation: egg 7s linear infinite;
+	}
+	a {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			right: 5px;
+			bottom: 5px;
+			background-color: #ffb422;
+			background: linear-gradient(75deg, #ff8100 0%, #ffb906 100%);
+			z-index: 141;
+			border-radius: 75px 70px 60px 65px;
+			animation: egg 5s linear infinite;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			right: 15px;
+			bottom: 15px;
+			background-color: #ffb422;
+			background: linear-gradient(75deg, #ff6e00 0%, #ffad02 100%);
+			z-index: 141;
+			border-radius: 75px 70px 60px 65px;
+			animation: egg 4.5s linear infinite;
+		}
+	}
+	img {
+		position: relative;
+		border: none;
+		z-index: 150;
+	}
+}
+
+.egg {
+	margin: 100px auto;
+	width: 150px;
+	height: 150px;
+	background: #d4d4d4;
+	border-radius: 75px 70px 60px 65px;
+	animation: egg 3s linear infinite;
+}
+
+@keyframes egg {
+	0% {
+		border-radius: 75px 70px 60px 65px;
+		transform: scale(1);
+	}
+	25% {
+		border-radius: 75px 90px 60px 95px;
+		transform: scale(.95);
+	}
+	50% {
+		border-radius: 75px 70px 60px 65px;
+		transform: scale(.9);
+	}
+	75% {	
+		border-radius: 95px 70px 90px 65px;
+		transform: scale(.95);
+	}
+	100% {
+		border-radius: 75px 70px 60px 65px;
+		transform: scale(1);
+	}
+}
+
+.logo1,.logo2,.logo3 {
+	margin: 50px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*______ End Main Nav ______*/
