@@ -1,0 +1,37 @@
+h1, .title-h1 {
+	margin-bottom: 50px;
+	@include text-size(96,96);
+/* font-size: 52px;
+line-height: 52px;
+@media (min-width: $tablet-w) {
+	font-size: 74px;
+	line-height: 74px;
+};
+@media (min-width: $desk-w) {
+	font-size: 96px;
+	line-height: 96px;
+}; */
+}
+
+h2, .title-h2 {
+	margin-bottom: 50px;
+	@include text-size(56,64);
+}
+
+h3, .title-h3 {
+	
+}
+
+h4, .title-h4 {
+
+}
+
+h5, .title-h5 {
+
+}
+
+
+p {
+	font-size: 18px;
+	line-height: 26px;
+}

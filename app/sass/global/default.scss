@@ -1,9 +1,11 @@
+html,
 body,
 table {
   font-family: $mainFont;
   font-size: $fontSize;
   line-height: $lineHeight;
   font-weight: $fontWeight;
+  color: $tColor;
 }
 
 * {
@@ -20,22 +22,6 @@ a {
 
 svg {
   transition: fill .3s linear;
-}
-
-html.uk-touch {
-	body {
-		*.uk-invisible {
-			display: block !important;
-			opacity: 1 !important;
-			animation: none !important;
-			visibility: visible !important;
-		}
-		[class*=uk-animation-] {
-			@media (min-width: $mob-xs) {
-				animation: none;
-			};
-		}
-	}
 }
 
 .uk-container {

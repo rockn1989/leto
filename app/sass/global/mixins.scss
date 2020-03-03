@@ -23,8 +23,22 @@
 }
 
 @mixin text-size($font-size, $line-height) {
-	font-size: $font-size;
-	line-height: $line-height;
+	@media (min-width: $mob-xs) {
+		font-size: #{($font-size/100)*50}px;
+		line-height: #{($line-height/100)*50}px;
+	};
+	@media (min-width: $mob-s) {
+		font-size: #{($font-size/100)*62.5}px;
+		line-height: #{($line-height/100)*62.5}px;
+	};
+	@media (min-width: $tablet-w) {
+		font-size: #{($font-size/100)*75}px;
+		line-height: #{($line-height/100)*75}px;
+	};
+	@media (min-width: $desk-w) {
+		font-size: #{$font-size}px;
+		line-height: #{$line-height}px;
+	};	
 }
 
 @mixin icomoon() {
