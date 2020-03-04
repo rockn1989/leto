@@ -89,3 +89,24 @@
 }
 
 /*______ END COMPONENTS ______*/
+
+
+
+/*______ ANIMATION ______*/
+
+.slide-up {
+	animation: slide-up 1.2s ease forwards;
+}
+
+@keyframes slide-up {
+	0%{
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/*______ END ANIMATION ______*/

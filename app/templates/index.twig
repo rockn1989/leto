@@ -1,7 +1,38 @@
 {% extends "layouts/default.twig" %}
 {% set title="Главная" %}
 {% block content %}
-	<section>
-		test	
-	</section>
+	<div class="main-banner">
+		<div class="uk-container uk-container--large">
+
+			<div class="main-banner__img">
+				<img src="img/media/main-banner-1-1440x730.png" alt="">
+<!-- 				<svg>
+	<defs>
+		<clipPath id="cut-center">
+			<ellipse fill="red" rx="800px" ry="200px" cx="690" cy="-100" />
+		</clipPath>
+	</defs>
+	<rect
+		width="100%"
+		height="400px"
+		clip-path="url(#cut-center)"
+		fill="transparent"
+		>
+</svg> -->
+			</div>
+
+			<div class="main-banner__text">
+				<div class="main-banner__title">
+					<h1>Натуральный продукт</h1>
+				</div>
+				<div class="main-banner__subtitle">
+					для всей семьи
+				</div>
+				<svg width="29px" height="67px" class="main-banner__arrow-down">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-down"></use>
+				</svg>
+			</div>
+
+		</div>
+	</div>
 {% endblock %}

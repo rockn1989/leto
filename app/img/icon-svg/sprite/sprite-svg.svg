@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="bn2ka" d="M966.66 56.05a3.61 3.61 0 1 1-7.23 0 3.61 3.61 0 0 1 7.23 0zM963.04 51a5.05 5.05 0 1 0 0 10.1 5.05 5.05 0 0 0 0-10.1z"/><path id="bn2kb" d="M968.97 62.9l-3.6-3.59 1.01-1.01 3.6 3.59z"/></defs><symbol id="icon-menu" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="bn2ka" d="M966.66 56.05a3.61 3.61 0 1 1-7.23 0 3.61 3.61 0 0 1 7.23 0zM963.04 51a5.05 5.05 0 1 0 0 10.1 5.05 5.05 0 0 0 0-10.1z"/><path id="bn2kb" d="M968.97 62.9l-3.6-3.59 1.01-1.01 3.6 3.59z"/></defs><symbol id="arrow-down" viewBox="0 0 29 67">
+<path d="M14.5 1L14.5 65.5M14.5 65.5V65.5C10.8533 60.5272 6.49286 56.1196 1.55957 52.4197L1 52M14.5 65.5V65.5C18.4877 60.5153 23.0153 55.9877 28 52V52" stroke="#FFB422" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-menu" viewBox="0 0 512 512">
 <g>
 	<g>
 		<path d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636
