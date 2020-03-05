@@ -2,6 +2,7 @@
 
 .main-banner {
 	position: relative;
+	min-height: 650px;
 	&__img {
 		position: relative;
 		svg {
@@ -49,6 +50,14 @@
 	svg {
 		color: $yellow;
 	}
+}
+
+.fly-box {
+	position: absolute;
+	left: 50%;
+	bottom: -240px;
+	transform: translateX(-50%);
+	z-index: 980;
 }
 
 /*______ End Main Banner ______*/
