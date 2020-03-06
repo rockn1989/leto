@@ -1,47 +1,110 @@
 /*______ Advantages list ______*/
 
 .advantages-section {
-	position: relative;
-	padding: 400px 0;
-	width: 100%;
-	min-height: 850px;
+	
 	&__inner {
+		position: relative;
+		padding: 400px 0;
+		width: 100%;
+		min-height: 850px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 	.center-box {
 		position: relative;
+		opacity: 0;
 		z-index: 800;
-/* 		position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%); */
+		transition: opacity .4s ease-out;
+		&.show {
+			opacity: 1;
+		}
 	}
 }
 
 .advantages-list {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 300px;
-	height: 300px;
-	overflow: hidden;
-	transform: translate(-50%, -50%);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
 	@include list-reset;
-	display: inline-block;
+	display: block;
 	vertical-align: top;
 	counter-reset: item;
 	li {
 		position: absolute;
 		width: 300px;
 		min-height: 200px;
+		opacity: 0;
+		transition: opacity .3s, transform .5s ease-out;
 		&:before {
 			position: absolute;
 			top: 50%;
 			left: 0;
 			counter-increment: item;	
 			content: "0"counter(item);
+		}
+		&:nth-child(1) {
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 20%);
+			transition-delay: .3s;
+		}
+		&:nth-child(2) {
+			top: 50%;
+			right: 0;
+			transform: translate(10%, -50%);
+			transition-delay: .3s;
+		}
+		&:nth-child(3) {
+			top: 65%;
+			right: 0;
+			transform: translate(-40%, 0);
+			transition-delay: .6s;
+		}
+		&:nth-child(4) {
+			bottom: 0;
+			left: 50%;
+			transform: translate(-100%, 20%);
+			transition-delay: .9s;
+		}
+		&:nth-child(5) {
+			top: 65%;
+			left: 0;
+			transform: translate(-10%, 0);
+			transition-delay: 1.2s;
+		}
+		&:nth-child(6) {
+			top: 50%;
+			left: 0;
+			transform: translate(-10%, -50%);
+			transition-delay: 1.5s;
+		}
+	}
+	&.show {
+		li {
+			opacity: 1;
+			&:nth-child(1) {
+				transform: translate(-50%, 30%);
+			}
+			&:nth-child(2) {
+				transform: translate(0, -50%);
+			}
+			&:nth-child(3) {
+				transform: translate(-50%, 0);
+			}
+			&:nth-child(4) {
+				transform: translate(-100%, 10%);
+			}
+			&:nth-child(5) {
+				transform: translate(0, 0);
+			}
+			&:nth-child(6) {
+				transform: translate(0, -50%);
+			}
 		}
 	}
 }
@@ -53,13 +116,25 @@ transform: translate(-50%, -50%); */
 		position: absolute;
 		top: 0;
 		right: 0;
+		padding-top: 20px;
 		width: 230px;
 		height: 230px;
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		background: #FAF4EF;
 		z-index: 100;
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 14;
+		}
+		img {
+			position: relative;
+			z-index: 15;
+		}
 	}
 	&__text {
 		position: relative;
@@ -67,6 +142,14 @@ transform: translate(-50%, -50%); */
 		font-size: 16px;
 		line-height: 22px;
 		z-index: 150;
+	}
+	&__link {
+		color: #9bc045;
+		font-size: 14px;
+		&:hover {
+			text-decoration: none;
+			color: #9bc045;
+		}
 	}
 }
 

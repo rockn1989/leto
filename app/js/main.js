@@ -2,6 +2,41 @@
 
 $(function() {	
 
+	/*______ Fly box moving ______*/
+
+	const flyBox = document.querySelector('.fly-box');
+	const centerBox = document.querySelector('.center-box');
+	const advantagesList = document.querySelector('.advantages-list');
+	//const windowHeight = $(window).outerHeight();
+	const windowHeight = document.documentElement.clientHeight;
+
+	$(document).bind('scroll', function (e) {
+		if(windowHeight - flyBox.getBoundingClientRect().top >= (windowHeight/2)) {
+			movingBox(flyBox, $(window).scrollTop());
+			watchToElementPosition(centerBox);
+		} else {
+			return false;
+		}
+	});
+
+	function movingBox(el, counter) {
+		el.style.bottom  = (counter*(-1)) +'px';
+	};
+
+	function watchToElementPosition(el) {
+
+		const watchEl = el;
+
+		let centerBoxPos = watchEl.getBoundingClientRect().top;
+
+		if(windowHeight - centerBoxPos >= (windowHeight/2)) {
+			$(document).unbind();
+			flyBox.classList.add('hidden');
+			watchEl.classList.add('show');
+			advantagesList.classList.add('show');
+		};
+	};
+
 	/*______ Показывать форму на мобильных устройствах ______*/
 
 	var $mobileForm = $('.mobile-form');
@@ -74,15 +109,6 @@ $(function() {
 	});
 
 
-	/*______ Отключение UIKIT анимации для мобильных устройств ______*/
-
-/*	UIkit.on('beforeready.uk.dom', function () {
-		if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
-			UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
-		};
-	});*/
-
-
 	/*______ Полифил для Object-fit ______*/
 	
 	objectFitImages();
@@ -90,6 +116,6 @@ $(function() {
 
 	/*______ Полифил для SVG ______*/
 
-	/*svg4everebody();*/
+	svg4everybody();
 
 });

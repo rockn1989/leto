@@ -2,7 +2,6 @@
 
 .main-banner {
 	position: relative;
-	min-height: 650px;
 	&__img {
 		position: relative;
 		svg {
@@ -21,6 +20,9 @@
 			border: 1px solid;
 			
 		}
+	}
+	&__arrow-down {
+		animation: move-toggle 1.45s linear infinite;
 	}
 	&__text {
 		position: absolute;
@@ -58,6 +60,16 @@
 	bottom: -240px;
 	transform: translateX(-50%);
 	z-index: 980;
+	img {
+		opacity: 1;
+		transition: opacity .5s, visibility .5s ease;
+	}
+	&.hidden {
+		img {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
 }
 
 /*______ End Main Banner ______*/

@@ -347,6 +347,92 @@ p {
   }
 }
 
+@-webkit-keyframes move-toggle {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  75% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes move-toggle {
+  0% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+
+  50% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  75% {
+    -moz-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-toggle {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  75% {
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 /*______ END ANIMATION ______*/
 
 html,
@@ -988,7 +1074,6 @@ svg {
 
 .main-banner {
   position: relative;
-  min-height: 650px;
 }
 
 .main-banner__img {
@@ -1009,6 +1094,12 @@ svg {
   display: block;
   background: #ffffff;
   border: 1px solid;
+}
+
+.main-banner__arrow-down {
+  -webkit-animation: move-toggle 1.45s linear infinite;
+  -moz-animation: move-toggle 1.45s linear infinite;
+  animation: move-toggle 1.45s linear infinite;
 }
 
 .main-banner__text {
@@ -1058,18 +1149,28 @@ svg {
   z-index: 980;
 }
 
+.fly-box img {
+  opacity: 1;
+  -webkit-transition: opacity .5s, visibility .5s ease;
+  -o-transition: opacity .5s, visibility .5s ease;
+  -moz-transition: opacity .5s, visibility .5s ease;
+  transition: opacity .5s, visibility .5s ease;
+}
+
+.fly-box.hidden img {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /*______ End Main Banner ______*/
 
 /*______ Advantages list ______*/
 
-.advantages-section {
+.advantages-section__inner {
   position: relative;
   padding: 400px 0;
   width: 100%;
   min-height: 850px;
-}
-
-.advantages-section__inner {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1089,28 +1190,30 @@ svg {
 
 .advantages-section .center-box {
   position: relative;
+  opacity: 0;
   z-index: 800;
-  /* 		position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%); */
+  -webkit-transition: opacity .4s ease-out;
+  -o-transition: opacity .4s ease-out;
+  -moz-transition: opacity .4s ease-out;
+  transition: opacity .4s ease-out;
+}
+
+.advantages-section .center-box.show {
+  opacity: 1;
 }
 
 .advantages-list {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: inline-block;
+  display: block;
   vertical-align: top;
   counter-reset: item;
 }
@@ -1119,6 +1222,13 @@ transform: translate(-50%, -50%); */
   position: absolute;
   width: 300px;
   min-height: 200px;
+  opacity: 0;
+  -webkit-transition: opacity .3s, -webkit-transform .5s ease-out;
+  transition: opacity .3s, -webkit-transform .5s ease-out;
+  -o-transition: opacity .3s, transform .5s ease-out;
+  -moz-transition: opacity .3s, transform .5s ease-out, -moz-transform .5s ease-out;
+  transition: opacity .3s, transform .5s ease-out;
+  transition: opacity .3s, transform .5s ease-out, -webkit-transform .5s ease-out, -moz-transform .5s ease-out;
 }
 
 .advantages-list li:before {
@@ -1127,6 +1237,130 @@ transform: translate(-50%, -50%); */
   left: 0;
   counter-increment: item;
   content: "0" counter(item);
+}
+
+.advantages-list li:nth-child(1) {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+  -moz-transform: translate(-50%, 20%);
+  -ms-transform: translate(-50%, 20%);
+  transform: translate(-50%, 20%);
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  -o-transition-delay: .3s;
+  transition-delay: .3s;
+}
+
+.advantages-list li:nth-child(2) {
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(10%, -50%);
+  -moz-transform: translate(10%, -50%);
+  -ms-transform: translate(10%, -50%);
+  transform: translate(10%, -50%);
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  -o-transition-delay: .3s;
+  transition-delay: .3s;
+}
+
+.advantages-list li:nth-child(3) {
+  top: 65%;
+  right: 0;
+  -webkit-transform: translate(-40%, 0);
+  -moz-transform: translate(-40%, 0);
+  -ms-transform: translate(-40%, 0);
+  transform: translate(-40%, 0);
+  -webkit-transition-delay: .6s;
+  -moz-transition-delay: .6s;
+  -o-transition-delay: .6s;
+  transition-delay: .6s;
+}
+
+.advantages-list li:nth-child(4) {
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, 20%);
+  -moz-transform: translate(-100%, 20%);
+  -ms-transform: translate(-100%, 20%);
+  transform: translate(-100%, 20%);
+  -webkit-transition-delay: .9s;
+  -moz-transition-delay: .9s;
+  -o-transition-delay: .9s;
+  transition-delay: .9s;
+}
+
+.advantages-list li:nth-child(5) {
+  top: 65%;
+  left: 0;
+  -webkit-transform: translate(-10%, 0);
+  -moz-transform: translate(-10%, 0);
+  -ms-transform: translate(-10%, 0);
+  transform: translate(-10%, 0);
+  -webkit-transition-delay: 1.2s;
+  -moz-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+  transition-delay: 1.2s;
+}
+
+.advantages-list li:nth-child(6) {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-10%, -50%);
+  -moz-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  transform: translate(-10%, -50%);
+  -webkit-transition-delay: 1.5s;
+  -moz-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+
+.advantages-list.show li {
+  opacity: 1;
+}
+
+.advantages-list.show li:nth-child(1) {
+  -webkit-transform: translate(-50%, 30%);
+  -moz-transform: translate(-50%, 30%);
+  -ms-transform: translate(-50%, 30%);
+  transform: translate(-50%, 30%);
+}
+
+.advantages-list.show li:nth-child(2) {
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.advantages-list.show li:nth-child(3) {
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.advantages-list.show li:nth-child(4) {
+  -webkit-transform: translate(-100%, 10%);
+  -moz-transform: translate(-100%, 10%);
+  -ms-transform: translate(-100%, 10%);
+  transform: translate(-100%, 10%);
+}
+
+.advantages-list.show li:nth-child(5) {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.advantages-list.show li:nth-child(6) {
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .advantage-item {
@@ -1138,6 +1372,7 @@ transform: translate(-50%, -50%); */
   position: absolute;
   top: 0;
   right: 0;
+  padding-top: 20px;
   width: 230px;
   height: 230px;
   display: -webkit-box;
@@ -1155,8 +1390,21 @@ transform: translate(-50%, -50%); */
   -moz-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  background: #FAF4EF;
   z-index: 100;
+}
+
+.advantage-item__img svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 14;
+}
+
+.advantage-item__img img {
+  position: relative;
+  z-index: 15;
 }
 
 .advantage-item__text {
@@ -1165,6 +1413,16 @@ transform: translate(-50%, -50%); */
   font-size: 16px;
   line-height: 22px;
   z-index: 150;
+}
+
+.advantage-item__link {
+  color: #9bc045;
+  font-size: 14px;
+}
+
+.advantage-item__link:hover {
+  text-decoration: none;
+  color: #9bc045;
 }
 
 /*______ End Advantages list ______*/
