@@ -5,6 +5,7 @@ $(function() {
 	/*______ Fly box moving ______*/
 
 	const flyBox = document.querySelector('.fly-box');
+	const flyBoxPositionBottom = 240;
 	const centerBox = document.querySelector('.center-box');
 	const advantagesList = document.querySelector('.advantages-list');
 	//const windowHeight = $(window).outerHeight();
@@ -20,7 +21,10 @@ $(function() {
 	});
 
 	function movingBox(el, counter) {
-		el.style.bottom  = (counter*(-1)) +'px';
+		if(counter >= flyBoxPositionBottom) {
+			el.style.bottom  = (counter*(-1)) +'px';	
+		}
+		
 	};
 
 	function watchToElementPosition(el) {

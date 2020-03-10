@@ -8,6 +8,26 @@ table {
   color: $tColor;
 }
 
+body {
+	@each $theme, $color in $theme-colors {
+		&.#{$theme} {
+			.advantages-list {
+				li {
+					&:before {
+						color: $color;
+					}
+				}
+			}
+			.advantage-item__link {
+				color: $color;
+			}
+			.adv-bg-img {
+				color: $color;
+			}
+		}
+	}
+}
+
 * {
   box-sizing: border-box;
 }

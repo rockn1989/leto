@@ -1,7 +1,10 @@
 /*______ Advantages list ______*/
 
 .advantages-section {
-	
+	margin-bottom: 40px;
+	@media (min-width: $desk-w) {
+		margin-bottom: 115px;
+	};
 	&__inner {
 		position: relative;
 		padding: 400px 0;
@@ -16,13 +19,36 @@
 		opacity: 0;
 		z-index: 800;
 		transition: opacity .4s ease-out;
+		img {
+			position: relative;
+			z-index: 500;
+		}
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			z-index: 400;
+			transform: translate(-50%, -50%) scale(0);
+			transition: all .65s ease 2.5s;
+
+		}
 		&.show {
 			opacity: 1;
+			svg {
+				&.yellow-ellipse-1 {
+					animation: scale 1s linear forwards 2.5s, rotate-back 20s linear infinite 3.5s;
+				}
+				&.yellow-ellipse-2 {
+					animation: scale 1s linear forwards 3.5s, rotate 26s linear infinite 3.5s;
+				}
+			}
 		}
 	}
 }
 
-.advantages-list {
+/* .advantages-list {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -107,7 +133,103 @@
 			}
 		}
 	}
+} */
+
+
+.advantages-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	@include list-reset;
+	display: block;
+	vertical-align: top;
+	counter-reset: item;
+	li {
+		position: absolute;
+		width: 300px;
+		min-height: 200px;
+		opacity: 0;
+		transition: opacity .3s, transform 1.2s, top 1.2s, bottom 1.2s, left 1.2s, right 1.2s ease-out;
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			counter-increment: item;	
+			content: "0"counter(item);
+			transform: translateY(-50%);
+		}
+		&:nth-child(1) {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition-delay: .3s;
+		}
+		&:nth-child(2) {
+			top: 50%;
+			right: 50%;
+			transform: translate(50%, -50%);
+			transition-delay: .6s;
+		}
+		&:nth-child(3) {
+			top: 50%;
+			right: 50%;
+			transform: translate(50%, -50%);
+			transition-delay: .9s;
+		}
+		&:nth-child(4) {
+			bottom: 50%;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			transition-delay: 1.2s;
+		}
+		&:nth-child(5) {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition-delay: 1.5s;
+		}
+		&:nth-child(6) {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition-delay: 1.8s;
+		}
+	}
+	&.show {
+		li {
+			opacity: 1;
+			&:nth-child(1) {
+				top: 0;
+				transform: translate(-50%, 25%);
+			}
+			&:nth-child(2) {
+				right: 0;
+				transform: translate(0, -75%);
+			}
+			&:nth-child(3) {
+				right: 0;
+				transform: translate(-25%, 50%);
+			}
+			&:nth-child(4) {
+				bottom: 0;
+				transform: translate(-75%, 10%);
+			}
+			&:nth-child(5) {
+				left: 0;
+				transform: translate(0, 50%);
+			}
+			&:nth-child(6) {
+				left: 0;
+				transform: translate(0, -100%);
+			}
+		}
+	}
 }
+
 
 .advantage-item {
 	position: relative;
