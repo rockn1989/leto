@@ -8,7 +8,6 @@ $(function() {
 	const flyBoxPositionBottom = 240;
 	const centerBox = document.querySelector('.center-box');
 	const advantagesList = document.querySelector('.advantages-list');
-	//const windowHeight = $(window).outerHeight();
 	const windowHeight = document.documentElement.clientHeight;
 
 	$(document).bind('scroll', function (e) {

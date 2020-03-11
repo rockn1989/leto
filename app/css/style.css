@@ -1801,6 +1801,7 @@ svg {
   width: 100%;
   height: 100%;
   z-index: 14;
+  color: #faf4ef;
 }
 
 .advantage-item__img img {
@@ -1883,6 +1884,9 @@ svg {
   top: 0;
   left: 0;
   z-index: 14;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .advantages-h-list .item__img .bg-img svg {
@@ -1929,6 +1933,114 @@ svg {
 }
 
 /*______ End Advantages-h-list ______*/
+
+/*______ Typebox-section ______*/
+
+.typebox-section {
+  margin-bottom: 130px;
+  padding: 130px 0;
+  background-color: #faf4ef;
+}
+
+.typebox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.typebox-list .item {
+  position: relative;
+  -webkit-flex-basis: -webkit-calc(100%/3);
+  -ms-flex-preferred-size: calc(100%/3);
+  flex-basis: -moz-calc(100%/3);
+  flex-basis: calc(100%/3);
+  margin: 0 auto 30px;
+}
+
+.typebox-list .item__img {
+  position: relative;
+  margin: 0 auto 20px;
+  padding-top: 75%;
+  width: 100%;
+}
+
+.typebox-list .item__img .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 14;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.typebox-list .item__img .bg-img svg {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.typebox-list .item__img .content-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.typebox-list .item__text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.typebox-list .item__subtitle {
+  font-size: 16px;
+  line-height: 22px;
+  color: #5b6356;
+}
+
+.typebox-list--four-elements .item {
+  -webkit-flex-basis: -webkit-calc(100%/4);
+  -ms-flex-preferred-size: calc(100%/4);
+  flex-basis: -moz-calc(100%/4);
+  flex-basis: calc(100%/4);
+}
+
+/*______ End Typebox-section ______*/
 
 /*______ MAIN CONTENT ______*/
 
@@ -2043,5 +2155,9 @@ svg {
 
   .advantages-h-list .item__img:after {
     display: block;
+  }
+
+  .typebox-list .item {
+    margin-bottom: 0;
   }
 }
