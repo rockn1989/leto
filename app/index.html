@@ -440,24 +440,153 @@
 	<div class="brands-slider preload">
 		<div class="uk-container">
 			<div class="slider">
-				<div class="slide"><a href=""><img data-lazy="img/media/box-type-2.png" alt=""></a></div>
-				<div class="slide"><a href=""><img data-lazy="img/media/box-type-3.png" alt=""></a></div>
-				<div class="slide"><a href=""><img data-lazy="img/media/box-type-4.png" alt=""></a></div>
-				<div class="slide"><a href=""><img data-lazy="img/media/box-type-5.png" alt=""></a></div>
-				<div class="slide"><a href=""><img data-lazy="img/media/box-type-6.png" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-1.svg" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-2.svg" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-3.svg" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-4.svg" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-3.svg" alt=""></a></div>
 			</div>
 			<div class="slider__arrows">
-				<div class="slide-prev"><i class="icon-arrow-left"></i></div>
-				<div class="slide-next"><i class="icon-arrow-right"></i></div>
+				<div class="slide-prev">
+					<svg width="52px" height="27px" class="slider-arrow">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-left"></use>
+					</svg>
+				</div>
+				<div class="slide-next">
+					<svg width="52px" height="27px" class="slider-arrow">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-right"></use>
+					</svg>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end  brands-slider -->
+	
+<section class="time-section" style="display: none;">
+	<div class="uk-container uk-container--small">
+		<h2 class="uk-text-center">Сколько времени варить яйца?</h2>
+		<a href="/timer.html" class="btn btn--icon uk-margin-auto icon-clock"><span>попробуйте наш таймер</span></a>
+		
+<div class="egg-slider">
+	<div class="slider">
+		<div class="slide">
+			<div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2" uk-grid>
+				<div class="slide-section">
+					<div class="slide-section__img"></div>
+					<div class="slide-section__timer">
+						<div class="circle-timer">
+							<div class="circle-timer__outer"></div>
+							<div class="circle-timer__inner">
+								<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="25" cy="25" r="25" width="1px" fill="#ffffff" stroke="#ffb422" stroke-width="2px"></circle>
+								</svg>
+
+							</div>
+							<div class="circle-timer__value">2</div>
+						</div>
+						<div class="text">Минуты</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 157 = 60
+x = 2
+
+157*2/60 -->
+<!-- <svg width="50px" height="50px" viewbox="0 0 50px 50px" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="23" cy="23" r="23" width="1px" fill="#ffffff" stroke="#ffb422" stroke-width="2px"></circle>
+</svg>
+ -->
+	</div>
+</section>
 
 <!-- begin footer -->
 <footer class="footer">
-	<div class="uk-container uk-container--small">
-		FOOTER
+	<div class="uk-container uk-container--medium">
+		<div class="footer__top">
+			<div class="uk-grid">
+				<div class="uk-width-2-3">
+					<div class="uk-grid">
+						<div class="uk-width-1-3">
+							<div class="footer__title" data-tole="toggle-list">Наши марки</div>
+							<ul class="footer__list">
+								<li><a href="#">Лето</a></li>
+								<li><a href="#">Деревенское угодье</a></li>
+								<li><a href="#">Junio</a></li>
+								<li><a href="#">Сельская новь</a></li>
+							</ul>
+						</div>
+						<div class="uk-width-1-3">
+							<div class="footer__title" data-tole="toggle-list">О компании</div>
+							<ul class="footer__list">
+								<li>
+									<a href="#">О компании</a>
+								</li>
+								<li>
+									<a href="#">Партнёрам</a>
+								</li>
+								<li>
+									<a href="#">Поставщикам</a>
+								</li>
+								<li>
+									<a href="#">Вакансии</a>
+								</li>
+								<li>
+									<a href="#">Новости</a>
+								</li>
+								<li>
+									<a href="#">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="uk-width-1-3">
+							<div class="footer__title" data-tole="toggle-list">Потребителям</div>
+							<ul class="footer__list">
+								<li>
+									<a href="#">Факты о яйце</a>
+								</li>
+								<li>
+									<a href="#">Рецепты</a>
+								</li>
+								<li>
+									<a href="#">Сообщить о проблеме</a>
+								</li>
+								<li>
+									<a href="#">Задать вопрос</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-1-3">
+					<div class="padding-left-25">
+						<div class="footer__title">Группа компаний «Лето»</div>
+						<div class="contacts">
+							<a href="tel:+74957815404" class="contacts__tel">+7 495 781-54-04</a>
+							<div class="subtitle">Напишите нам:</div>
+							<a href="mailto:info@leto-group.ru" class="green-link">info@leto-group.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="uk-grid">
+				<div class="uk-width-2-3">
+					<div class="copyright">Группа компаний «Лето» 2020</div>
+					<a href="" class="politics">Политика в отношении персональных данных</a>
+				</div>
+				<div class="uk-width-1-3">
+					<div class="padding-left-25">
+						<a href="https://aevrika.ru/" target="_blank" class="dev-ae">
+							Разработка и продвижение —ЭВРИКА
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </footer><!-- end footer -->
 

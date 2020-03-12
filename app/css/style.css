@@ -243,6 +243,20 @@ p {
   z-index: 10;
 }
 
+.circle-timer {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* 	&__inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 2px solid $yellow;
+} */
+}
+
 /*______ END COMPONENTS ______*/
 
 /*______ ANIMATION ______*/
@@ -726,7 +740,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #333e2c;
+  text-decoration: none;
 }
 
 svg {
@@ -748,8 +763,16 @@ svg {
   max-width: 1020px;
 }
 
+.uk-container--medium {
+  max-width: 1205px;
+}
+
 .uk-container--large {
   max-width: 1440px;
+}
+
+.padding-left-25 {
+  padding-left: 25%;
 }
 
 /*______ HEADER ______*/
@@ -2052,9 +2075,172 @@ svg {
 
 /*______ FOOTER ______*/
 
+.footer__top {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ece6e1;
+}
+
+.footer__title {
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__list li {
+  margin-bottom: 14px;
+  display: block;
+}
+
+.footer__list li a {
+  color: #5b6356;
+}
+
+.contacts__tel {
+  margin-bottom: 14px;
+  display: inline-block;
+  font-size: 24px;
+  color: #333e2c;
+  font-family: "Museo";
+}
+
+.subtitle {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5b6356;
+}
+
+.green-link {
+  color: #549537;
+}
+
+.copyright {
+  margin-bottom: 10px;
+}
+
+.politics {
+  color: #5b6356;
+}
+
+.dev-ae {
+  color: #5b6356;
+}
+
 /*______ END FOOTER ______*/
 
 /*______ SLIDERS ______*/
+
+.brands-slider {
+  margin-bottom: 130px;
+}
+
+.brands-slider .uk-container {
+  position: relative;
+}
+
+.brands-slider .slider__arrows {
+  max-width: 1300px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 650;
+}
+
+.brands-slider .slider .slide a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.brands-slider .slider .slick-dots li {
+  width: auto;
+  height: auto;
+}
+
+.brands-slider .slider .slick-dots li button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  border-radius: 50%;
+  background-color: #ECE6E1;
+  -webkit-transition: background-color .3s, -webkit-transform .3s, -webkit-box-shadow .2s ease-in;
+  transition: background-color .3s, -webkit-transform .3s, -webkit-box-shadow .2s ease-in;
+  -o-transition: transform .3s, background-color .3s, box-shadow .2s ease-in;
+  -moz-transition: transform .3s, background-color .3s, box-shadow .2s ease-in, -moz-transform .3s;
+  transition: transform .3s, background-color .3s, box-shadow .2s ease-in;
+  transition: transform .3s, background-color .3s, box-shadow .2s ease-in, -webkit-transform .3s, -moz-transform .3s, -webkit-box-shadow .2s ease-in;
+}
+
+.brands-slider .slider .slick-dots li button:before {
+  display: none;
+}
+
+.brands-slider .slider .slick-dots li.slick-active button {
+  background-color: #ffb422;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-box-shadow: 0px 4px 4px rgba(255, 167, 34, 0.25);
+  box-shadow: 0px 4px 4px rgba(255, 167, 34, 0.25);
+}
+
+.brands-slider .slide-prev,
+.brands-slider .slide-next {
+  position: absolute;
+  top: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.brands-slider .slide-prev {
+  left: 0;
+}
+
+.brands-slider .slide-next {
+  left: auto;
+  right: 0;
+}
 
 /*______ END SLIDERS ______*/
 
@@ -2159,5 +2345,18 @@ svg {
 
   .typebox-list .item {
     margin-bottom: 0;
+  }
+
+  .footer__top {
+    margin-bottom: 60px;
+    padding-bottom: 80px;
+  }
+
+  .brands-slider .slide-prev {
+    left: -120px;
+  }
+
+  .brands-slider .slide-next {
+    right: -120px;
   }
 }

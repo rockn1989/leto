@@ -15,6 +15,7 @@ $(function() {
 			movingBox(flyBox, $(window).scrollTop());
 			watchToElementPosition(centerBox);
 		} else {
+			flyBox.style.display = "none";
 			return false;
 		}
 	});

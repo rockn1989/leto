@@ -1,12 +1,24 @@
 $(function() {
 
-	$('.brands-slider .slider').slick({
+	var $brandsSlider = $('.brands-slider .slider');
+
+	$brandsSlider.init(function(event, slick) {
+
+		$('.brands-slider .slide-prev').on('click', function () {
+			$brandsSlider.slick('slickPrev');
+		});
+
+		$('.brands-slider .slide-next').on('click', function () {
+			$brandsSlider.slick('slickNext');
+		});
+	});
+
+	$brandsSlider.slick({
 		arrows: true,
 		dots: false,
 		slidesToShow: 4,
 		lazyLoad: 'progressive',
-		prevArrow: '<div class="btn-slide slick-prev"><i class="icon-arrow-left"></i></div>',
-		nextArrow: '<div class="btn-slide slick-next"><i class="icon-arrow-right"></i></div>',
+		dots: true,
 		responsive: [
 			{
 				breakpoint: 1220,
