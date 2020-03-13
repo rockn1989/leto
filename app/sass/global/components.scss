@@ -1,5 +1,7 @@
 /*______ COMPONENTS ______*/
-
+* + .btn {
+	margin-top: 40px;
+}
 .btn {
 	position: relative;
 	margin-bottom: 30px;
@@ -91,19 +93,66 @@
 
 .circle-timer {
 	position: relative;
+	margin-right: 10px;  
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	&__ounter {
-
+	&__outer {
+		position: absolute;
+		top: -6px;
+		left: -6px;
+		right: -6px;
+		bottom: -6px;
+		transform: rotate(-90deg);
+		svg {
+			width: 100%;
+			height: 100%;
+		}
 	}
-/* 	&__inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	border: 2px solid $yellow;
-} */
+	&__inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		transform: rotate(-90deg);
+		svg {
+			width: 50px;
+			height: 50px;
+			transform: rotateX(180deg);
+		}
+	}
+	&__value {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+	}
+	svg {
+		position: relative;
+		border-radius: 50%;
+		circle {
+			transition: stroke-dashoffset .8s linear;
+			fill: none;
+		}
+		.circle-1 {
+			z-index: 10;
+			stroke: $yellow;
+			stroke-width: 3px;
+			stroke-dasharray: 157;
+			stroke-dashoffset: 157;
+		}
+		.circle-2 {
+			z-index: 11;
+			stroke: #9BC045;
+			stroke-width: 8px;
+			stroke-dasharray: 170;
+			stroke-dashoffset: 170;
+		}
+	}
 }
 
 /*______ END COMPONENTS ______*/

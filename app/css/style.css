@@ -108,6 +108,10 @@ p {
 
 /*______ COMPONENTS ______*/
 
+* + .btn {
+  margin-top: 40px;
+}
+
 .btn {
   position: relative;
   margin-bottom: 30px;
@@ -245,16 +249,98 @@ p {
 
 .circle-timer {
   position: relative;
+  margin-right: 10px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  /* 	&__inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	border: 2px solid $yellow;
-} */
+}
+
+.circle-timer__outer {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.circle-timer__outer svg {
+  width: 100%;
+  height: 100%;
+}
+
+.circle-timer__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.circle-timer__inner svg {
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.circle-timer__value {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.circle-timer svg {
+  position: relative;
+  border-radius: 50%;
+}
+
+.circle-timer svg circle {
+  -webkit-transition: stroke-dashoffset .8s linear;
+  -o-transition: stroke-dashoffset .8s linear;
+  -moz-transition: stroke-dashoffset .8s linear;
+  transition: stroke-dashoffset .8s linear;
+  fill: none;
+}
+
+.circle-timer svg .circle-1 {
+  z-index: 10;
+  stroke: #ffb422;
+  stroke-width: 3px;
+  stroke-dasharray: 157;
+  stroke-dashoffset: 157;
+}
+
+.circle-timer svg .circle-2 {
+  z-index: 11;
+  stroke: #9BC045;
+  stroke-width: 8px;
+  stroke-dasharray: 170;
+  stroke-dashoffset: 170;
 }
 
 /*______ END COMPONENTS ______*/
@@ -2065,6 +2151,69 @@ svg {
 
 /*______ End Typebox-section ______*/
 
+/*______ Egg section ______*/
+
+.time-section {
+  margin-bottom: 130px;
+}
+
+.eggs-section {
+  margin: 60px 0;
+}
+
+.egg-section__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 185px;
+}
+
+.egg-section__img {
+  margin-bottom: 20px;
+  max-width: 185px;
+}
+
+.egg-section__img img {
+  -webkit-filter: drop-shadow(25px 25px 15px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(25px 25px 15px rgba(0, 0, 0, 0.3));
+}
+
+.egg-section__timer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.egg-section__text {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .05px;
+}
+
+/*______ End Egg section ______*/
+
 /*______ MAIN CONTENT ______*/
 
 .advantages-h-section {
@@ -2079,6 +2228,10 @@ svg {
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #ece6e1;
+}
+
+.footer__bottom {
+  padding-bottom: 70px;
 }
 
 .footer__title {
@@ -2348,7 +2501,7 @@ svg {
   }
 
   .footer__top {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     padding-bottom: 80px;
   }
 

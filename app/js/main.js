@@ -15,7 +15,6 @@ $(function() {
 			movingBox(flyBox, $(window).scrollTop());
 			watchToElementPosition(centerBox);
 		} else {
-			flyBox.style.display = "none";
 			return false;
 		}
 	});
@@ -40,6 +39,22 @@ $(function() {
 			advantagesList.classList.add('show');
 		};
 	};
+
+
+	/*______ Анимация круглого таймера ______*/
+
+	$('.egg-section').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+		const timer = $(this).find('.circle-timer'),
+					timerValue = timer.data("time"),
+					circleOne = timer.find('.circle-1'),
+					circleTwo = timer.find('.circle-2'),
+					circleOneValue = 157 - (157 * (60 - timerValue))/60,
+					circleTwoValue = 170 - (170 * timerValue)/60;
+
+		circleOne.css('stroke-dashoffset', circleOneValue);
+		circleTwo.css('stroke-dashoffset', circleTwoValue);
+		
+	});
 
 	/*______ Показывать форму на мобильных устройствах ______*/
 
