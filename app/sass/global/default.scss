@@ -11,6 +11,7 @@ table {
 body {
 	@each $theme, $color in $theme-colors {
 		&.#{$theme} {
+
 			.advantages-list {
 				li {
 					&:before {
@@ -18,11 +19,34 @@ body {
 					}
 				}
 			}
+
 			.advantage-item__link {
 				color: $color;
 			}
+
 			.adv-bg-img {
 				color: $color;
+			}
+
+			.main-nav {
+				li {
+					&.active {
+						svg {
+							color: $color;
+						}
+						span {
+							color: $white;
+						}
+					}
+					&:hover {
+						svg {
+							color: $color;
+						}
+						span {
+							color: $white;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -86,4 +110,54 @@ svg {
 
 .padding-left-25 {
 	padding-left: 25%;
+}
+
+
+.wave-bg {
+	position: relative;
+	background-color: $bgColor;
+	&:before,&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		background-repeat: repeat-x;
+		background-size: 100%;
+		background-position: 0 0;
+		z-index: 1;
+		transition: transform 1.5s ease;
+	}
+	&:before {
+		background-image: url('../img/ui/wave-top.png');
+		top: 0;
+		transform: translateY(0);
+	}
+	&:after {
+		bottom: 0;
+		background-image: url('../img/ui/wave-bottom.png');
+		transform: translateY(0);
+	}
+}
+
+.wave-anim {
+	&.wave-bg {
+		&:before {
+			transform: translateY(-50px);
+			//animation: move-wave 3s linear infinite alternate;
+		}
+		&:after {
+			transform: translateY(50px);
+			//animation: move-wave 3s linear infinite alternate;
+		}
+	}
+}
+
+@keyframes move-wave {
+	0%,100% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 50% 50%;
+	}
 }

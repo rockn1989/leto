@@ -72,10 +72,9 @@
 	z-index: 500;
 	li {
 		margin-right: 40px;
-		//padding: 8px 15px;
-		
-		display: block;
-		
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		&:first-child {
 			position: relative;
 			padding-right: 40px;
@@ -110,49 +109,33 @@
 			}
 		}
 		a {
+			position: relative;
 			padding: 19px 17px;
 			display: block;
 			text-transform: uppercase;
 			font-weight: 700;
 			color: $white;
-			//border: 1px solid #000000;
 			&:hover {
 				text-decoration: none;
-			}
-			img {
-				//border: 5px solid #ffffff;
-				//border-radius: 50%;
 			}
 		}
 		.logo2 {
 			margin: 0;
 		}
-		&:nth-child(1) {
-			a {
-				background-color: #9bc045;
-				border-radius: 40% 50% 40% 55%;
-			}
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 15;
+			width: 100%;
+			height: 100%;
+			transition: color .3s ease;
 		}
-		&:nth-child(2) {
-			a {
-				background-color: #3180CA;
-				border-radius: 20% 40% 45% 34%/52% 51% 48% 42%;
-			}
-		}
-		&:nth-child(3) {
-			padding: 0;
-		}
-		&:nth-child(4) {
-			a {
-				background-color: #C93E7F;
-				border-radius: 70% 42% 62% 50%;
-			}
-		}
-		&:nth-child(5) {
-			a {
-				background-color: #D0724E;
-				border-radius: 78% 50% 34% 38%/68% 63% 58% 53%;
-			}
+		span {
+			position: relative;
+			color: $tColor;
+			z-index: 16;
+			transition: color .3s ease;
 		}
 	}
 }
@@ -184,8 +167,6 @@
 			z-index: 141;
 			border-radius: 75px 70px 60px 65px;
 			transition: all .3s ease;
-			//animation: egg 5s linear infinite;
-			//animation-play-state: paused;
 		}
 		&:after {
 			content: '';
@@ -199,12 +180,6 @@
 			z-index: 141;
 			border-radius: 75px 70px 60px 65px;
 			animation: egg 4.5s linear infinite;
-		}
-		&:hover {
-			&:before {
-				animation: egg 5s linear infinite;
-				//animation-play-state: start;
-			}
 		}
 	}
 	img {

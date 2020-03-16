@@ -1,5 +1,7 @@
 $(function() {
 
+	/*______ Brands Slider ______*/
+
 	var $brandsSlider = $('.brands-slider .slider');
 
 	$brandsSlider.init(function(event, slick) {
@@ -52,5 +54,29 @@ $(function() {
 			}
 		]
 	});	
+
+
+	/*______ Composition Slider ______*/
+
+	var $compositionSlider = $('.composition-slider .slider');
+
+	$compositionSlider.init(function(event, slick) {
+
+		$('.composition-slider .slide-prev').on('click', function () {
+			$compositionSlider.slick('slickPrev');
+		});
+
+		$('.composition-slider .slide-next').on('click', function () {
+			$compositionSlider.slick('slickNext');
+		});
+	});
+
+	$compositionSlider.slick({
+		arrows: true,
+		dots: false,
+		slidesToShow: 1,
+		lazyLoad: 'progressive'
+	});	
+
 
 });

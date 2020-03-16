@@ -75,4 +75,51 @@
 	}
 }
 
+.composition-slider {
+	.uk-container {
+		position: relative;
+	}
+	.slider {
+		button {
+			width: 0;
+			height: 0;
+			&:before {
+				display: none;
+			}
+		}
+		&__arrows {
+			max-width: 1300px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			z-index: 650;
+		}
+	}
+	.slide-prev,
+	.slide-next {
+		position: absolute;
+		top: 50%;
+		display: flex;
+		transform: translateY(-50%);
+		cursor: pointer;
+	}
+
+	.slide-prev {
+		left: 0;
+		@media (min-width: $desk-w) {
+			left: -200px;	
+		};
+	}
+
+	.slide-next {
+		left: auto;
+		right: 0;
+		@media (min-width: $desk-w) {
+			right: -200px;	
+		};
+		
+	}
+}
+
 /*______ END SLIDERS ______*/

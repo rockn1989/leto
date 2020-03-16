@@ -93,36 +93,46 @@
 <nav class="nav">
 	<div class="uk-container">
 		<ul class="main-nav">
-			<li><a href="#">Лето</a></li>
-			<li><a href="#">Деревнское угодье</a></li>
+			<li class="active">
+				<a href="#">
+					<svg width="82px" height="59px" class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-1"></use>
+					</svg>
+					<span>Лето</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<svg width="233px" height="71px" class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-2"></use>
+					</svg>
+					<span>Деревенское угодье</span>
+				</a>
+			</li>
 			<li>
 				<span class="logo1">
 					<a href="#"><img src="img/media/logo.svg" alt="Leto"></a>
 				</span>
 			</li>
-			<li><a href="#">Junior</a></li>
-			<li><a href="#">Сельская новь</a></li>
+			<li>
+				<a href="#">
+					<svg class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-3"></use>
+					</svg>
+					<span>Junior</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<svg class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-4"></use>
+					</svg>
+					<span>Сельская новь</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 </nav><!-- end nav -->
-
-
-
-<!-- <div class="logo1">
-	<a href=""><img src="img/media/logo.svg" alt="Leto"/></a>
-</div>
-
-<div class="logo2">
-	<a href="">
-		<span></span>
-		<img src="img/media/logo.svg" alt="Leto"/>
-	</a>
-</div>
-
-<div class="logo3">
-	<a href=""><img src="img/media/logo.svg" alt="Leto"/></a>
-</div>
- -->
 </div>
 	<!-- begin header__mobile -->
 <div class="header__mobile uk-hidden@m">
@@ -133,26 +143,31 @@
 	<div class="main-banner">
 		<div class="uk-container uk-container--large">
 
-			<div class="main-banner__img">
+			<div class="main-banner__img" uk-scrollspy="cls:border-anim">
 				<img src="img/media/main-banner-1-1440x730.png" alt="">
-				<!-- 				<svg>
-					<defs>
-						<clipPath id="cut-center">
-							<ellipse fill="red" rx="800px" ry="200px" cx="690" cy="-100" />
-						</clipPath>
-					</defs>
-					<rect
-						width="100%"
-						height="400px"
-						clip-path="url(#cut-center)"
-						fill="transparent"
-						>
-				</svg> -->
+<!-- <svg>
+	<defs>
+		<clipPath id="cut-center">
+			<ellipse fill="red" rx="800px" ry="200px" cx="690" cy="-100" />
+		</clipPath>
+	</defs>
+	<rect
+		width="100%"
+		height="100px"
+		clip-path="url(#cut-center)"
+		fill="blue"
+		></rect>
+	<rect
+		width="100%"
+		height="100px"
+		fill="red"
+		></rect>
+</svg> -->
 			</div>
 
 			<div class="main-banner__text">
 				<div class="main-banner__title">
-					<h1>Натуральный продукт</h1>
+					<h1 uk-scrollspy="cls:slide-up">Натуральный продукт</h1>
 				</div>
 				<div class="main-banner__subtitle">
 					для всей семьи
@@ -162,7 +177,7 @@
 				</svg>
 			</div>
 			
-			<div class="fly-box" uk-scrollspy="cls: slide-up-abs">
+			<div class="fly-box " uk-scrollspy="cls: slide-up-abs uk-visible; delay: 500">
 				<img src="img/media/egg-box-1.png" alt="Лето">
 			</div>
 
@@ -371,11 +386,11 @@
 
 
 	
-	<div class="typebox-section" uk-scrollspy="target: .item; cls: slide-right; delay: 300">
+	<div class="typebox-section wave-bg" uk-scrollspy="cls: wave-anim">
 		<div class="uk-container">
 			<h2 class="title-h2 uk-text-center" uk-scrollspy="cls:slide-up">Виды упаковки</h2>
 
-			<ul class="typebox-list">
+			<ul class="typebox-list" uk-scrollspy="target: .item; cls: slide-right; delay: 300">
 
 				<li class="item">
 					<div class="item__img">
@@ -630,6 +645,42 @@
 		</p>
 		<a href="" class="green-link">Подробнее</a>
 		<a href="" class="btn btn--yellow uk-margin-auto" uk-scrollspy="cls:slide-up"><span>Посмотреть все рецепты</span></a>
+	</div>
+</section>
+	
+<section class="composition-section wave-bg" uk-scrollspy="cls: wave-anim">
+	<div class="uk-container uk-container--small">
+		<h2 class="uk-text-center" uk-scrollspy="cls:slide-up">Какие элементы содержит яйцо?</h2>
+		<!-- begin composition-slider -->
+<div class="composition-slider">
+	<div class="uk-container">
+		<div class="slider">
+			<div class="slide">
+				<img src="img/media/sliders/composition-slide.png" alt="Состав яйца">
+			</div>
+			<div class="slide">
+				<img src="img/media/sliders/composition-slide.svg" alt="Состав яйца">
+			</div>
+		</div>
+		<div class="slider__arrows">
+			<div class="slide-prev">
+				<svg width="154px" height="29px" class="slider-arrow">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-left"></use>
+				</svg>
+			</div>
+			<div class="slide-next">
+				<svg width="154px" height="29px" class="slider-arrow">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-right"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
+</div><!-- end composition-slider -->
+		<p>
+			Ниже представлены таблицы химического состава и диаграммы, из которых Вы можете узнать какая пищевая ценность, какие витамины, минералы, и сколько калорий содержится в данном продукте питания. Со временем Вам достаточно будет одного взгляда на графики, чтобы понять питательную ценность пищи.В таблицах приводятся данные %РСП.
+		</p>
+		<a href="" class="green-link">Подробнее</a>
+		<a href="" class="btn btn--yellow uk-margin-auto" uk-scrollspy="cls:slide-up"><span>Посмотреть все факты о яйце</span></a>
 	</div>
 </section>
 

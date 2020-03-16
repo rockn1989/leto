@@ -50,7 +50,7 @@ $(function() {
 					circleTwo = timer.find('.circle-2'),
 					circleOneValue = 157 - (157 * (60 - timerValue))/60,
 					circleTwoValue = 170 - (170 * timerValue)/60;
-
+					
 		circleOne.css('stroke-dashoffset', circleOneValue);
 		circleTwo.css('stroke-dashoffset', circleTwoValue);
 		
