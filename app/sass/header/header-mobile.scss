@@ -1,3 +1,27 @@
-.header__mobile {
-	
+
+.uk-offcanvas {
+	.uk-offcanvas-bar {
+		padding: 2px 0 25px;
+		background: #ffffff;
+	}
+	.uk-nav {
+		margin-bottom: 20px;
+		li {
+			padding: 10px 25px;
+			border-bottom: 1px solid #ece6e1;
+			a {
+				color: $tColor;	
+			}
+		}
+	}
+	.contacts {
+		padding: 0 25px;
+		color: $tColor;
+		&__tel {
+			color: $tColor;	
+		}
+		.green-link {
+			color: #549537;
+		}
+	}
 }

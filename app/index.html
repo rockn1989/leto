@@ -34,60 +34,43 @@
 
 			<a href="/timer.html" class="timer-link">
 				<span class="timer-link__icon icon-clock"></span>
-				<span class="timer-link__text">Таймер для варки яиц</span>
+				<span class="timer-link__text">Таймер <span class="uk-visible@s">для варки яиц</span></span>
 			</a>
 
 			
 			<div class="top-panel-nav">
-				<ul class="nav-list">
+				<ul class="nav-list uk-visible@m">
 					<li><a href="#">Яйцо</a></li>
 					<li><a href="#">Рецепты</a></li>
 					<li><a href="#">О компании</a></li>
 					<li><a href="#">Переработка</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
+				<a href="#" class="close-btn js__toggle-mobile-left-menu" uk-toggle="target: #offcanvas-menu"></a>
 			</div>
 		</div>
 
 	</div>
+
+	<!-- begin offcanvas-menu -->
+	<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+		<div class="uk-offcanvas-bar">
+			<ul class="uk-nav">
+				<li><a href="#">Яйцо</a></li>
+				<li><a href="#">Рецепты</a></li>
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Переработка</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="contacts">
+				<a href="tel:+74957815404" class="contacts__tel">+7 495 781-54-04</a>
+				<div class="subtitle">Напишите нам:</div>
+				<a href="mailto:info@leto-group.ru" class="green-link">info@leto-group.ru</a>
+			</div>
+		</div>
+	</div><!-- end offcanvas-menu -->
+
 </div><!-- end top-panel -->
-
-<!-- 
-<div class="uk-container">
-	<div class="someblock">
-		<img src="img/icon-svg/wave.svg" alt="" uk-scrollspy="cls:slide-up">
-	</div>
-</div>
-
-
-<a href="" class="btn"><span>попробуйте наш таймер</span></a>
-<a href="" class="btn btn--icon icon-clock"><span>попробуйте наш таймер</span></a>
-
-<div class="somediv">
-	<a href="" class="btn btn--yellow"><span>посмотреть все рецепты</span></a>
-	<a href="" class="btn btn--yellow"><span>Посмотреть все факты о яйце</span></a>
-	<a href="" class="btn btn--icon icon-clock btn--yellow"><span>посмотреть все рецепты</span></a>
-</div>
-
-<h1>Натуральный
-продукт</h1>
-
-
-<h2>Натуральный
-продукт</h2>
-
-
-
-<h3>Натуральный
-продукт</h3>
-
-
-
-<h4>Натуральный
-продукт</h4>
-
-
- -->
 	
 <!-- begin nav -->
 <nav class="nav">
@@ -101,7 +84,7 @@
 					<span>Лето</span>
 				</a>
 			</li>
-			<li>
+			<li class="active">
 				<a href="#">
 					<svg width="233px" height="71px" class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-2"></use>
@@ -114,7 +97,7 @@
 					<a href="#"><img src="img/media/logo.svg" alt="Leto"></a>
 				</span>
 			</li>
-			<li>
+			<li class="active">
 				<a href="#">
 					<svg class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-3"></use>
@@ -122,7 +105,7 @@
 					<span>Junior</span>
 				</a>
 			</li>
-			<li>
+			<li class="active">
 				<a href="#">
 					<svg class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-4"></use>
@@ -135,7 +118,7 @@
 </nav><!-- end nav -->
 </div>
 	<!-- begin header__mobile -->
-<div class="header__mobile uk-hidden@m">
+<div class="header__mobile uk-hidden">
 	555
 </div><!-- end header__mobile -->
 </header><!-- end header -->
@@ -689,66 +672,83 @@
 	<div class="uk-container uk-container--medium">
 		<div class="footer__top">
 			<div class="uk-grid">
-				<div class="uk-width-2-3">
+				<div class="uk-width-2-3@m">
 					<div class="uk-grid">
-						<div class="uk-width-1-3">
-							<div class="footer__title" data-tole="toggle-list">Наши марки</div>
-							<ul class="footer__list">
-								<li><a href="#">Лето</a></li>
-								<li><a href="#">Деревенское угодье</a></li>
-								<li><a href="#">Junio</a></li>
-								<li><a href="#">Сельская новь</a></li>
-							</ul>
+						<div class="uk-width-1-3@s">
+							<div class="footer__column-wrapper">
+								<div class="footer__title" data-role="toggle-list">
+									Наши марки
+									<i class="icon-arrow-up uk-hidden@s"></i>
+								</div>
+								<ul class="footer__list">
+									<li><a href="#">Лето</a></li>
+									<li><a href="#">Деревенское угодье</a></li>
+									<li><a href="#">Junio</a></li>
+									<li><a href="#">Сельская новь</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="uk-width-1-3">
-							<div class="footer__title" data-tole="toggle-list">О компании</div>
-							<ul class="footer__list">
-								<li>
-									<a href="#">О компании</a>
-								</li>
-								<li>
-									<a href="#">Партнёрам</a>
-								</li>
-								<li>
-									<a href="#">Поставщикам</a>
-								</li>
-								<li>
-									<a href="#">Вакансии</a>
-								</li>
-								<li>
-									<a href="#">Новости</a>
-								</li>
-								<li>
-									<a href="#">Контакты</a>
-								</li>
-							</ul>
+						<div class="uk-width-1-3@s">
+							<div class="footer__column-wrapper">
+								<div class="footer__title" data-role="toggle-list">
+									О компании
+									<i class="icon-arrow-up uk-hidden@s"></i>
+								</div>
+								<ul class="footer__list">
+									<li>
+										<a href="#">О компании</a>
+									</li>
+									<li>
+										<a href="#">Партнёрам</a>
+									</li>
+									<li>
+										<a href="#">Поставщикам</a>
+									</li>
+									<li>
+										<a href="#">Вакансии</a>
+									</li>
+									<li>
+										<a href="#">Новости</a>
+									</li>
+									<li>
+										<a href="#">Контакты</a>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<div class="uk-width-1-3">
-							<div class="footer__title" data-tole="toggle-list">Потребителям</div>
-							<ul class="footer__list">
-								<li>
-									<a href="#">Факты о яйце</a>
-								</li>
-								<li>
-									<a href="#">Рецепты</a>
-								</li>
-								<li>
-									<a href="#">Сообщить о проблеме</a>
-								</li>
-								<li>
-									<a href="#">Задать вопрос</a>
-								</li>
-							</ul>
+						<div class="uk-width-1-3@s">
+							<div class="footer__column-wrapper">
+								<div class="footer__title" data-role="toggle-list">
+									Потребителям
+									<i class="icon-arrow-up uk-hidden@s"></i>
+								</div>
+								<ul class="footer__list">
+									<li>
+										<a href="#">Факты о яйце</a>
+									</li>
+									<li>
+										<a href="#">Рецепты</a>
+									</li>
+									<li>
+										<a href="#">Сообщить о проблеме</a>
+									</li>
+									<li>
+										<a href="#">Задать вопрос</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="uk-width-1-3">
-					<div class="padding-left-25">
-						<div class="footer__title">Группа компаний «Лето»</div>
-						<div class="contacts">
-							<a href="tel:+74957815404" class="contacts__tel">+7 495 781-54-04</a>
-							<div class="subtitle">Напишите нам:</div>
-							<a href="mailto:info@leto-group.ru" class="green-link">info@leto-group.ru</a>
+				<div class="uk-width-1-3@m">
+					<div class="footer__column-wrapper">
+						<div class="padding-left-25">
+							<div class="footer__title">Группа компаний «Лето»</div>
+							<div class="contacts">
+								<a href="tel:+74957815404" class="contacts__tel">+7 495 781-54-04</a>
+								<div class="subtitle">Напишите нам:</div>
+								<a href="mailto:info@leto-group.ru" class="green-link">info@leto-group.ru</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -756,13 +756,16 @@
 		</div>
 		<div class="footer__bottom">
 			<div class="uk-grid">
-				<div class="uk-width-2-3">
+				<div class="uk-width-1-2@s uk-width-2-3@m">
 					<div class="copyright">Группа компаний «Лето» 2020</div>
 					<a href="" class="politics">Политика в отношении персональных данных</a>
 				</div>
-				<div class="uk-width-1-3">
+				<div class="uk-width-1-2@s uk-width-1-3@m">
 					<div class="padding-left-25">
 						<a href="https://aevrika.ru/" target="_blank" class="dev-ae">
+							<svg width="16px" height="22px" class="ae-logo">
+							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#ae-logo"></use>
+							</svg>
 							Разработка и продвижение —ЭВРИКА
 						</a>
 					</div>

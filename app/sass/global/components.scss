@@ -155,6 +155,51 @@
 	}
 }
 
+.icon-arrow-up {
+	font-family: none;
+	width: 20px;
+	height:20px;
+	display: block;
+	background: url('../img/icon-svg/arrow-up.svg') center no-repeat;
+	background-size: 16px 8px;
+}
+
+.close-btn {
+	position: relative;
+	display: block;
+	width: 24px;
+	height: 24px;
+	&:after,&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 30px;
+		height: 2px;
+		display: block;
+		background: $tColor;
+		transform-origin: center;
+		transition: transform .3s ease;
+	}
+	&:before {
+		top: 8px;
+	}
+	&:after {
+		bottom: 8px;
+	}
+	&.active {
+		&:before {
+			/* transform-origin: center; */
+			transform: rotate(-45deg) translateY(-50%);
+			top: 50%;
+		}
+		&:after {
+			/* transform-origin: center; */
+			transform: rotate(45deg) translateY(50%);
+			bottom: 50%;
+		}
+	}
+}
+
 /*______ END COMPONENTS ______*/
 
 

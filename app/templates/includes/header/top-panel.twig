@@ -6,57 +6,40 @@
 
 			<a href="/timer.html" class="timer-link">
 				<span class="timer-link__icon icon-clock"></span>
-				<span class="timer-link__text">Таймер для варки яиц</span>
+				<span class="timer-link__text">Таймер <span class="uk-visible@s">для варки яиц</span></span>
 			</a>
 
 			
 			<div class="top-panel-nav">
-				<ul class="nav-list">
+				<ul class="nav-list uk-visible@m">
 					<li><a href="#">Яйцо</a></li>
 					<li><a href="#">Рецепты</a></li>
 					<li><a href="#">О компании</a></li>
 					<li><a href="#">Переработка</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
+				<a href="#" class="close-btn js__toggle-mobile-left-menu" uk-toggle="target: #offcanvas-menu"></a>
 			</div>
 		</div>
 
 	</div>
+
+	<!-- begin offcanvas-menu -->
+	<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+		<div class="uk-offcanvas-bar">
+			<ul class="uk-nav">
+				<li><a href="#">Яйцо</a></li>
+				<li><a href="#">Рецепты</a></li>
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Переработка</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="contacts">
+				<a href="tel:+74957815404" class="contacts__tel">+7 495 781-54-04</a>
+				<div class="subtitle">Напишите нам:</div>
+				<a href="mailto:info@leto-group.ru" class="green-link">info@leto-group.ru</a>
+			</div>
+		</div>
+	</div><!-- end offcanvas-menu -->
+
 </div><!-- end top-panel -->
-
-<!-- 
-<div class="uk-container">
-	<div class="someblock">
-		<img src="img/icon-svg/wave.svg" alt="" uk-scrollspy="cls:slide-up">
-	</div>
-</div>
-
-
-<a href="" class="btn"><span>попробуйте наш таймер</span></a>
-<a href="" class="btn btn--icon icon-clock"><span>попробуйте наш таймер</span></a>
-
-<div class="somediv">
-	<a href="" class="btn btn--yellow"><span>посмотреть все рецепты</span></a>
-	<a href="" class="btn btn--yellow"><span>Посмотреть все факты о яйце</span></a>
-	<a href="" class="btn btn--icon icon-clock btn--yellow"><span>посмотреть все рецепты</span></a>
-</div>
-
-<h1>Натуральный
-продукт</h1>
-
-
-<h2>Натуральный
-продукт</h2>
-
-
-
-<h3>Натуральный
-продукт</h3>
-
-
-
-<h4>Натуральный
-продукт</h4>
-
-
- -->

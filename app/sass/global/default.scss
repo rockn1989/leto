@@ -109,7 +109,9 @@ svg {
 
 
 .padding-left-25 {
-	padding-left: 25%;
+	@media (min-width: $desk-w) {
+		padding-left: 25%;
+	};
 }
 
 
@@ -124,16 +126,17 @@ svg {
 		height: 50px;
 		background-repeat: repeat-x;
 		background-size: 100%;
-		background-position: 0 0;
 		z-index: 1;
 		transition: transform 1.5s ease;
 	}
 	&:before {
+		background-position: 0 100%;
 		background-image: url('../img/ui/wave-top.png');
 		top: 0;
 		transform: translateY(0);
 	}
 	&:after {
+		background-position: 0 0;
 		bottom: 0;
 		background-image: url('../img/ui/wave-bottom.png');
 		transform: translateY(0);
@@ -159,5 +162,15 @@ svg {
 	}
 	50% {
 		background-position: 50% 50%;
+	}
+}
+
+body {
+	& >* {
+		display: none;
+	}
+
+	header.header {
+		display: block !important;
 	}
 }

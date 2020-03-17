@@ -1,31 +1,81 @@
 /*______ FOOTER ______*/
 
 .footer {
+	padding-top: 30px;
+	@media (min-width: $tablet-w) {
+		padding-top: 70px;
+	};
+	&__column-wrapper {
+		@media (min-width: $mob-xs) {
+			margin-bottom: 15px !important;
+		};
+		@media (min-width: $mob-s) {
+			margin-bottom: 30px !important;
+		};
+	}
 	&__top {
-		margin-bottom: 30px;
+		margin-bottom: 60px;
 		padding-bottom: 30px;
 		border-bottom: 1px solid #ece6e1;
-		@media (min-width: $desk-w) {
+		@media (min-width: $mob-xs) {
+			margin-bottom: 30px;
+			padding-bottom: 0px;
+		};
+		@media (min-width: $tablet-w) {
 			margin-bottom: 70px;
-			padding-bottom: 80px;
+			padding-bottom: 50px;
 		};
 	}
 	&__bottom {
-		padding-bottom: 70px;
+		padding-bottom: 30px;
+		@media (min-width: $tablet-w) {
+			padding-bottom: 70px;
+		};
 	}
 	&__title {
+		position: relative;
 		margin-bottom: 25px;
 		font-size: 16px;
 		line-height: 21px;
 		font-weight: 700;
 		letter-spacing: 0.8px;
 		text-transform: uppercase;
+		&[data-role] {
+			margin-bottom: 0;
+			padding-bottom: 15px;
+			@media (min-width: $mob-s) {
+				margin-bottom: 25px;
+				padding-bottom: 0;
+			};
+		}
+		.icon-arrow-up {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform-origin: center;
+			transform: rotateX(180deg);
+			transition: transform .5s ease;
+			&.open {
+				transform: rotateX(0);
+			}
+		}
 	}
 	&__list {
 		@include list-reset;
+		display: none;
+		@media (min-width: $mob-xs) {
+			padding-bottom: 0px !important;
+		};
+		@media (min-width: $mob-s) {
+			padding-bottom: 0 !important;
+			display: block !important;
+		};
 		li {
 			margin-bottom: 14px;
 			display: block;
+			&:last-child {
+				margin-bottom: 0;
+			}
 			a {
 				color: $tColor;
 			}
@@ -56,6 +106,7 @@
 
 .copyright {
 	margin-bottom: 10px;
+	line-height: 24px;
 }
 
 .politics {
@@ -63,7 +114,20 @@
 }
 
 .dev-ae {
+	position: relative;
+	margin-top: 10px;
+	padding-left: 30px;
+	display: inline-block;
+	line-height: 24px;
 	color: $tColor;
+	@media (min-width: $mob-s) {
+		margin-top: 0;
+	};
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }
 
 /*______ END FOOTER ______*/

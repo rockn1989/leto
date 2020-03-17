@@ -127,6 +127,13 @@ $(function() {
 		siblingsList.stop().slideToggle('350');
 	});
 
+	/*______ Открытие/закрытие мобильного левого меню ______*/
+
+	$('.js__toggle-mobile-left-menu').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+	})
+
 
 	/*______ Полифил для Object-fit ______*/
 	
