@@ -1,12 +1,30 @@
 /*______ MAIN CONTENT ______*/
 
 .advantages-h-section {
-	margin-bottom: 130px;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
 }
 
 .composition-section {
-	margin-bottom: 130px;
-	padding: 120px 0;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+		padding: 60px 0;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+		padding: 90px 0;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+		padding: 120px 0;
+	};
 }
 
 /*______ END MAIN CONTENT ______*/

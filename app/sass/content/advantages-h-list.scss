@@ -10,8 +10,11 @@
 		position: relative;
 		flex-basis: 250px;
 		margin-bottom: 30px;
-		@media (min-width: $desk-w) {
-			margin-bottom: 0;
+		@media (min-width: $mob-xs) {
+			margin: 0 auto 30px;
+		};
+		@media (min-width: $mob-s) {
+			margin: 0 0 30px;
 		};
 		&__img {
 			position: relative;
@@ -80,6 +83,13 @@
 					right: calc(-100% - 25px);
 					max-width: 173px;
 					background: url('../img/icon-svg/small-line-3.svg') 0 center no-repeat;
+				}
+			}
+		}
+		&:last-child {
+			.item__img {
+				&:after {
+					display: none;
 				}
 			}
 		}

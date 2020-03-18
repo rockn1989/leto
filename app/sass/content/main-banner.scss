@@ -2,8 +2,25 @@
 
 .main-banner {
 	position: relative;
+	&>.uk-container {
+		@media (min-width: $mob-xs) {
+			padding: 0;
+		};
+		@media (min-width: $tablet-w) {
+			padding: 0 15px;
+		};
+	}
 	&__img {
 		position: relative;
+		padding-top: 100%;
+		background-repeat: no-repeat;
+		background-position: center 0;
+		@media (min-width: $mob-s) {
+			padding-top: 80%;
+		};
+		@media (min-width: $tablet-w) {
+			padding-top: 50%;
+		};
 		&.border-anim {
 			img {
 				border-radius: 0% 0% 100% 100% / 0 0 50% 50%;
@@ -59,10 +76,19 @@
 .fly-box {
 	position: absolute;
 	left: 50%;
-	bottom: -240px;
+	
 	transform: translateX(-50%);
 	z-index: 980;
-	visibility: hidden;
+	min-width: 320px;
+	@media (min-width: $mob-xs) {
+		bottom: -120px;
+	};
+	@media (min-width: $tablet-w) {
+		bottom: -240px;
+	};
+	@media (min-width: $desk-w) {
+		visibility: hidden;
+	};
 	&.uk-visible {
 		visibility: visible;
 	}
@@ -72,8 +98,10 @@
 	}
 	&.hidden {
 		img {
-			opacity: 0;
-			visibility: hidden;
+			@media (min-width: $desk-w) {
+				opacity: 0;
+				visibility: hidden;
+			};
 		}
 	}
 }

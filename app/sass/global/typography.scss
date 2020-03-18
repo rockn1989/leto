@@ -7,23 +7,24 @@ h5, .title-h5 {
 }
 
 h1, .title-h1 {
-	margin-bottom: 50px;
+	
 	@include text-size(96,96);
-/* font-size: 52px;
-line-height: 52px;
-@media (min-width: $tablet-w) {
-	font-size: 74px;
-	line-height: 74px;
-};
-@media (min-width: $desk-w) {
-	font-size: 96px;
-	line-height: 96px;
-}; */
+	@media (min-width: $mob-xs) {
+		margin-bottom: 30px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 50px;
+	};
 }
 
 h2, .title-h2 {
-	margin-bottom: 50px;
 	@include text-size(56,64);
+	@media (min-width: $mob-xs) {
+		margin-bottom: 30px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 50px;
+	};
 }
 
 h3, .title-h3 {

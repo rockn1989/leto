@@ -46,7 +46,7 @@
 					<li><a href="#">Переработка</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
-				<a href="#" class="close-btn js__toggle-mobile-left-menu" uk-toggle="target: #offcanvas-menu"></a>
+				<a href="#" class="close-btn js__toggle-mobile-left-menu uk-hidden@m" uk-toggle="target: #offcanvas-menu"></a>
 			</div>
 		</div>
 
@@ -84,7 +84,7 @@
 					<span>Лето</span>
 				</a>
 			</li>
-			<li class="active">
+			<li>
 				<a href="#">
 					<svg width="233px" height="71px" class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-2"></use>
@@ -97,7 +97,7 @@
 					<a href="#"><img src="img/media/logo.svg" alt="Leto"></a>
 				</span>
 			</li>
-			<li class="active">
+			<li>
 				<a href="#">
 					<svg class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-3"></use>
@@ -105,7 +105,7 @@
 					<span>Junior</span>
 				</a>
 			</li>
-			<li class="active">
+			<li>
 				<a href="#">
 					<svg class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-4"></use>
@@ -126,8 +126,7 @@
 	<div class="main-banner">
 		<div class="uk-container uk-container--large">
 
-			<div class="main-banner__img" uk-scrollspy="cls:border-anim">
-				<img src="img/media/main-banner-1-1440x730.png" alt="">
+			<div class="main-banner__img" style="background-image:url(img/media/main-banner-1-1440x730.png)" uk-scrollspy="cls:border-anim">
 <!-- <svg>
 	<defs>
 		<clipPath id="cut-center">
@@ -436,6 +435,7 @@
 
 		<!-- begin brands-slider -->
 	<div class="brands-slider preload">
+		<h2 class="uk-text-center">Купить онлайн</h2>
 		<div class="uk-container">
 			<div class="slider">
 				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-1.svg" alt=""></a></div>

@@ -130,7 +130,7 @@ svg {
 		transition: transform 1.5s ease;
 	}
 	&:before {
-		background-position: 0 100%;
+		background-position: 100% 100%;
 		background-image: url('../img/ui/wave-top.png');
 		top: 0;
 		transform: translateY(0);
@@ -165,12 +165,19 @@ svg {
 	}
 }
 
-body {
+/* body {
 	& >* {
 		display: none;
 	}
 
-	header.header {
+	header.header,
+	footer.footer,
+	.main-banner,
+	.advantages-h-section,
+	.typebox-section,
+	.brands-slider,
+	.time-section {
 		display: block !important;
 	}
 }
+ */
