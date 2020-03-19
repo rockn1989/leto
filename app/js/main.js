@@ -9,6 +9,7 @@ $(function() {
 	const centerBox = document.querySelector('.center-box');
 	const advantagesList = document.querySelector('.advantages-list');
 	const windowHeight = document.documentElement.clientHeight;
+
 	if($(document).outerWidth() > (960 + 17)) {
 		$(document).bind('scroll', function (e) {
 			if(windowHeight - flyBox.getBoundingClientRect().top >= (windowHeight/2)) {
@@ -42,19 +43,39 @@ $(function() {
 		};
 	};
 
+/*if ("IntersectionObserver" in window) {
+	const flyBox = document.querySelector('.fly-box');
+	const flyBoxObserv = new IntersectionObserver(function(entries, observer) {
+		entries.forEach(function(entry) {
+			if (entry.isIntersecting && $(window).scrollTop() < 1000) {
+				entry.target.classList.remove('hidden');
+				flyBoxObserv.unobserve(flyBox)
+			}
+			
+		})
+	}, {
+		root: null,
+		threshold: 0.5
+	});
+	flyBoxObserv.observe(flyBox);
+}
+*/
 
 	/*______ Анимация круглого таймера ______*/
 
-	$('.egg-section').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
-		const timer = $(this).find('.circle-timer'),
-					timerValue = timer.data("time"),
-					circleOne = timer.find('.circle-1'),
-					circleTwo = timer.find('.circle-2'),
-					circleOneValue = 157 - (157 * (60 - timerValue))/60,
-					circleTwoValue = 170 - (170 * timerValue)/60;
-					
-		circleOne.css('stroke-dashoffset', circleOneValue);
-		circleTwo.css('stroke-dashoffset', circleTwoValue);
+	$('.eggs-section').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+		const timer = $(this).find('.circle-timer');
+		$.each(timer, function (idx, el) {
+			const	timerValue = $(el).data("time");
+			const	circleOne = $(el).find('.circle-1');
+			const	circleTwo = $(el).find('.circle-2');
+			const	circleOneValue = 157 - (157 * (60 - timerValue))/60;
+			const	circleTwoValue = 170 - (170 * timerValue)/60;
+						
+			circleOne.css('stroke-dashoffset', circleOneValue);
+			circleTwo.css('stroke-dashoffset', circleTwoValue);
+		});
+
 		
 	});
 

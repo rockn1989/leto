@@ -1,5 +1,16 @@
 /*______ SLIDERS ______*/
 
+.slider__arrows {
+	.slide-prev {
+		&:hover {
+			svg {
+				fill: $salat !important;
+				stroke: $salat !important;
+			}
+		}
+	}
+}
+
 .brands-slider {
 	@media (min-width: $mob-xs) {
 		margin-bottom: 60px;
@@ -169,6 +180,75 @@
 			right: -200px;	
 		};
 		
+	}
+}
+
+.custom-slider {
+	position: relative;
+	.uk-container {
+		position: relative;
+	}
+	.slider {
+		height: 500px;
+		overflow: hidden;
+		transition: height 1s ease;
+		&.slick-initialized {
+			height: auto;
+			overflow: visible;
+			~.slider__arrows {
+				display: block;
+			}
+		}
+		button {
+			width: 0;
+			height: 0;
+			&:before {
+				display: none;
+			}
+		}
+		&__arrows {
+			display: none;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			z-index: 650;
+			@media (min-width: 1460px) {
+				max-width: 1300px;	
+			};
+		}
+	}
+	.slide-prev,
+	.slide-next {
+		position: absolute;
+		top: 50%;
+		display: flex;
+		transform: translateY(-50%);
+		cursor: pointer;
+		svg {
+			width: 100px;
+			@media (min-width: 1460px) {
+				width: auto;
+			};
+		}
+	}
+
+	.slide-prev {
+		left: 0;
+		@media (min-width: 1460px) {
+			left: -200px;	
+		};
+	}
+
+	.slide-next {
+		right: 0;
+		@media (min-width: 1460px) {
+			right: -200px;	
+		};
+		
+	}
+	&__text {
+		margin-top: 50px;
 	}
 }
 

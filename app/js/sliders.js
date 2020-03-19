@@ -79,4 +79,28 @@ $(function() {
 	});	
 
 
+	/*______ Custom Slider ______*/
+
+	var $customSlider = $('.custom-slider .slider');
+
+	$customSlider.init(function(event, slick) {
+
+		$('.custom-slider .slide-prev').on('click', function () {
+			$customSlider.slick('slickPrev');
+		});
+
+		$('.custom-slider .slide-next').on('click', function () {
+			$customSlider.slick('slickNext');
+		});
+	});
+
+	$customSlider.slick({
+		arrows: true,
+		dots: false,
+		slidesToShow: 1,
+		lazyLoad: 'progressive',
+		adaptiveHeight: true
+	});	
+
+
 });
