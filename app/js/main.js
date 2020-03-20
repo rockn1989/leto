@@ -12,20 +12,20 @@ $(function() {
 
 	if($(document).outerWidth() > (960 + 17)) {
 		$(document).bind('scroll', function (e) {
-			if(windowHeight - flyBox.getBoundingClientRect().top >= (windowHeight/2)) {
+			if(windowHeight - (flyBox.getBoundingClientRect().top + (flyBox.offsetHeight/2)) >= (windowHeight/2)) {
 				movingBox(flyBox, $(window).scrollTop());
 				watchToElementPosition(centerBox);
 			} else {
 				return false;
-			}
+			};
 		});
 	}
 
 
 	function movingBox(el, counter) {
 		if(counter >= flyBoxPositionBottom) {
-			el.style.bottom  = (counter*(-1)) +'px';	
-		}
+			el.style.bottom  = (counter - flyBoxPositionBottom)*(-1) +'px';	
+		};
 		
 	};
 

@@ -9,6 +9,7 @@ table {
 }
 
 body {
+	overflow-x: hidden;
 	@each $theme, $color in $theme-colors {
 		&.#{$theme} {
 

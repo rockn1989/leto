@@ -806,6 +806,10 @@ table {
   color: #5b6356;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body.theme-green .advantages-list li:before {
   color: #9bc045;
 }
@@ -1745,10 +1749,40 @@ svg {
   padding-top: 100%;
   background-repeat: no-repeat;
   background-position: center 0;
+  overflow: hidden;
 }
 
-.main-banner__img.border-anim img {
-  border-radius: 0% 0% 100% 100% / 0 0 50% 50%;
+.main-banner__img .img-mask {
+  position: absolute;
+  left: -1px;
+  right: 1px;
+  bottom: 0;
+  width: 110%;
+  height: 100px;
+  fill: #ffffff;
+  display: none;
+}
+
+.main-banner__img:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -2.5%;
+  width: 105%;
+  height: 100px;
+  background: url("../img/ui/mask3.svg") 0 0 no-repeat;
+  background-size: 100%;
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  transform: translateY(100px);
+  -webkit-transition: -webkit-transform .8s ease 1.5s;
+  transition: -webkit-transform .8s ease 1.5s;
+  -o-transition: transform .8s ease 1.5s;
+  -moz-transition: transform .8s ease 1.5s, -moz-transform .8s ease 1.5s;
+  transition: transform .8s ease 1.5s;
+  transition: transform .8s ease 1.5s, -webkit-transform .8s ease 1.5s, -moz-transform .8s ease 1.5s;
+  will-change: transform;
 }
 
 .main-banner__img img {
@@ -1822,6 +1856,10 @@ svg {
   transform: translateX(-50%);
   z-index: 980;
   min-width: 320px;
+  -webkit-transition: bottom .35s linear;
+  -o-transition: bottom .35s linear;
+  -moz-transition: bottom .35s linear;
+  transition: bottom .35s linear;
 }
 
 .fly-box.uk-visible {
@@ -1885,10 +1923,10 @@ svg {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-  -moz-transform: translate(-50%, -50%) scale(0);
-  -ms-transform: translate(-50%, -50%) scale(0);
-  transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   width: 100%;
   height: 100%;
   z-index: 400;
@@ -1900,18 +1938,6 @@ svg {
 
 .advantages-section .center-box.show {
   opacity: 1;
-}
-
-.advantages-section .center-box.show svg.yellow-ellipse-1 {
-  -webkit-animation: scale 1s linear forwards 2.5s, rotate-back 20s linear infinite 3.5s;
-  -moz-animation: scale 1s linear forwards 2.5s, rotate-back 20s linear infinite 3.5s;
-  animation: scale 1s linear forwards 2.5s, rotate-back 20s linear infinite 3.5s;
-}
-
-.advantages-section .center-box.show svg.yellow-ellipse-2 {
-  -webkit-animation: scale 1s linear forwards 3.5s, rotate 26s linear infinite 3.5s;
-  -moz-animation: scale 1s linear forwards 3.5s, rotate 26s linear infinite 3.5s;
-  animation: scale 1s linear forwards 3.5s, rotate 26s linear infinite 3.5s;
 }
 
 .advantages-list {
@@ -1950,6 +1976,10 @@ svg {
   -moz-transition: opacity .3s, transform 1.2s, top 1.2s, bottom 1.2s, left 1.2s, right 1.2s ease-out, -moz-transform 1.2s;
   transition: opacity .3s, transform 1.2s, top 1.2s, bottom 1.2s, left 1.2s, right 1.2s ease-out;
   transition: opacity .3s, transform 1.2s, top 1.2s, bottom 1.2s, left 1.2s, right 1.2s ease-out, -webkit-transform 1.2s, -moz-transform 1.2s;
+  will-change: transform top bottom left right;
+  width: 100%;
+  max-width: 230px;
+  margin: 0 auto;
 }
 
 .advantages-list li:before {
@@ -2444,6 +2474,10 @@ svg {
   position: relative;
 }
 
+.brands-slider .slider > button {
+  display: none !important;
+}
+
 .brands-slider .slider__arrows {
   position: absolute;
   top: 50%;
@@ -2763,8 +2797,27 @@ svg {
     padding: 0;
   }
 
+  .main-banner__img.border-anim:after {
+    -webkit-transform: translateY(53%);
+    -moz-transform: translateY(53%);
+    -ms-transform: translateY(53%);
+    transform: translateY(53%);
+  }
+
+  .main-banner__text {
+    padding: 11% 0;
+  }
+
+  .main-banner svg {
+    height: 42px;
+  }
+
   .fly-box {
     bottom: -120px;
+  }
+
+  .advantages-section .center-box {
+    display: none;
   }
 
   .advantages-h-list .item {
@@ -2895,6 +2948,10 @@ svg {
     padding-top: 80%;
   }
 
+  .main-banner svg {
+    height: 67px;
+  }
+
   .advantages-h-list .item {
     margin: 0 0 30px;
   }
@@ -2923,6 +2980,15 @@ svg {
 
   .brands-slider .slider .slide a img {
     max-width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-banner__img.border-anim:after {
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    transform: translateY(15px);
   }
 }
 
@@ -3075,11 +3141,31 @@ svg {
   }
 
   .advantages-section .center-box {
+    display: block;
     opacity: 0;
   }
 
   .advantages-section .center-box {
     margin: 0;
+  }
+
+  .advantages-section .center-box.show svg {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .advantages-section .center-box.show svg.yellow-ellipse-1 {
+    -webkit-animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+    -moz-animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+    animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+  }
+
+  .advantages-section .center-box.show svg.yellow-ellipse-2 {
+    -webkit-animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
+    -moz-animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
+    animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
   }
 
   .advantages-list {
@@ -3096,6 +3182,7 @@ svg {
     width: 300px;
     min-height: 200px;
     opacity: 0;
+    max-width: 100%;
   }
 
   .advantages-list li:nth-child(1) {
@@ -3148,6 +3235,15 @@ svg {
     -moz-transition-delay: 1.2s;
     -o-transition-delay: 1.2s;
     transition-delay: 1.2s;
+    width: 355px;
+  }
+
+  .advantages-list li:nth-child(4) .advantage-item__img {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
   }
 
   .advantages-list li:nth-child(5) {
@@ -3356,5 +3452,12 @@ svg {
 @media (min-width: 640px) and (max-width: 960px) {
   .main-nav li {
     margin: 0 5px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 640px) {
+  .main-banner__title h1 {
+    font-size: 40px;
+    line-height: 40px;
   }
 }

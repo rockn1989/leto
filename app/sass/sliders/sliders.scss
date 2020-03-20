@@ -25,6 +25,9 @@
 		position: relative;
 	}
 	.slider {
+		&>button {
+			display: none !important;
+		}
 		&__arrows {
 			
 			position: absolute;

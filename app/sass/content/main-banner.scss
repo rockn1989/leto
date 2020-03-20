@@ -1,5 +1,6 @@
 /*______ Main Banner ______*/
 
+
 .main-banner {
 	position: relative;
 	&>.uk-container {
@@ -15,6 +16,30 @@
 		padding-top: 100%;
 		background-repeat: no-repeat;
 		background-position: center 0;
+		overflow: hidden;
+		.img-mask {
+			position: absolute;
+			left: -1px;
+			right: 1px;
+			bottom: 0;
+			width: 110%;
+			height: 100px;
+			fill: #ffffff;
+			display: none;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -2.5%;
+			width: 105%;
+			height: 100px;
+			background: url('../img/ui/mask3.svg') 0 0 no-repeat;
+			background-size: 100%;
+			transform: translateY(100px);
+			transition: transform .8s ease 1.5s;
+			will-change: transform;
+		}
 		@media (min-width: $mob-s) {
 			padding-top: 80%;
 		};
@@ -22,9 +47,13 @@
 			padding-top: 50%;
 		};
 		&.border-anim {
-			img {
-				border-radius: 0% 0% 100% 100% / 0 0 50% 50%;
-				//border-radius: 0% 0% 50% 50% / 0% 0% 10% 10%;
+			&:after {
+				@media (min-width: $mob-xs) {
+					transform: translateY(53%);
+				};
+				@media (min-width: 768px) {
+					transform: translateY(15px);
+				};
 			}
 		}
 		img {
@@ -51,6 +80,9 @@
 		color: $white;
 		text-align: center;
 		transform: translateX(-50%);
+		@media (min-width: $mob-xs) {
+			padding: 11% 0;
+		};
 	}
 	&__title {
 		max-width: 640px;
@@ -58,6 +90,10 @@
 		text-align: center;
 		h1 {
 			color: $white;
+			@media (min-width: $mob-xs) and (max-width: $mob-s) {
+				font-size: 40px;
+				line-height: 40px;
+			};
 		}
 	}
 	&__subtitle {
@@ -70,6 +106,12 @@
 	}
 	svg {
 		color: $yellow;
+		@media (min-width: $mob-xs) {
+			height: 42px;
+		};
+		@media (min-width: $mob-s) {
+			height: 67px;
+		};
 	}
 }
 
@@ -80,6 +122,7 @@
 	transform: translateX(-50%);
 	z-index: 980;
 	min-width: 320px;
+	transition: bottom .35s linear;
 	@media (min-width: $mob-xs) {
 		bottom: -120px;
 	};

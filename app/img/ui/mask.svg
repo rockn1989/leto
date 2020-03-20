@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1301 90">
+    <defs>
+        <style>
+        .cls-1 {
+            fill: #fff;
+            stroke: #ffffff;
+            stroke-miterlimit: 10;
+        }
+        </style>
+    </defs>
+    <g>
+        <g>
+            <path class="cls-1" d="M650.5,80.5C306.76,80.5,25.35,45.2,2.07.5H.5v89h1300V.5h-1.57C1275.65,45.2,994.24,80.5,650.5,80.5Z" />
+        </g>
+    </g>
+</svg>
