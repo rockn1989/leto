@@ -1,27 +1,25 @@
+
 	<div class="main-banner">
 		<div class="uk-container uk-container--large">
 
-			<div class="main-banner__img" style="background-image:url(img/media/main-banner-1-1440x730.png)" uk-scrollspy="cls:border-anim">
-<!-- 				<svg class="img-mask">
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#mask3"></use>
-</svg> -->
+			<div class="main-banner__img" style="background-image: url({{data.bgURL}})" uk-scrollspy="cls:border-anim">
 			</div>
 
 			<div class="main-banner__text">
 				<div class="main-banner__title">
-					<h1 uk-scrollspy="cls:slide-up">Натуральный продукт</h1>
+					<h1 uk-scrollspy="cls:slide-up">{{data.title}}</h1>
 				</div>
 				<div class="main-banner__subtitle">
-					для всей семьи
+					{{data.subtitle}}
 				</div>
 				<svg width="29px" height="67px" class="main-banner__arrow-down">
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-down"></use>
 				</svg>
 			</div>
-			
+			{% if data.flyBox.isset == true %}
 			<div class="fly-box " uk-scrollspy="cls: slide-up-abs uk-visible; delay: 500">
-				<img src="img/media/egg-box-1.png" alt="Лето">
+				<img src="{{data.flyBox.img}}" alt="Лето">
 			</div>
-
+			{% endif %}
 		</div>
 	</div>

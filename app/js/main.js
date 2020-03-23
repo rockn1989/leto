@@ -4,44 +4,46 @@ $(function() {
 
 	/*______ Fly box moving ______*/
 
-	const flyBox = document.querySelector('.fly-box');
-	const flyBoxPositionBottom = 240;
-	const centerBox = document.querySelector('.center-box');
-	const advantagesList = document.querySelector('.advantages-list');
-	const windowHeight = document.documentElement.clientHeight;
+	if($('.fly-box').length > 0) {
+		const flyBox = document.querySelector('.fly-box');
+		const flyBoxPositionBottom = 240;
+		const centerBox = document.querySelector('.center-box');
+		const advantagesList = document.querySelector('.advantages-list');
+		const windowHeight = document.documentElement.clientHeight;
 
-	if($(document).outerWidth() > (960 + 17)) {
-		$(document).bind('scroll', function (e) {
-			if(windowHeight - (flyBox.getBoundingClientRect().top + (flyBox.offsetHeight/2)) >= (windowHeight/2)) {
-				movingBox(flyBox, $(window).scrollTop());
-				watchToElementPosition(centerBox);
-			} else {
-				return false;
+		if($(document).outerWidth() > (960 + 17)) {
+			$(document).bind('scroll', function (e) {
+				if(windowHeight - (flyBox.getBoundingClientRect().top + (flyBox.offsetHeight/2)) >= (windowHeight/2)) {
+					movingBox(flyBox, $(window).scrollTop());
+					watchToElementPosition(centerBox);
+				} else {
+					return false;
+				};
+			});
+		}
+
+
+		function movingBox(el, counter) {
+			if(counter >= flyBoxPositionBottom) {
+				el.style.bottom  = (counter - flyBoxPositionBottom)*(-1) +'px';	
 			};
-		});
+			
+		};
+
+		function watchToElementPosition(el) {
+
+			const watchEl = el;
+
+			let centerBoxPos = watchEl.getBoundingClientRect().top;
+
+			if(windowHeight - centerBoxPos >= (windowHeight/2)) {
+				$(document).unbind();
+				flyBox.classList.add('hidden');
+				watchEl.classList.add('show');
+				advantagesList.classList.add('show');
+			};
+		};
 	}
-
-
-	function movingBox(el, counter) {
-		if(counter >= flyBoxPositionBottom) {
-			el.style.bottom  = (counter - flyBoxPositionBottom)*(-1) +'px';	
-		};
-		
-	};
-
-	function watchToElementPosition(el) {
-
-		const watchEl = el;
-
-		let centerBoxPos = watchEl.getBoundingClientRect().top;
-
-		if(windowHeight - centerBoxPos >= (windowHeight/2)) {
-			$(document).unbind();
-			flyBox.classList.add('hidden');
-			watchEl.classList.add('show');
-			advantagesList.classList.add('show');
-		};
-	};
 
 /*if ("IntersectionObserver" in window) {
 	const flyBox = document.querySelector('.fly-box');

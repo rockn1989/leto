@@ -1825,7 +1825,7 @@ svg {
 }
 
 .main-banner__title {
-  max-width: 640px;
+  max-width: 980px;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -2338,6 +2338,70 @@ svg {
 
 /*______ End Egg section ______*/
 
+/*______ Total section ______*/
+
+.total-section__title {
+  color: #9bc045;
+  font-weight: bold;
+}
+
+.total-section-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.total-section-list .item__img {
+  position: relative;
+  margin: 0 auto;
+  width: 250px;
+  height: 228px;
+  z-index: 40;
+}
+
+.total-section-list .item__text {
+  position: relative;
+  margin-top: -80px;
+  z-index: 50;
+}
+
+.total-section-list .item .bg-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 15;
+}
+
+.total-section-list .item .bg-img svg {
+  width: 100%;
+  height: 100%;
+  color: #faf4ef;
+}
+
+.total-section-list .item .content-img {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 16;
+}
+
+.green-number {
+  font-weight: bold;
+  color: #9bc045;
+}
+
+/*______ End Total section ______*/
+
 /*______ MAIN CONTENT ______*/
 
 /*______ END MAIN CONTENT ______*/
@@ -2843,6 +2907,16 @@ svg {
     max-width: 400px;
   }
 
+  .total-section__title {
+    font-size: 80px;
+    line-height: 85px;
+  }
+
+  .green-number {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
   .advantages-h-section {
     margin-bottom: 60px;
   }
@@ -2956,6 +3030,16 @@ svg {
     margin: 0 0 30px;
   }
 
+  .total-section__title {
+    font-size: 100px;
+    line-height: 106.25px;
+  }
+
+  .green-number {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
   .footer__column-wrapper {
     margin-bottom: 30px !important;
   }
@@ -3054,6 +3138,16 @@ svg {
 
   .fly-box {
     bottom: -240px;
+  }
+
+  .total-section__title {
+    font-size: 120px;
+    line-height: 127.5px;
+  }
+
+  .green-number {
+    font-size: 42px;
+    line-height: 48px;
   }
 
   .advantages-h-section {
@@ -3363,6 +3457,16 @@ svg {
     flex-basis: -moz-calc(100%/4);
     flex-basis: calc(100%/4);
     max-width: none;
+  }
+
+  .total-section__title {
+    font-size: 160px;
+    line-height: 170px;
+  }
+
+  .green-number {
+    font-size: 56px;
+    line-height: 64px;
   }
 
   .advantages-h-section {

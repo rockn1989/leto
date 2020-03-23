@@ -1,9 +1,21 @@
 {% extends "layouts/default.twig" %}
 {% set title="Главная" %}
 {% set theme="theme-green" %}
+{% 
+	set data = {
+		bgURL: 'img/media/main-banner-1-1440x730.png',
+		title: 'Натуральный продукт',
+		subtitle: 'для всей семьи',
+		flyBox: {
+			isset: true,
+			img: 'img/media/egg-box-1.png'
+		}
+	} 
+%}
+
 {% block content %}
 
-	{% include './includes/components/main-banner.twig' %}
+	{% include './includes/components/main-banner.twig' with {'data': data} %}
 	{% include './includes/components/advantages-section.twig' %}
 	{% include './includes/components/advantages-h-section.twig' with {'theme': 'green'} %}
 
