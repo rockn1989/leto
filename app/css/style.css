@@ -1742,6 +1742,7 @@ svg {
 
 .main-banner {
   position: relative;
+  margin-bottom: 70px;
 }
 
 .main-banner__img {
@@ -2339,6 +2340,10 @@ svg {
 /*______ End Egg section ______*/
 
 /*______ Total section ______*/
+
+.total-section {
+  margin-bottom: 100px;
+}
 
 .total-section__title {
   color: #9bc045;
@@ -3491,6 +3496,12 @@ svg {
 @media (min-width: 1360px) {
   .brands-slider .slider__arrows {
     max-width: 1300px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .total-section__inner {
+    background: url("../img/ui/long-line.svg") center 30px no-repeat;
   }
 }
 

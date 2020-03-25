@@ -2,10 +2,16 @@
 /*______ Total section ______*/
 
 .total-section {
+	margin-bottom: 100px;
 	&__title {
 		@include text-size(160, 170);
 		color: $salat;
 		font-weight: bold;
+	}
+	&__inner {
+		@media (min-width: 1400px) {
+			background: url('../img/ui/long-line.svg') center 30px no-repeat;
+		};
 	}
 }
 
