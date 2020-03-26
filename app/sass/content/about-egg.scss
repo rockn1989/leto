@@ -1,0 +1,19 @@
+
+/*______ About egg ______*/
+
+	.about-egg {
+		margin-bottom: 100px;
+		&__img {
+			margin-bottom: 40px;
+		}
+		&__text {
+			margin:  0 auto;
+			max-width: 770px;
+			font-size: 20px;
+			line-height: 24px;
+			font-weight: bold;
+			font-family: $secondFont;
+		}
+	}
+
+/*______ End About egg ______*/

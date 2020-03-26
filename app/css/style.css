@@ -2164,6 +2164,25 @@ svg {
   display: none;
 }
 
+.advantages-h-list--three-items {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.advantages-h-list--three-items .item:nth-child(1) .item__img:after {
+  width: 200px;
+  right: -160%;
+  max-width: 193px;
+  background: url("../img/icon-svg/long-line-1.svg") 0 center no-repeat;
+}
+
+.advantages-h-list--three-items .item:nth-child(2) .item__img:after {
+  right: -160%;
+  width: 200px;
+  max-width: 179px;
+  background: url("../img/icon-svg/long-line-2.svg") 0 center no-repeat;
+}
+
 /*______ End Advantages-h-list ______*/
 
 /*______ Typebox-section ______*/
@@ -2406,6 +2425,27 @@ svg {
 }
 
 /*______ End Total section ______*/
+
+/*______ About egg ______*/
+
+.about-egg {
+  margin-bottom: 100px;
+}
+
+.about-egg__img {
+  margin-bottom: 40px;
+}
+
+.about-egg__text {
+  margin: 0 auto;
+  max-width: 770px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: "Museo";
+}
+
+/*______ End About egg ______*/
 
 /*______ MAIN CONTENT ______*/
 
