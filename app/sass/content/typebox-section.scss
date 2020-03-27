@@ -62,7 +62,7 @@
 				height: 100%;
 				z-index: 15;
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
 				align-items: center;
 				transform: translate(-50%, -50%);
 			}
@@ -90,6 +90,39 @@
 				flex-basis: calc(100%/4);
 				max-width: none;
 			};
+		}
+	}
+	&.mask {
+		.bg-img {
+			display: none;
+		}
+		li {
+			img {
+				mask-position: center 0;
+				mask-size: contain;
+				mask-repeat: no-repeat;
+			}
+			&:nth-child(1) {
+				.content-img {
+					img {
+						mask-image: url('../img/icon-svg/ellipse-1.svg');
+					}
+				}
+			}
+			&:nth-child(2) {
+				.content-img {
+					img {
+						mask-image: url('../img/icon-svg/ellipse-2.svg');
+					}
+				}
+			}
+			&:nth-child(3) {
+				.content-img {
+					img {
+						mask-image: url('../img/icon-svg/ellipse-3.svg');
+					}
+				}
+			}
 		}
 	}
 }

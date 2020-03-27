@@ -118,6 +118,7 @@ svg {
 
 .wave-bg {
 	position: relative;
+	padding: 120px 0;
 	background-color: $bgColor;
 	&:before,&:after {
 		content: '';

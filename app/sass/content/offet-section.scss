@@ -1,0 +1,17 @@
+
+/*______ Offer section ______*/
+
+.offer-section {
+	margin-bottom: 130px;
+	&__inner {
+		position: relative;
+		.btn {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+/*______ End Offer section ______*/

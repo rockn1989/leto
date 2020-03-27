@@ -227,6 +227,10 @@ p {
   z-index: 10;
 }
 
+.btn--small {
+  max-width: 320px;
+}
+
 .circle-timer {
   position: relative;
   margin-right: 10px;
@@ -970,6 +974,7 @@ svg {
 
 .wave-bg {
   position: relative;
+  padding: 120px 0;
   background-color: #faf4ef;
 }
 
@@ -2258,11 +2263,11 @@ svg {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -moz-box-align: center;
@@ -2291,6 +2296,34 @@ svg {
   -ms-flex-preferred-size: calc(100%/4);
   flex-basis: -moz-calc(100%/4);
   flex-basis: calc(100%/4);
+}
+
+.typebox-list.mask .bg-img {
+  display: none;
+}
+
+.typebox-list.mask li img {
+  -webkit-mask-position: center 0;
+  mask-position: center 0;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.typebox-list.mask li:nth-child(1) .content-img img {
+  -webkit-mask-image: url("../img/icon-svg/ellipse-1.svg");
+  mask-image: url("../img/icon-svg/ellipse-1.svg");
+}
+
+.typebox-list.mask li:nth-child(2) .content-img img {
+  -webkit-mask-image: url("../img/icon-svg/ellipse-2.svg");
+  mask-image: url("../img/icon-svg/ellipse-2.svg");
+}
+
+.typebox-list.mask li:nth-child(3) .content-img img {
+  -webkit-mask-image: url("../img/icon-svg/ellipse-3.svg");
+  mask-image: url("../img/icon-svg/ellipse-3.svg");
 }
 
 /*______ End Typebox-section ______*/
@@ -2425,6 +2458,28 @@ svg {
 }
 
 /*______ End Total section ______*/
+
+/*______ Offer section ______*/
+
+.offer-section {
+  margin-bottom: 130px;
+}
+
+.offer-section__inner {
+  position: relative;
+}
+
+.offer-section__inner .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*______ End Offer section ______*/
 
 /*______ About egg ______*/
 
@@ -2966,7 +3021,7 @@ svg {
     margin-bottom: 60px;
   }
 
-  .composition-section {
+  .slider-section {
     margin-bottom: 60px;
     padding: 60px 0;
   }
@@ -3199,7 +3254,7 @@ svg {
     margin-bottom: 90px;
   }
 
-  .composition-section {
+  .slider-section {
     margin-bottom: 90px;
     padding: 90px 0;
   }
@@ -3518,7 +3573,7 @@ svg {
     margin-bottom: 130px;
   }
 
-  .composition-section {
+  .slider-section {
     margin-bottom: 130px;
     padding: 120px 0;
   }
