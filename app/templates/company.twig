@@ -267,18 +267,104 @@
 		</div>
 	</section>
 
+	<!-- begin products-section -->
+	<section class="products-section">
+		<div class="uk-container">
+			<h2 class="title-h2 uk-text-center">Наша продукция доступна в магазинах</h2>
+
+			<!-- begin custom-tabs -->
+			<div class="custom-tabs">
+				<ul class="tab-sw" uk-switcher="swiping: false">
+					<li><a href="">Цфо</a></li>
+					<li><a href="">Юфо</a></li>
+				</ul>
+
+				<ul class="uk-switcher">
+					<li>
+						<div class="tab-slider">
+							<div class="slider">
+								<div class="slide">
+									<div class="brands-grid">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div><!-- end custom-tabs -->
+
+		</div>
+	</section><!-- end products-section -->
+
 	<!-- begin news-section -->
-	<section class="news-section wave-bg" uk-scrollspy="target: .item; cls: slide-right; delay: 300">
+	<section class="news-section wave-bg" uk-scrollspy="cls: wave-anim">
 		<div class="uk-container">
 			<h2 class="title-h2 uk-text-center">Новости компании «Лето-Групп»</h2>
-			<ul class="news-list">
+			<ul class="news-list" uk-scrollspy="target: .item; cls: slide-right; delay: 300">
 				<li class="item">
 					<article>
-						<figure></figure>
-						<h3 class="title-h3"></h3>
+						<header>
+							<figure>
+								<img src="img/media/news-img-1.png" alt="">
+							</figure>
+							<time datetime="2020-02-29">
+								<span>29</span> 
+								<span>февраля</span> 
+								<span>2020</span>
+							</time>
+						</header>
+						<section>
+							<h3 class="title-h3">Численность наших сотрудников возрасла до 2233 человек</h3>
+							<p>
+								Оригинальные запатентованные торговые марки в разных ценовых категориях
+							</p>
+						</section>
+					</article>
+				</li>
+				<li class="item">
+					<article>
+						<header>
+							<figure>
+								<img src="img/media/news-img-2.png" alt="">
+							</figure>
+							<time datetime="2020-13-29">
+								<span>13</span>
+								<span>февраля</span>
+								<span>2020</span>
+							</time>
+						</header>
+						<section>
+							<h3 class="title-h3">Новые удобные короба для лотков</h3>
+							<p>
+								Продукция упакована в красочные короба-шоубоксы, которые удобно размещаются непосредственно на яичной полке магазина без дополнительного ручного труда.
+							</p>
+						</section>
+					</article>
+				</li>
+				<li class="item">
+					<article>
+						<header>
+							<figure>
+								<img src="img/media/news-img-3.png" alt="">
+							</figure>
+							<time datetime="2020-01-08">
+								<span>08</span>
+								<span>января</span>
+								<span>2020</span>
+							</time>
+						</header>
+						<section>
+							<h3 class="title-h3">Мы запустили акцию для проверенных оптовиков</h3>
+							<p>
+								Маркетинговая поддержка собственных брендов, направленная на покупателей. 
+							</p>
+						</section>
 					</article>
 				</li>
 			</ul>
+			<a href="" class="btn btn--yellow uk-margin-auto"><span>Все новости</span></a>
 		</div>
 	</section><!-- end news-section -->
 

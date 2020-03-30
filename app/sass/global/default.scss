@@ -118,8 +118,13 @@ svg {
 
 .wave-bg {
 	position: relative;
-	padding: 120px 0;
 	background-color: $bgColor;
+	@media (min-width: $mob-xs) {
+		padding: 60px 0;
+	};
+	@media (min-width: $desk-w) {
+		padding: 70px 0;
+	};
 	&:before,&:after {
 		content: '';
 		position: absolute;

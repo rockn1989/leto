@@ -974,7 +974,6 @@ svg {
 
 .wave-bg {
   position: relative;
-  padding: 120px 0;
   background-color: #faf4ef;
 }
 
@@ -2481,6 +2480,131 @@ svg {
 
 /*______ End Offer section ______*/
 
+/*______ New Section ______*/
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.news-list .item {
+  position: relative;
+  margin: 0 auto 50px;
+  -webkit-flex-basis: -webkit-calc(100%/3);
+  -ms-flex-preferred-size: calc(100%/3);
+  flex-basis: -moz-calc(100%/3);
+  flex-basis: calc(100%/3);
+}
+
+.news-list .item:last-child {
+  margin-bottom: 0;
+}
+
+.news-list article header {
+  position: relative;
+  margin: 0 auto 20px;
+  padding-top: 75%;
+  width: 100%;
+}
+
+.news-list article figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.news-list article time {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #9bc045;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 25;
+}
+
+.news-list article time span {
+  display: block;
+}
+
+.news-list p {
+  text-align: left;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.news-list p:last-child {
+  margin-bottom: 0;
+}
+
+.news-list li img {
+  -webkit-mask-position: center 0;
+  mask-position: center 0;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.news-list li:nth-child(1) figure img {
+  -webkit-mask-image: url("../img/icon-svg/ellipse-1.svg");
+  mask-image: url("../img/icon-svg/ellipse-1.svg");
+}
+
+.news-list li:nth-child(2) figure img {
+  -webkit-mask-image: url("../img/icon-svg/ellipse-2.svg");
+  mask-image: url("../img/icon-svg/ellipse-2.svg");
+}
+
+.news-list li:nth-child(3) figure img {
+  -webkit-mask-image: url("../img/icon-svg/ellipse-3.svg");
+  mask-image: url("../img/icon-svg/ellipse-3.svg");
+}
+
+/*______ End New Section ______*/
+
 /*______ About egg ______*/
 
 .about-egg {
@@ -2933,6 +3057,10 @@ svg {
     padding-left: 15px;
   }
 
+  .wave-bg {
+    padding: 60px 0;
+  }
+
   .main-nav {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -3017,13 +3145,19 @@ svg {
     line-height: 32px;
   }
 
+  .news-list .item {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 400px;
+  }
+
   .advantages-h-section {
     margin-bottom: 60px;
   }
 
   .slider-section {
     margin-bottom: 60px;
-    padding: 60px 0;
   }
 
   .footer__column-wrapper {
@@ -3256,7 +3390,6 @@ svg {
 
   .slider-section {
     margin-bottom: 90px;
-    padding: 90px 0;
   }
 
   .footer {
@@ -3300,6 +3433,10 @@ svg {
 
   .padding-left-25 {
     padding-left: 25%;
+  }
+
+  .wave-bg {
+    padding: 70px 0;
   }
 
   .main-nav li a {
@@ -3569,13 +3706,21 @@ svg {
     line-height: 64px;
   }
 
+  .news-list .item {
+    margin-bottom: 0;
+    -webkit-flex-basis: -webkit-calc(100%/3);
+    -ms-flex-preferred-size: calc(100%/3);
+    flex-basis: -moz-calc(100%/3);
+    flex-basis: calc(100%/3);
+    max-width: 320px;
+  }
+
   .advantages-h-section {
     margin-bottom: 130px;
   }
 
   .slider-section {
     margin-bottom: 130px;
-    padding: 120px 0;
   }
 
   .brands-slider {

@@ -22,7 +22,9 @@
 		<script src="libs/placeholders.min.js"></script>
 	<![endif]-->
 </head>
+
 <body class="theme-green">
+
 <!-- begin header -->
 <header class="header">
 	<div class="header__desk ">
@@ -71,6 +73,7 @@
 	</div><!-- end offcanvas-menu -->
 
 </div><!-- end top-panel -->
+
 	
 <!-- begin nav -->
 <nav class="nav">
@@ -116,12 +119,17 @@
 		</ul>
 	</div>
 </nav><!-- end nav -->
+
 </div>
+
 	<!-- begin header__mobile -->
 <div class="header__mobile uk-hidden">
 	555
 </div><!-- end header__mobile -->
+
 </header><!-- end header -->
+
+
 	
 
 	
@@ -142,7 +150,8 @@
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-down"></use>
 				</svg>
 			</div>
-					</div>
+			
+		</div>
 	</div>
 
 	<!-- begin total-section -->
@@ -396,15 +405,108 @@
 		</div>
 	</section>
 
+	<!-- begin products-section -->
+	<section class="products-section">
+		<div class="uk-container">
+			<h2 class="title-h2 uk-text-center">Наша продукция доступна в магазинах</h2>
+
+			<!-- begin custom-tabs -->
+			<div class="custom-tabs">
+				<ul class="tab-sw" uk-switcher="swiping: false">
+					<li><a href="">Цфо</a></li>
+					<li><a href="">Юфо</a></li>
+				</ul>
+
+				<ul class="uk-switcher">
+					<li>
+						<div class="tab-slider">
+							<div class="slider">
+								<div class="slide">
+									<div class="brands-grid">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div><!-- end custom-tabs -->
+
+		</div>
+	</section><!-- end products-section -->
+
 	<!-- begin news-section -->
-	<section class="news-section wave-bg" uk-scrollspy="target: .item; cls: slide-right; delay: 300">
+	<section class="news-section wave-bg" uk-scrollspy="cls: wave-anim">
 		<div class="uk-container">
 			<h2 class="title-h2 uk-text-center">Новости компании «Лето-Групп»</h2>
-			<ul class="news-list">
-				<li class="item"></li>
+			<ul class="news-list" uk-scrollspy="target: .item; cls: slide-right; delay: 300">
+				<li class="item">
+					<article>
+						<header>
+							<figure>
+								<img src="img/media/news-img-1.png" alt="">
+							</figure>
+							<time datetime="2020-02-29">
+								<span>29</span> 
+								<span>февраля</span> 
+								<span>2020</span>
+							</time>
+						</header>
+						<section>
+							<h3 class="title-h3">Численность наших сотрудников возрасла до 2233 человек</h3>
+							<p>
+								Оригинальные запатентованные торговые марки в разных ценовых категориях
+							</p>
+						</section>
+					</article>
+				</li>
+				<li class="item">
+					<article>
+						<header>
+							<figure>
+								<img src="img/media/news-img-2.png" alt="">
+							</figure>
+							<time datetime="2020-13-29">
+								<span>13</span>
+								<span>февраля</span>
+								<span>2020</span>
+							</time>
+						</header>
+						<section>
+							<h3 class="title-h3">Новые удобные короба для лотков</h3>
+							<p>
+								Продукция упакована в красочные короба-шоубоксы, которые удобно размещаются непосредственно на яичной полке магазина без дополнительного ручного труда.
+							</p>
+						</section>
+					</article>
+				</li>
+				<li class="item">
+					<article>
+						<header>
+							<figure>
+								<img src="img/media/news-img-3.png" alt="">
+							</figure>
+							<time datetime="2020-01-08">
+								<span>08</span>
+								<span>января</span>
+								<span>2020</span>
+							</time>
+						</header>
+						<section>
+							<h3 class="title-h3">Мы запустили акцию для проверенных оптовиков</h3>
+							<p>
+								Маркетинговая поддержка собственных брендов, направленная на покупателей. 
+							</p>
+						</section>
+					</article>
+				</li>
 			</ul>
+			<a href="" class="btn btn--yellow uk-margin-auto"><span>Все новости</span></a>
 		</div>
 	</section><!-- end news-section -->
+
+
 
 
 
@@ -521,6 +623,9 @@
 
 
 
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
@@ -529,6 +634,7 @@
 <script src="libs/ofi.min.js" defer></script>
 <script src="js/sliders.js" defer></script>
 <script src="js/main.js" defer></script>
+
 
 </body>
 </html>
