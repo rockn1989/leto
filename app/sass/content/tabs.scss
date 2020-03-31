@@ -1,0 +1,83 @@
+
+/*______ Tabs ______*/
+
+.products-section {
+	margin: 120px 0;
+}
+
+.tab-sw {
+	@include list-reset;
+	display: flex;
+	justify-content: center;
+	li {
+		margin: 0 10px;
+		display: block;
+		a {
+			position: relative;
+			padding: 0 3.25em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 60px;
+			border-radius: 72px;
+			background-color: transparent;
+			text-transform: uppercase;
+			border: 2px solid $salat;
+			color: $tColor;
+			letter-spacing: .8px;
+			font-weight: bold;
+			transition: background-color .3s, color .3s ease;
+			@media (min-width: $mob-xs) {
+				font-size: 14px;
+			}
+			@media (min-width: $mob-s) {
+				font-size: 16px;
+			};
+			&:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: -9px;
+				width: 15px;
+				height: 7.5px;
+				transform: translateX(-50%);
+				background: url('../img/icon-svg/triangle-down.svg') center 0 no-repeat;
+				opacity: 0;
+				transition: opacity .3s ease;
+			}
+		}
+		&.uk-active {
+			a {
+				color: $white;
+				background-color: $salat;
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.products-section {
+	&__inner {
+		position: relative;
+		.ellipse-abs-1,
+		.ellipse-abs-2 {
+			position: absolute;
+			top: 25px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 10;
+		}
+	}
+}
+
+.custom-tabs{
+	position: relative;
+	z-index: 20;
+	min-height: 800px;
+}
+
+
+
+/*______ End Tabs ______*/

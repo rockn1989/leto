@@ -103,4 +103,37 @@ $(function() {
 	});	
 
 
+	/*______ Tabs Slider ______*/
+
+	$tabsSlider = $('.tab-slider .slider').eq(0);
+	console.log($tabsSlider)
+	$tabsSlider.slick({
+		arrows: false,
+		dots: true,
+		slideToShoW: 1
+	})
+	var $ukSwitcherTabs = $('[uk-switcher]').eq(0),
+		$ukSwitcherTabsContent = $ukSwitcherTabs.siblings('ul.uk-switcher');
+
+	$('.tab-sw').on('click', 'li', function (e) {
+
+		e.preventDefault();
+
+		var idx = $('.tab-sw li').index($(this)),
+				li = $ukSwitcherTabsContent.find('li.uk-active'),
+		tabSliderWrapper  = li.find($('.tab-slider')),
+		tabSlider = li.find('.tab-slider .slider');
+		
+		if(!tabSlider.hasClass('slick-initialized')) {
+			tabSlider.slick({
+				arrows: false,
+				dots: true,
+				slideToShoW: 1
+			})
+		}
+	});
+
+
+
+
 });
