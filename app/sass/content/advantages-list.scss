@@ -52,10 +52,10 @@
 				svg {
 					transform: translate(-50%, -50%) scale(1);
 					&.yellow-ellipse-1 {
-						//animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+						animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
 					}
 					&.yellow-ellipse-2 {
-						//animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
+						animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
 					}
 				}
 			};

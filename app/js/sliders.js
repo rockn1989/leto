@@ -2,7 +2,7 @@ $(function() {
 
 	/*______ Brands Slider ______*/
 
-	var $brandsSlider = $('.brands-slider .slider');
+	const $brandsSlider = $('.brands-slider .slider');
 
 	$brandsSlider.init(function(event, slick) {
 
@@ -58,7 +58,7 @@ $(function() {
 
 	/*______ Composition Slider ______*/
 
-	var $compositionSlider = $('.composition-slider .slider');
+	const $compositionSlider = $('.composition-slider .slider');
 
 	$compositionSlider.init(function(event, slick) {
 
@@ -81,7 +81,7 @@ $(function() {
 
 	/*______ Custom Slider ______*/
 
-	var $customSlider = $('.custom-slider .slider');
+	const $customSlider = $('.custom-slider .slider');
 
 	$customSlider.init(function(event, slick) {
 
@@ -105,21 +105,23 @@ $(function() {
 
 	/*______ Tabs Slider ______*/
 
-	$tabsSlider = $('.tab-slider .slider').eq(0);
-	console.log($tabsSlider)
+	const $tabsSlider = $('.tab-slider .slider').eq(0);
+
 	$tabsSlider.slick({
 		arrows: false,
 		dots: true,
 		slideToShoW: 1
-	})
-	var $ukSwitcherTabs = $('[uk-switcher]').eq(0),
+	});
+
+
+	let $ukSwitcherTabs = $('[uk-switcher]').eq(0),
 		$ukSwitcherTabsContent = $ukSwitcherTabs.siblings('ul.uk-switcher');
 
 	$('.tab-sw').on('click', 'li', function (e) {
 
 		e.preventDefault();
 
-		var idx = $('.tab-sw li').index($(this)),
+		let idx = $('.tab-sw li').index($(this)),
 				li = $ukSwitcherTabsContent.find('li.uk-active'),
 		tabSliderWrapper  = li.find($('.tab-slider')),
 		tabSlider = li.find('.tab-slider .slider');
@@ -129,8 +131,8 @@ $(function() {
 				arrows: false,
 				dots: true,
 				slideToShoW: 1
-			})
-		}
+			});
+		};
 	});
 
 

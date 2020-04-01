@@ -169,4 +169,23 @@ $(function() {
 
 	svg4everybody();
 
+
+
+	/*______ Animatio Number ______*/
+
+	$('.js__anim-number').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+		const options = {
+		  separator: ' ',
+				duration: 3
+		};
+
+		let demo = new CountUp('counter', 800000000, options);
+
+		if (!demo.error) {
+		  demo.start();
+		} else {
+		  console.error(demo.error);
+		}
+	});
+
 });

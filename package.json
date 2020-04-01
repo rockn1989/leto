@@ -17,6 +17,7 @@
   "author": "Artem Ryabkov",
   "license": "ISC",
   "dependencies": {
+    "countup.js": "^2.0.4",
     "del": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",

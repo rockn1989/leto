@@ -19,7 +19,7 @@
 	<!-- begin total-section -->
 	<section class="total-section">
 		<div class="uk-container">
-			<div class="total-section__title uk-text-center">800 000 000</div>
+			<div id="counter" class="total-section__title uk-text-center js__anim-number count" uk-scrollspy="cls: slide-up; delay: 300" data-val="800000000">0</div>
 			<div class="total-section__inner">
 				<h2 class="title-h2 uk-text-center">Яиц в год</h2>
 				<ul class="total-section-list uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
@@ -266,6 +266,8 @@
 			</div><!-- end composition-slider -->
 		</div>
 	</section>
+
+	{% include './includes/components/steps-work-section.twig' %}
 
 	<!-- begin products-section -->
 	<section class="products-section">
