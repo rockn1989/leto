@@ -2,7 +2,15 @@
 /*______ About egg ______*/
 
 	.about-egg {
-		margin-bottom: 100px;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 50px;
+		}
+		@media (min-width: $tablet-w) {
+			margin-bottom: 80px;
+		};
+		@media (min-width: $desk-w) {
+			margin-bottom: 100px;
+		};
 		&__img {
 			margin-bottom: 40px;
 		}

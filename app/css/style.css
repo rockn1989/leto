@@ -410,51 +410,69 @@ p {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  background: url("../img/icon-svg/step-line.svg") center 0 no-repeat;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .steps-list li {
   position: relative;
-  width: 30%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .steps-list li:before {
   position: absolute;
-  top: 50%;
+  top: 120px;
   left: 0;
   counter-increment: item;
   content: "0" counter(item);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   z-index: 500;
   color: #549537;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  -o-transition: opacity .3s ease;
+  -moz-transition: opacity .3s ease;
+  transition: opacity .3s ease;
 }
 
-.steps-list li:nth-child(1) {
-  -webkit-transform: translateX(40px);
-  -moz-transform: translateX(40px);
-  -ms-transform: translateX(40px);
-  transform: translateX(40px);
+.steps-list li:nth-child(1):before {
+  -webkit-transition-delay: 1.2s;
+  -moz-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+  transition-delay: 1.2s;
 }
 
 .steps-list li:nth-child(1) .round-item__img img {
   top: -30px;
 }
 
-.steps-list li:nth-child(2) {
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.steps-list li:nth-child(2):before {
+  -webkit-transition-delay: 1.4s;
+  -moz-transition-delay: 1.4s;
+  -o-transition-delay: 1.4s;
+  transition-delay: 1.4s;
 }
 
 .steps-list li:nth-child(2) .round-item__img img {
   top: 30px;
+}
+
+.steps-list li:nth-child(3):before {
+  -webkit-transition-delay: 1.6s;
+  -moz-transition-delay: 1.6s;
+  -o-transition-delay: 1.6s;
+  transition-delay: 1.6s;
 }
 
 .steps-list li:nth-child(3) .round-item__img img {
@@ -463,21 +481,25 @@ p {
 }
 
 .steps-list li:nth-child(4) {
-  -webkit-transform: translateY(40px);
-  -moz-transform: translateY(40px);
-  -ms-transform: translateY(40px);
-  transform: translateY(40px);
+  margin-top: 80px;
+}
+
+.steps-list li:nth-child(4):before {
+  -webkit-transition-delay: 1.8s;
+  -moz-transition-delay: 1.8s;
+  -o-transition-delay: 1.8s;
+  transition-delay: 1.8s;
 }
 
 .steps-list li:nth-child(4) .round-item__img img {
   top: -30px;
 }
 
-.steps-list li:nth-child(5) {
-  -webkit-transform: translateX(-40%) translateY(25%);
-  -moz-transform: translateX(-40%) translateY(25%);
-  -ms-transform: translateX(-40%) translateY(25%);
-  transform: translateX(-40%) translateY(25%);
+.steps-list li:nth-child(5):before {
+  -webkit-transition-delay: 2s;
+  -moz-transition-delay: 2s;
+  -o-transition-delay: 2s;
+  transition-delay: 2s;
 }
 
 .steps-list li:nth-child(5) .round-item__img img {
@@ -486,14 +508,14 @@ p {
 
 .round-item {
   position: relative;
-  padding-top: 160px;
   max-width: 400px;
 }
 
 .round-item__img {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 25px;
+  margin-bottom: -80px;
   width: 230px;
   height: 230px;
   z-index: 24;
@@ -527,6 +549,7 @@ p {
 
 .round-item .btn {
   margin-top: 20px;
+  margin-bottom: 0;
   padding: 0 35px;
   height: 60px;
   max-width: 255px;
@@ -2420,6 +2443,11 @@ svg {
   transform: translate(-50%, -50%);
 }
 
+.typebox-list .item__img .content-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .typebox-list .item__text {
   text-align: center;
   font-size: 18px;
@@ -2534,10 +2562,6 @@ svg {
 
 /*______ Total section ______*/
 
-.total-section {
-  margin-bottom: 100px;
-}
-
 .total-section__title {
   color: #9bc045;
   font-weight: bold;
@@ -2601,10 +2625,6 @@ svg {
 /*______ End Total section ______*/
 
 /*______ Offer section ______*/
-
-.offer-section {
-  margin-bottom: 130px;
-}
 
 .offer-section__inner {
   position: relative;
@@ -2749,10 +2769,6 @@ svg {
 
 /*______ About egg ______*/
 
-.about-egg {
-  margin-bottom: 100px;
-}
-
 .about-egg__img {
   margin-bottom: 40px;
 }
@@ -2769,10 +2785,6 @@ svg {
 /*______ End About egg ______*/
 
 /*______ Tabs ______*/
-
-.products-section {
-  margin: 120px 0;
-}
 
 .tab-sw {
   margin: 0;
@@ -2880,6 +2892,10 @@ svg {
 /*______ End Tabs ______*/
 
 /*______ MAIN CONTENT ______*/
+
+.steps-work-section__inner.uk-scrollspy-inview li:before {
+  opacity: 1;
+}
 
 /*______ END MAIN CONTENT ______*/
 
@@ -3393,6 +3409,24 @@ svg {
     margin-bottom: 30px;
   }
 
+  .steps-list {
+    margin-top: 50px;
+    display: block;
+  }
+
+  .steps-list li {
+    margin: 0 auto 30px;
+    max-width: 320px;
+  }
+
+  .round-item__img {
+    margin-bottom: -50px;
+  }
+
+  .round-item br {
+    display: none;
+  }
+
   .uk-container {
     padding: 0 15px;
   }
@@ -3483,9 +3517,17 @@ svg {
     max-width: 400px;
   }
 
+  .total-section {
+    margin-bottom: 50px;
+  }
+
   .total-section__title {
     font-size: 80px;
     line-height: 85px;
+  }
+
+  .total-section__title {
+    margin-bottom: 20px;
   }
 
   .green-number {
@@ -3493,11 +3535,19 @@ svg {
     line-height: 32px;
   }
 
+  .offer-section {
+    margin-bottom: 60px;
+  }
+
   .news-list .item {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 400px;
+  }
+
+  .about-egg {
+    margin-bottom: 50px;
   }
 
   .tab-sw li a {
@@ -3509,6 +3559,18 @@ svg {
   }
 
   .slider-section {
+    margin-bottom: 60px;
+  }
+
+  .products-section {
+    margin-bottom: 60px;
+  }
+
+  .news-section {
+    margin-bottom: 60px;
+  }
+
+  .steps-work-section {
     margin-bottom: 60px;
   }
 
@@ -3549,6 +3611,26 @@ svg {
   .title-h2 {
     font-size: 35px;
     line-height: 40px;
+  }
+
+  .steps-list {
+    margin-top: 70px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .steps-list li {
+    width: 50%;
+  }
+
+  .round-item br {
+    display: block;
   }
 
   .main-nav {
@@ -3689,6 +3771,14 @@ svg {
     margin-bottom: 50px;
   }
 
+  .steps-list {
+    margin-top: 120px;
+  }
+
+  .round-item__img {
+    margin-bottom: -80px;
+  }
+
   .uk-container {
     padding: 0 30px;
   }
@@ -3730,9 +3820,17 @@ svg {
     bottom: -240px;
   }
 
+  .total-section {
+    margin-bottom: 80px;
+  }
+
   .total-section__title {
     font-size: 120px;
     line-height: 127.5px;
+  }
+
+  .total-section-list {
+    padding-top: 60px;
   }
 
   .green-number {
@@ -3740,11 +3838,31 @@ svg {
     line-height: 48px;
   }
 
+  .offer-section {
+    margin-bottom: 90px;
+  }
+
+  .about-egg {
+    margin-bottom: 80px;
+  }
+
   .advantages-h-section {
     margin-bottom: 90px;
   }
 
   .slider-section {
+    margin-bottom: 90px;
+  }
+
+  .products-section {
+    margin-bottom: 90px;
+  }
+
+  .news-section {
+    margin-bottom: 90px;
+  }
+
+  .steps-work-section {
     margin-bottom: 90px;
   }
 
@@ -3789,6 +3907,45 @@ svg {
   .title-h2 {
     font-size: 56px;
     line-height: 64px;
+  }
+
+  .steps-list {
+    margin-top: 200px;
+  }
+
+  .steps-list li {
+    width: 30%;
+    margin: 0;
+    max-width: none;
+  }
+
+  .steps-list li:nth-child(1) {
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+
+  .steps-list li:nth-child(2) {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .steps-list li:nth-child(4) {
+    margin-top: 0;
+    -webkit-transform: translate(15px, 70px);
+    -moz-transform: translate(15px, 70px);
+    -ms-transform: translate(15px, 70px);
+    transform: translate(15px, 70px);
+  }
+
+  .steps-list li:nth-child(5) {
+    -webkit-transform: translateX(-40%) translateY(25%);
+    -moz-transform: translateX(-40%) translateY(25%);
+    -ms-transform: translateX(-40%) translateY(25%);
+    transform: translateX(-40%) translateY(25%);
   }
 
   .padding-left-25 {
@@ -4056,6 +4213,10 @@ svg {
     max-width: none;
   }
 
+  .total-section {
+    margin-bottom: 100px;
+  }
+
   .total-section__title {
     font-size: 160px;
     line-height: 170px;
@@ -4064,6 +4225,10 @@ svg {
   .green-number {
     font-size: 56px;
     line-height: 64px;
+  }
+
+  .offer-section {
+    margin-bottom: 130px;
   }
 
   .news-list .item {
@@ -4075,11 +4240,27 @@ svg {
     max-width: 320px;
   }
 
+  .about-egg {
+    margin-bottom: 100px;
+  }
+
   .advantages-h-section {
     margin-bottom: 130px;
   }
 
   .slider-section {
+    margin-bottom: 130px;
+  }
+
+  .products-section {
+    margin-bottom: 130px;
+  }
+
+  .news-section {
+    margin-bottom: 130px;
+  }
+
+  .steps-work-section {
     margin-bottom: 130px;
   }
 
@@ -4099,15 +4280,19 @@ svg {
   }
 }
 
-@media (min-width: 1360px) {
-  .brands-slider .slider__arrows {
-    max-width: 1300px;
+@media (min-width: 1300px) {
+  .steps-list {
+    background: url("../img/icon-svg/step-line.svg") center 0 no-repeat;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1360px) {
   .total-section__inner {
     background: url("../img/ui/long-line.svg") center 30px no-repeat;
+  }
+
+  .brands-slider .slider__arrows {
+    max-width: 1300px;
   }
 }
 

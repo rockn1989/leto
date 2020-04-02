@@ -24,4 +24,49 @@
 	};
 }
 
+.products-section {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
+}
+
+.news-section {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
+}
+
+.steps-work-section {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
+	&__inner {
+		&.uk-scrollspy-inview {
+			li {
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
 /*______ END MAIN CONTENT ______*/

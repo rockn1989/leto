@@ -10,6 +10,7 @@ $(function() {
 		const centerBox = document.querySelector('.center-box');
 		const advantagesList = document.querySelector('.advantages-list');
 		const windowHeight = document.documentElement.clientHeight;
+		const windowDivider = windowHeight > 900 ? 3 : 5;
 
 		if($(document).outerWidth() > (960 + 17)) {
 			$(document).bind('scroll', function (e) {
@@ -35,8 +36,8 @@ $(function() {
 			const watchEl = el;
 
 			let centerBoxPos = watchEl.getBoundingClientRect().top;
-
-			if(windowHeight - centerBoxPos >= (windowHeight/2)) {
+			console.log(centerBoxPos)
+			if(windowHeight - centerBoxPos >= (windowHeight/windowDivider)) {
 				$(document).unbind();
 				flyBox.classList.add('hidden');
 				watchEl.classList.add('show');
@@ -173,19 +174,29 @@ $(function() {
 
 	/*______ Animatio Number ______*/
 
-	$('.js__anim-number').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
-		const options = {
-		  separator: ' ',
-				duration: 3
-		};
+	$.each($('.js__anim-number'), function (idx, el) {
 
-		let demo = new CountUp('counter', 800000000, options);
+		let elId = $(el).attr('id');
+		let numberValue = $(el).data('val');
 
-		if (!demo.error) {
-		  demo.start();
-		} else {
-		  console.error(demo.error);
-		}
-	});
+		console.log($(el))
+
+		$(el).on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+
+
+			const options = {
+			  separator: ' ',
+					duration: 2
+			};
+
+			let counter = new CountUp(elId, numberValue, options);
+
+			if (!counter.error) {
+				counter.start();
+			} else {
+			  console.error(counter.error);
+			}
+		});
+	})
 
 });

@@ -19,10 +19,12 @@
 	<!-- begin total-section -->
 	<section class="total-section">
 		<div class="uk-container">
-			<div id="counter" class="total-section__title uk-text-center js__anim-number count" uk-scrollspy="cls: slide-up; delay: 300" data-val="800000000">0</div>
+			<div id="counter-1" class="total-section__title uk-text-center js__anim-number count" uk-scrollspy="cls: slide-up; delay: 300" data-val="800000000">0</div>
 			<div class="total-section__inner">
-				<h2 class="title-h2 uk-text-center">Яиц в год</h2>
-				<ul class="total-section-list uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
+
+				<h2 class="title-h2 uk-text-center" uk-scrollspy="cls: slide-up;">Яиц в год</h2>
+
+				<ul class="total-section-list uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid uk-scrollspy="target: .green-number, .item;cls: slide-right; delay: 200">
 					<li class="item-wrapper">
 						<div class="item">
 							<div class="item__img">
@@ -37,7 +39,7 @@
 							</div>
 							<div class="item__text uk-text-center">
 								<h3 class="title-h3">Производим</h3>
-								<div class="green-number">130 000</div>
+								<div id="counter-2" class="green-number js__anim-number count" data-val="130000">0</div>
 								<div class="text">тонн корма в год</div>
 							</div>
 						</div>
@@ -57,7 +59,7 @@
 							</div>
 							<div class="item__text uk-text-center">
 								<h3 class="title-h3">Содержим</h3>
-								<div class="green-number">2 600 000</div>
+								<div id="counter-3" class="green-number js__anim-number count" data-val="2600000">0</div>
 								<div class="text">кур-несушек</div>
 							</div>
 						</div>
@@ -77,7 +79,7 @@
 							</div>
 							<div class="item__text uk-text-center">
 								<h3 class="title-h3">Продаём</h3>
-								<div class="green-number">70 000 000</div>
+								<div id="counter-4" class="green-number js__anim-number count" data-val="70000000">0</div>
 								<div class="text">упаковок в год</div>
 							</div>
 						</div>
@@ -88,7 +90,7 @@
 	</section><!-- end total-section -->
 
 	<!-- begin about-egg -->
-	<section class="about-egg uk-text-center">
+	<section class="about-egg uk-text-center" uk-scrollspy="cls: slide-up;">
 		<div class="uk-container">
 			<div class="about-egg__img">
 				<img src="img/media/egg-2.png" alt="">
@@ -228,8 +230,8 @@
 
 	<section class="offer-section">
 		<div class="uk-container">
-			<h2 class="title-h2 uk-text-center">Открыты новым идеям</h2>
-			<div class="offer-section__inner uk-text-center">
+			<h2 class="title-h2 uk-text-center" uk-scrollspy="cls: slide-up;">Открыты новым идеям</h2>
+			<div class="offer-section__inner uk-text-center" uk-scrollspy="cls: slide-up; delay: 300">
 				<img data-src="img/media/chicken.png" alt="" uk-img>
 				<a href="" class="btn btn--small btn--yellow"><span>Предложить идею</span></a>
 			</div>
@@ -240,7 +242,7 @@
 		<div class="uk-container uk-container--small">
 			<h2 class="uk-text-center" uk-scrollspy="cls:slide-up">Самое ценное для нас – люди, которые работают для Вас</h2>
 			<!-- begin composition-slider -->
-			<div class="custom-slider">
+			<div class="custom-slider" uk-scrollspy="cls: slide-up; delay: 300">
 				<div class="uk-container">
 					<div class="slider">
 						<div class="slide">
@@ -272,7 +274,7 @@
 	<!-- begin products-section -->
 	<section class="products-section">
 		<div class="uk-container">
-			<h2 class="title-h2 uk-text-center">Наша продукция доступна в магазинах</h2>
+			<h2 class="title-h2 uk-text-center" uk-scrollspy="cls: slide-up;">Наша продукция доступна в магазинах</h2>
 			<div class="products-section__inner">
 				<img class="ellipse-abs-1 uk-visible@l" src="img/icon-svg/large-ellipse-1.svg" alt="">
 				<img class="ellipse-abs-2 uk-visible@l" src="img/icon-svg/large-ellipse-2.svg" alt="">
@@ -367,7 +369,7 @@
 	<!-- begin news-section -->
 	<section class="news-section wave-bg" uk-scrollspy="cls: wave-anim">
 		<div class="uk-container">
-			<h2 class="title-h2 uk-text-center">Новости компании «Лето-Групп»</h2>
+			<h2 class="title-h2 uk-text-center" uk-scrollspy="cls: slide-up;">Новости компании «Лето-Групп»</h2>
 			<ul class="news-list" uk-scrollspy="target: .item; cls: slide-right; delay: 300">
 				<li class="item">
 					<article>

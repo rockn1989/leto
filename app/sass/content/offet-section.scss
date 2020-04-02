@@ -2,7 +2,15 @@
 /*______ Offer section ______*/
 
 .offer-section {
-	margin-bottom: 130px;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
 	&__inner {
 		position: relative;
 		.btn {

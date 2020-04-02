@@ -2,14 +2,25 @@
 /*______ Total section ______*/
 
 .total-section {
-	margin-bottom: 100px;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 50px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-bottom: 80px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 100px;
+	};
 	&__title {
 		@include text-size(160, 170);
 		color: $salat;
 		font-weight: bold;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 20px;
+		}
 	}
 	&__inner {
-		@media (min-width: 1400px) {
+		@media (min-width: 1360px) {
 			background: url('../img/ui/long-line.svg') center 30px no-repeat;
 		};
 	}
@@ -17,6 +28,9 @@
 
 .total-section-list {
 	@include list-reset;
+	@media (min-width: $tablet-w) {
+		padding-top: 60px;
+	};
 	.item {
 		&__img {
 			position: relative;
