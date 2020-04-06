@@ -5,12 +5,24 @@
 	@include list-reset;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	li {
-		margin: 0 10px;
 		display: block;
+		@media (min-width: $mob-xs) {
+			width: 100%;
+			margin: 0 0 15px;
+		}
+		@media (min-width: $mob-s) {
+			width: 30%;
+			margin: 0 5px;
+		};
+		@media (min-width: $tablet-w) {
+			width: auto;
+			margin: 0 15px;
+		};
 		a {
 			position: relative;
-			padding: 0 3.25em;
+			padding: 0 1.25em;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -27,7 +39,16 @@
 				font-size: 14px;
 			}
 			@media (min-width: $mob-s) {
+				font-size: 12px;
+				height: 50px;
+			};
+			@media (min-width: $tablet-w) {
+				padding: 0 2.25em;
 				font-size: 16px;
+				height: 60px;
+			};
+			@media (min-width: $desk-w) {
+				padding: 0 3.25em;
 			};
 			&:after {
 				content: '';
@@ -71,9 +92,22 @@
 .custom-tabs{
 	position: relative;
 	z-index: 20;
-	min-height: 800px;
+	/* min-height: 800px; */
 }
 
+.contacts-tabs {
+	.uk-switcher {
+		padding-top: 40px;
+		@media (min-width: $desk-w) {
+			padding-top: 95px;
+		};
+	}
+}
 
+.address-tabs {
+	.uk-switcher {
+		padding-top: 50px;
+	}
+}
 
 /*______ End Tabs ______*/

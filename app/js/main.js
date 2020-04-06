@@ -2,9 +2,10 @@
 
 $(function() {	
 
-	/*______ Fly box moving ______*/
+	/*______ Передвижение летающей коробки ______*/
 
 	if($('.fly-box').length > 0) {
+
 		const flyBox = document.querySelector('.fly-box');
 		const flyBoxPositionBottom = 240;
 		const centerBox = document.querySelector('.center-box');
@@ -14,6 +15,7 @@ $(function() {
 
 		if($(document).outerWidth() > (960 + 17)) {
 			$(document).bind('scroll', function (e) {
+
 				if(windowHeight - (flyBox.getBoundingClientRect().top + (flyBox.offsetHeight/2)) >= (windowHeight/2)) {
 					movingBox(flyBox, $(window).scrollTop());
 					watchToElementPosition(centerBox);
@@ -26,6 +28,7 @@ $(function() {
 
 		function movingBox(el, counter) {
 			if(counter >= flyBoxPositionBottom) {
+				console.log(el.style.bottom)
 				el.style.bottom  = (counter - flyBoxPositionBottom)*(-1) +'px';	
 			};
 			
@@ -36,7 +39,7 @@ $(function() {
 			const watchEl = el;
 
 			let centerBoxPos = watchEl.getBoundingClientRect().top;
-			console.log(centerBoxPos)
+
 			if(windowHeight - centerBoxPos >= (windowHeight/windowDivider)) {
 				$(document).unbind();
 				flyBox.classList.add('hidden');
@@ -44,25 +47,7 @@ $(function() {
 				advantagesList.classList.add('show');
 			};
 		};
-	}
-
-/*if ("IntersectionObserver" in window) {
-	const flyBox = document.querySelector('.fly-box');
-	const flyBoxObserv = new IntersectionObserver(function(entries, observer) {
-		entries.forEach(function(entry) {
-			if (entry.isIntersecting && $(window).scrollTop() < 1000) {
-				entry.target.classList.remove('hidden');
-				flyBoxObserv.unobserve(flyBox)
-			}
-			
-		})
-	}, {
-		root: null,
-		threshold: 0.5
-	});
-	flyBoxObserv.observe(flyBox);
-}
-*/
+	};
 
 	/*______ Анимация круглого таймера ______*/
 
@@ -172,7 +157,7 @@ $(function() {
 
 
 
-	/*______ Animatio Number ______*/
+	/*______ Анимация цифр ______*/
 
 	$.each($('.js__anim-number'), function (idx, el) {
 
@@ -197,6 +182,17 @@ $(function() {
 			  console.error(counter.error);
 			}
 		});
-	})
+	});
+
+
+	/*______ Выбор файл в форме ______*/
+
+	$('.custom-form input[type="file"]').on('change', function (e) {
+		const file = $(this).get(0).files[0];
+		
+		if (file) {
+			$(this).siblings('.file-name').text(file.name);	
+		};
+	});
 
 });

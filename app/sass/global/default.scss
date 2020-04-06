@@ -120,10 +120,12 @@ svg {
 	position: relative;
 	background-color: $bgColor;
 	@media (min-width: $mob-xs) {
+		margin-bottom: 160px !important;
 		padding: 60px 0;
 	};
 	@media (min-width: $desk-w) {
 		padding: 70px 0;
+		margin-bottom: 170px !important;
 	};
 	&:before,&:after {
 		content: '';
@@ -153,11 +155,11 @@ svg {
 .wave-anim {
 	&.wave-bg {
 		&:before {
-			transform: translateY(-50px);
+			transform: translateY(-48px);
 			//animation: move-wave 3s linear infinite alternate;
 		}
 		&:after {
-			transform: translateY(50px);
+			transform: translateY(48px);
 			//animation: move-wave 3s linear infinite alternate;
 		}
 	}

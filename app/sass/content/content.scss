@@ -34,9 +34,38 @@
 	@media (min-width: $desk-w) {
 		margin-bottom: 130px;
 	};
+	&__inner {
+		@media (min-width: $desk-w) {
+			min-height: 800px;
+		};
+	}
 }
 
 .news-section {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
+}
+
+.contacts-section {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
+}
+
+.career-section {
 	@media (min-width: $mob-xs) {
 		margin-bottom: 60px;
 	};

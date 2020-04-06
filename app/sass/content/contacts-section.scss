@@ -1,0 +1,47 @@
+
+/*______ Page contacts ______*/
+
+.contacts-section {
+	border-bottom: 1px solid #ECE6E1;
+	@media (min-width: $mob-xs) {
+		padding: 40px 0;
+	}
+	@media (min-width: $mob-s) {
+		padding: 60px 0;
+	};
+	@media (min-width: $tablet-w) {
+		padding: 80px 0;
+	};
+	@media (min-width: $desk-w) {
+		padding: 100px 0;
+	};
+	.contacts {
+		margin-bottom: 30px;
+		@media (min-width: $tablet-w) {
+			margin-bottom: 65px;
+		};
+	}
+	.slogan {
+		@media (min-width: $tablet-w) {
+			margin-bottom: 50px;
+		};
+		@media (min-width: $desk-w) {
+			margin-bottom: 80px;
+		};
+	}
+}
+
+.contacts {
+	&__tel {
+		margin-bottom: 14px;
+		display: inline-block;
+		font-size: 24px;
+		color: $btColor;
+		font-family: $secondFont;
+		&--large {
+			@include text-size(56, 64);
+		}
+	}
+}
+
+/*______ End Page contacts ______*/

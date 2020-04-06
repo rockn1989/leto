@@ -2,7 +2,10 @@
 /*______ New Section ______*/
 
 .news-section {
-
+	&.main {
+		padding: 100px 0;
+		border-bottom: 1px solid #ECE6E1;
+	}
 }
 
 .news-list {
@@ -10,26 +13,57 @@
 	margin-bottom: 80px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	.item {
+	justify-content: flex-start;
+	.news-item {
 		position: relative;
-		margin: 0 auto 50px;
-
-		flex-basis: calc(100%/3);
-		&:last-child {
-			margin-bottom: 0;
-		}
-		@media (min-width: $mob-xs) {
+		margin: 0 0 50px;
+		&.news-item--big {
+			margin-bottom: 70px;
 			flex-basis: 100%;
-			max-width: 400px;
-		};
-		@media (min-width: $desk-w) {
-			margin-bottom: 0;
-			flex-basis: calc(100%/3);
-			max-width: 320px;
-		};
+			max-width: 100%;
+			article {
+				max-width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+				header,
+				section {
+					flex-basis: 100%;
+					@media (min-width: $tablet-w) {
+						flex-basis: 50%;
+					};
+				}
+				header {
+					margin: 0;
+					padding: 0;
+					@media (min-width: $tablet-w) {
+						padding-right: 50px;
+					};
+				}
+				figure {
+					position: static;
+					transform: none;
+					justify-content: center;
+					@media (min-width: $tablet-w) {
+						justify-content: flex-end;
+					};
+				}
+				time {
+					bottom: auto;
+					top: 40px;
+				}
+				section {
+					@media (min-width: $tablet-w) {
+						padding-right: 6.5%;
+					};
+				}
+			}
+		}
 	}
 	article {
+		margin: 0 auto;
+		max-width: 320px;
 		header {
 			position: relative;
 			margin: 0 auto 20px;
@@ -45,7 +79,7 @@
 			z-index: 15;
 			display: flex;
 			justify-content: center;
-			align-items: center;
+			align-news-items: center;
 			transform: translate(-50%, -50%);
 		}
 		time {
@@ -80,21 +114,21 @@
 			max-width: 100%;
 			max-height: 100%;
 		}
-		&:nth-child(1) {
+		&:nth-child(1n) {
 			figure {
 				img {
 					mask-image: url('../img/icon-svg/ellipse-1.svg');
 				}
 			}
 		}
-		&:nth-child(2) {
+		&:nth-child(2n) {
 			figure {
 				img {
 					mask-image: url('../img/icon-svg/ellipse-2.svg');
 				}
 			}
 		}
-		&:nth-child(3) {
+		&:nth-child(3n) {
 			figure {
 				img {
 					mask-image: url('../img/icon-svg/ellipse-3.svg');

@@ -298,7 +298,9 @@
 			}
 		}
 		&:nth-child(4) {
-			margin-top: 80px;
+			@media (min-width: $tablet-w) {
+				margin-top: 80px;
+			};
 			@media (min-width: $desk-w) {
 				margin-top: 0;
 				transform: translate(15px, 70px);
@@ -381,6 +383,63 @@
 		@media (min-width: $mob-s) {
 			display: block;
 		};
+	}
+}
+
+.slogan {
+	margin-bottom: 40px;
+	font-size: 18px;
+	line-height: 24px;
+	@media (min-width: $tablet-w) {
+		font-size: 24px;
+		line-height: 30px;
+	};
+}
+
+
+.subtitle {
+	margin-bottom: 10px;
+	font-size: 16px;
+	line-height: 22px;
+	color: #5b6356;
+	&--large {
+		margin-bottom: 25px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.green-link {
+	color: $green;
+	&--large {
+		font-size: 24px;
+		line-height: 26px;
+	}
+}
+
+.copyright {
+	margin-bottom: 10px;
+	line-height: 24px;
+}
+
+.politics {
+	color: $tColor;
+}
+
+.dev-ae {
+	position: relative;
+	margin-top: 10px;
+	padding-left: 30px;
+	display: inline-block;
+	line-height: 24px;
+	color: $tColor;
+	@media (min-width: $mob-s) {
+		margin-top: 0;
+	};
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 }
 

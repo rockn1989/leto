@@ -62,6 +62,10 @@
 
 /*______ Main Nav ______*/
 
+nav.nav {
+	border-bottom: 1px solid #ece6e1;
+}
+
 .main-nav {
 	position: relative;
 	@include list-reset;
