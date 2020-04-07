@@ -119,16 +119,17 @@
 .fly-box {
 	position: absolute;
 	left: 50%;
-	
 	transform: translateX(-50%);
 	z-index: 980;
 	min-width: 320px;
 	transition: bottom .35s linear;
+	transition: opacity .5s, visibility .5s ease;
 	@media (min-width: $mob-xs) {
 		bottom: -120px;
 	};
 	@media (min-width: $tablet-w) {
-		bottom: -240px;
+		bottom: auto;
+		top: calc(100% - 147px);
 	};
 	@media (min-width: $desk-w) {
 		visibility: hidden;
@@ -141,6 +142,8 @@
 		transition: opacity .5s, visibility .5s ease;
 	}
 	&.hidden {
+		opacity: 0;
+		visibility: hidden;
 		img {
 			@media (min-width: $desk-w) {
 				opacity: 0;

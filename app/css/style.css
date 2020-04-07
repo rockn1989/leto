@@ -2082,6 +2082,10 @@ nav.nav {
   -o-transition: bottom .35s linear;
   -moz-transition: bottom .35s linear;
   transition: bottom .35s linear;
+  -webkit-transition: opacity .5s, visibility .5s ease;
+  -o-transition: opacity .5s, visibility .5s ease;
+  -moz-transition: opacity .5s, visibility .5s ease;
+  transition: opacity .5s, visibility .5s ease;
 }
 
 .fly-box.uk-visible {
@@ -2094,6 +2098,11 @@ nav.nav {
   -o-transition: opacity .5s, visibility .5s ease;
   -moz-transition: opacity .5s, visibility .5s ease;
   transition: opacity .5s, visibility .5s ease;
+}
+
+.fly-box.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /*______ End Main Banner ______*/
@@ -4158,7 +4167,10 @@ nav.nav {
   }
 
   .fly-box {
-    bottom: -240px;
+    bottom: auto;
+    top: -webkit-calc(100% - 147px);
+    top: -moz-calc(100% - 147px);
+    top: calc(100% - 147px);
   }
 
   .total-section {
