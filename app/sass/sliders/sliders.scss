@@ -238,6 +238,9 @@
 
 	.slide-prev {
 		left: 0;
+		@media (min-width: $desk-w) {
+			left: -50px;
+		};
 		@media (min-width: 1460px) {
 			left: -200px;	
 		};
@@ -245,6 +248,9 @@
 
 	.slide-next {
 		right: 0;
+		@media (min-width: $desk-w) {
+			right: -50px;
+		};
 		@media (min-width: 1460px) {
 			right: -200px;	
 		};

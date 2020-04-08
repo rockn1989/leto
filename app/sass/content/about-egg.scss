@@ -12,7 +12,28 @@
 			margin-bottom: 100px;
 		};
 		&__img {
-			margin-bottom: 40px;
+			position: relative;
+			margin:0 auto 40px;
+			max-width: 646px;
+			svg {
+				position: absolute;
+				top: -25px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+				height: 100%;
+				z-index: 14;
+				@media (min-width: $mob-s) {
+					top: -75px;
+				};
+				@media (min-width: $desk-w) {
+					top: calc(50% - 70px);
+				};
+			}
+			img {
+				position: relative;
+				z-index: 15;
+			}
 		}
 		&__text {
 			margin:  0 auto;
@@ -21,6 +42,19 @@
 			line-height: 24px;
 			font-weight: bold;
 			font-family: $secondFont;
+		}
+		&.show {
+			@media (min-width: $desk-w) {
+				svg {
+					transform: translate(-50%, 0) scale(1);
+					&.yellow-ellipse-3 {
+						animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+					}
+					&.yellow-ellipse-4 {
+						animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
+					}
+				}
+			};
 		}
 	}
 

@@ -106,7 +106,46 @@
 
 .address-tabs {
 	.uk-switcher {
+		position: relative;
 		padding-top: 50px;
+		li {
+			
+			height: 500px;
+			overflow: hidden;
+			@media (min-width: $mob-xs) {
+				height: 200px;
+			};
+			@media (min-width: $mob-s) {
+				height: 300px;
+			};
+			@media (min-width: $tablet-w) {
+				height: 500px;
+			};
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 64px;
+				height: 64px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: url('../img/ui/pin.svg') center no-repeat;
+				background-size: 100%;
+				z-index: 250;
+			}
+			div {
+				position: relative;
+				z-index: 120;
+			}
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 110;
+			}
+		}
 	}
 }
 

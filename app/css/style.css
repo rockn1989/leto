@@ -454,7 +454,7 @@ p {
 }
 
 .steps-list li:nth-child(1) .round-item__img img {
-  top: -30px;
+  top: -10px;
 }
 
 .steps-list li:nth-child(2):before {
@@ -553,6 +553,11 @@ p {
 
 .slogan {
   margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.slogan p {
   font-size: 18px;
   line-height: 24px;
 }
@@ -1377,7 +1382,6 @@ svg {
 }
 
 .nav-list li {
-  margin-left: 30px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1587,10 +1591,10 @@ nav.nav {
 .logo1 a:before {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
   background-color: #ffb422;
   background: -moz-linear-gradient(15deg, #ff8100 0%, #ffb906 100%);
   background: -o-linear-gradient(15deg, #ff8100 0%, #ffb906 100%);
@@ -2532,6 +2536,8 @@ nav.nav {
 .typebox-list .item__img .content-img img {
   max-width: 100%;
   max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .typebox-list .item__text {
@@ -2934,7 +2940,27 @@ nav.nav {
 /*______ About egg ______*/
 
 .about-egg__img {
-  margin-bottom: 40px;
+  position: relative;
+  margin: 0 auto 40px;
+  max-width: 646px;
+}
+
+.about-egg__img svg {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: 14;
+}
+
+.about-egg__img img {
+  position: relative;
+  z-index: 15;
 }
 
 .about-egg__text {
@@ -3060,7 +3086,46 @@ nav.nav {
 }
 
 .address-tabs .uk-switcher {
+  position: relative;
   padding-top: 50px;
+}
+
+.address-tabs .uk-switcher li {
+  height: 500px;
+  overflow: hidden;
+}
+
+.address-tabs .uk-switcher li:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: url("../img/ui/pin.svg") center no-repeat;
+  background-size: 100%;
+  z-index: 250;
+}
+
+.address-tabs .uk-switcher li div {
+  position: relative;
+  z-index: 120;
+}
+
+.address-tabs .uk-switcher li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 110;
 }
 
 /*______ End Tabs ______*/
@@ -3821,16 +3886,13 @@ nav.nav {
   }
 
   .total-section {
-    margin-bottom: 50px;
-  }
-
-  .total-section__title {
-    font-size: 80px;
-    line-height: 85px;
+    margin-bottom: 120px;
   }
 
   .total-section__title {
     margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .green-number {
@@ -3862,6 +3924,10 @@ nav.nav {
 
   .tab-sw li a {
     font-size: 14px;
+  }
+
+  .address-tabs .uk-switcher li {
+    height: 200px;
   }
 
   .advantages-h-section {
@@ -4024,9 +4090,13 @@ nav.nav {
     margin: 0 0 30px;
   }
 
+  .total-section {
+    margin-bottom: 150px;
+  }
+
   .total-section__title {
-    font-size: 100px;
-    line-height: 106.25px;
+    font-size: 70px;
+    line-height: 85px;
   }
 
   .green-number {
@@ -4043,6 +4113,10 @@ nav.nav {
     line-height: 40px;
   }
 
+  .about-egg__img svg {
+    top: -75px;
+  }
+
   .tab-sw li {
     width: 30%;
     margin: 0 5px;
@@ -4051,6 +4125,10 @@ nav.nav {
   .tab-sw li a {
     font-size: 12px;
     height: 50px;
+  }
+
+  .address-tabs .uk-switcher li {
+    height: 300px;
   }
 
   .footer__column-wrapper {
@@ -4129,6 +4207,11 @@ nav.nav {
     line-height: 30px;
   }
 
+  .slogan p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   .uk-container {
     padding: 0 30px;
   }
@@ -4139,6 +4222,10 @@ nav.nav {
 
   .uk-grid > * {
     padding-left: 30px;
+  }
+
+  .nav-list li {
+    margin-left: 20px;
   }
 
   .main-nav li:first-child:after {
@@ -4154,8 +4241,15 @@ nav.nav {
   }
 
   .logo1 {
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo1 a:before {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
   }
 
   .main-banner > .uk-container {
@@ -4174,12 +4268,12 @@ nav.nav {
   }
 
   .total-section {
-    margin-bottom: 80px;
+    margin-bottom: 180px;
   }
 
   .total-section__title {
-    font-size: 120px;
-    line-height: 127.5px;
+    font-size: 100px;
+    line-height: 120px;
   }
 
   .total-section-list {
@@ -4248,6 +4342,10 @@ nav.nav {
     padding: 0 2.25em;
     font-size: 16px;
     height: 60px;
+  }
+
+  .address-tabs .uk-switcher li {
+    height: 500px;
   }
 
   .advantages-h-section {
@@ -4374,6 +4472,10 @@ nav.nav {
     margin-bottom: 170px !important;
   }
 
+  .nav-list li {
+    margin-left: 30px;
+  }
+
   .main-nav li a {
     font-size: 16px;
   }
@@ -4385,6 +4487,13 @@ nav.nav {
   .logo1 {
     width: 150px;
     height: 150px;
+  }
+
+  .logo1 a:before {
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
   }
 
   .fly-box {
@@ -4634,7 +4743,7 @@ nav.nav {
   }
 
   .total-section {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
   }
 
   .total-section__title {
@@ -4666,6 +4775,31 @@ nav.nav {
 
   .about-egg {
     margin-bottom: 100px;
+  }
+
+  .about-egg__img svg {
+    top: -webkit-calc(50% - 70px);
+    top: -moz-calc(50% - 70px);
+    top: calc(50% - 70px);
+  }
+
+  .about-egg.show svg {
+    -webkit-transform: translate(-50%, 0) scale(1);
+    -moz-transform: translate(-50%, 0) scale(1);
+    -ms-transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  .about-egg.show svg.yellow-ellipse-3 {
+    -webkit-animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+    -moz-animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+    animation: scale 3s ease forwards, rotate-back 30s linear infinite 3s;
+  }
+
+  .about-egg.show svg.yellow-ellipse-4 {
+    -webkit-animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
+    -moz-animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
+    animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
   }
 
   .tab-sw li a {
@@ -4715,6 +4849,14 @@ nav.nav {
   .brands-slider .slider__arrows {
     display: block;
     max-width: 1140px;
+  }
+
+  .custom-slider .slide-prev {
+    left: -50px;
+  }
+
+  .custom-slider .slide-next {
+    right: -50px;
   }
 
   .tab-slider .brands-grid .row {

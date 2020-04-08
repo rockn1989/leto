@@ -44,9 +44,14 @@
 	@include list-reset;
 	font-size: 0;
 	li {
-		margin-left: 30px;
 		display: inline-block;
 		vertical-align: top;
+		@media (min-width: $tablet-w) {
+			margin-left: 20px;
+		};
+		@media (min-width: $desk-w) {
+			margin-left: 30px;
+		};
 		&:first-child {
 			margin-left: 0;
 		}
@@ -246,8 +251,8 @@ nav.nav {
 		height: 100px;
 	};
 	@media (min-width: $tablet-w) {
-		width: 125px;
-		height: 125px;
+		width: 120px;
+		height: 120px;
 	};
 	@media (min-width: $desk-w) {
 		width: 150px;
@@ -262,15 +267,27 @@ nav.nav {
 		&:before {
 			content: '';
 			position: absolute;
-			top: 5px;
-			left: 5px;
-			right: 5px;
-			bottom: 5px;
+			top: 4px;
+			left: 4px;
+			right: 4px;
+			bottom: 4px;
 			background-color: #ffb422;
 			background: linear-gradient(75deg, #ff8100 0%, #ffb906 100%);
 			z-index: 141;
 			border-radius: 75px 70px 60px 65px;
 			transition: all .3s ease;
+			@media (min-width: $tablet-w) {
+				top: 5px;
+				left: 5px;
+				right: 5px;
+				bottom: 5px;	
+			};
+			@media (min-width: $desk-w) {
+				top: 6px;
+				left: 6px;
+				right: 6px;
+				bottom: 6px;				
+			};
 		}
 		&:after {
 			content: '';

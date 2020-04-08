@@ -4,65 +4,6 @@ $(function() {
 
 	/*______ Передвижение летающей коробки ______*/
 
-/*	if($('.fly-box').length > 0) {
-
-		const flyBox = document.querySelector('.fly-box');
-		const flyBoxPos = flyBox.getBoundingClientRect().top;
-		
-		const centerBox = document.querySelector('.center-box');
-		const advantagesList = document.querySelector('.advantages-list');
-
-		const windowHeight = document.documentElement.clientHeight;
-
-		const flyBoxPositionBottom = windowHeight > 900 ? 40 : 280;
-
-		const windowDivider = windowHeight > 900 ? 3 : 5;
-
-
-		if($(document).outerWidth() > (1200 + 17)) {
-			$(document).bind('scroll', function (e) {
-
-				if(flyBox.getBoundingClientRect().top <=(windowHeight/2)) {
-					movingBox(flyBox, $(window).scrollTop());
-					watchToElementPosition(centerBox);
-				};
-			});
-		}
-
-
-		function movingBox(el, counter) {
-			if(counter > flyBoxPositionBottom) {
-				let pos = (windowHeight/2) ;
-
-				el.style.position = 'fixed';
-				el.style.top = pos + 'px';
-				el.style.bottom = 'unset';
-			}else {
-				returnToStart(el);
-			}
-			
-		};
-
-		function returnToStart(el) {
-			el.style.position = 'absolute';
-			el.style.top = 'calc(100% - 147px)';
-		}
-
-		function watchToElementPosition(el) {
-
-			const watchEl = el;
-
-			let centerBoxPos = watchEl.getBoundingClientRect().top;
-
-			if(windowHeight - centerBoxPos >= (windowHeight/windowDivider)) {
-				$(document).unbind();
-				flyBox.classList.add('hidden');
-				watchEl.classList.add('show');
-				advantagesList.classList.add('show');
-			};
-		};
-	};*/
-
 	if($(document).outerWidth() > (1200 + 17) && $('.fly-box').length > 0) {
 		const FlyBoxInstance = new FlyBox('.fly-box', '.center-box');
 		console.log(FlyBoxInstance)

@@ -3,21 +3,38 @@
 
 .total-section {
 	@media (min-width: $mob-xs) {
-		margin-bottom: 50px;
+		margin-bottom: 120px;
 	}
+	@media (min-width: $mob-s) {
+		margin-bottom: 150px;
+	};
 	@media (min-width: $tablet-w) {
-		margin-bottom: 80px;
+		margin-bottom: 180px;
 	};
 	@media (min-width: $desk-w) {
-		margin-bottom: 100px;
+		margin-bottom: 200px;
 	};
 	&__title {
-		@include text-size(160, 170);
+		
 		color: $salat;
 		font-weight: bold;
 		@media (min-width: $mob-xs) {
 			margin-bottom: 20px;
+			font-size: 50px;
+			line-height: 60px;
 		}
+		@media (min-width: $mob-s) {
+			font-size: 70px;
+			line-height: 85px;
+		};
+		@media (min-width: $tablet-w) {
+			font-size: 100px;
+			line-height: 120px;
+		};
+		@media (min-width: $desk-w) {
+			font-size: 160px;
+			line-height: 170px;
+		};
 	}
 	&__inner {
 		@media (min-width: 1360px) {

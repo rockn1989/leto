@@ -21,11 +21,13 @@
 		};
 
 		this.move = true;
+		this.windowDivider = this.windowParams.height > 900 ? 1.5 : 2.5;
 		this.scrollStartValue = 0;
 		this.onScroll = this.onScroll.bind(this);
 	};
 
 	FlyBox.prototype.watch = function() {
+		console.log(this.windowParams.height)
 		document.addEventListener('scroll', this.onScroll);
 	};
 
@@ -63,7 +65,7 @@
 			this.move = true;
 		};
 
-		if((this.secondTargetParams.top + (this.secondTargetParams.height / 1)) <= this.windowParams.height) {
+		if((this.secondTargetParams.top + (this.secondTargetParams.height / this.windowDivider)) <= this.windowParams.height) {
 			this.target.classList.add('hidden');
 			this.secondTarget.classList.add('show');
 			document.querySelector('.advantages-list').classList.add('show');

@@ -269,7 +269,7 @@
 			}
 			.round-item__img {
 				img {
-					top: -30px;
+					top: -10px;
 				}
 			}
 		}
@@ -394,6 +394,14 @@
 		font-size: 24px;
 		line-height: 30px;
 	};
+	p {
+		font-size: 18px;
+		line-height: 24px;
+		@media (min-width: $tablet-w) {
+			font-size: 24px;
+			line-height: 30px;
+		};
+	}
 }
 
 
