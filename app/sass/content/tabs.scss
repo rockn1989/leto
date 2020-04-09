@@ -104,6 +104,18 @@
 	}
 }
 
+.address {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	@media (min-width: $mob-xs) {
+		background-position: center 100%;
+	}
+	@media (min-width: $tablet-w) {
+		background-position: center center;
+	};
+}
+
 .address-tabs {
 	.uk-switcher {
 		position: relative;
@@ -112,6 +124,9 @@
 			
 			height: 500px;
 			overflow: hidden;
+			background-repeat: no-repeat;
+			background-position: center 0;
+			background-size: contain;
 			@media (min-width: $mob-xs) {
 				height: 200px;
 			};
@@ -122,11 +137,11 @@
 				height: 500px;
 			};
 			&:after {
-				content: '';
+				//content: '';
 				position: absolute;
 				display: block;
 				width: 64px;
-				height: 64px;
+				height: 70px;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);

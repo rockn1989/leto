@@ -1,0 +1,26 @@
+{% extends "layouts/default.twig" %}
+{% set title="Главная" %}
+{% set theme="theme-blue" %}
+{% 
+	set data = {
+		bgURL: 'img/media/main-banner-3-1440x730.png',
+		title: 'Когда качество имеет размер!',
+		subtitle: 'для силы и здоровья',
+		flyBox: {
+			isset: true,
+			img: 'img/media/egg-box-2.png'
+		}
+	} 
+%}
+
+{% block content %}
+
+	{% include './includes/components/main-banner.twig' with {'data': data} %}
+	{% include './includes/components/advantages-section.twig' %}
+	{% include './includes/components/advantages-h-section.twig' with {'theme': 'green'} %}
+
+	{% include './includes/components/typebox-section.twig' with {'theme': 'green'} %}
+	{% include './includes/components/brands-slider.twig' %}
+	{% include './includes/components/time-section.twig' %}
+	{% include './includes/components/slider-section.twig' %}
+{% endblock %}

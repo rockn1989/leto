@@ -2,11 +2,25 @@
 
 $(function() {	
 
+	/*______ Активный пункт меня (на время разработки) ______*/
+	if((window.location.href.indexOf('localhost') > 1) || (window.location.href.indexOf('verstka') > 1)) {
+		const pageList = ['index', 'ugodie'];
+		const currentPage = window.location.href;
+		const mainNav = $('.main-nav li');
+		let idx = null;
+
+		pageList.forEach(function (el, idxS) {
+			if(currentPage.indexOf(el) > 1) {
+				idx = idxS;
+			};
+		});
+		mainNav.eq(idx).addClass('active');
+	}
+
 	/*______ Передвижение летающей коробки ______*/
 
 	if($(document).outerWidth() > (1200 + 17) && $('.fly-box').length > 0) {
 		const FlyBoxInstance = new FlyBox('.fly-box', '.center-box');
-		console.log(FlyBoxInstance)
 		FlyBoxInstance.init();
 	};
 
@@ -156,5 +170,25 @@ $(function() {
 			$(this).siblings('.file-name').text(file.name);	
 		};
 	});
+
+
+	/*______ Подгрузка фона в табаха с адресами ______*/
+
+	let $ukSwitcherTabs = $('.address-tabs [uk-switcher]'),
+	$ukSwitcherTabsContent = $('.address-tabs').find('ul.uk-switcher');
+
+	$ukSwitcherTabs.on('click', 'li', function () {
+		let liActive = $ukSwitcherTabsContent.find('li.uk-active');
+		let imgSrc = liActive.data('img');
+
+		$('.address').css('backgroundImage', 'url('+imgSrc+')');
+	});
+
+	if($ukSwitcherTabs) {
+		let liActive = $ukSwitcherTabsContent.find('li.uk-active');
+		let imgSrc = liActive.data('img');
+
+		$('.address').css('backgroundImage', 'url('+imgSrc+')');
+	};
 
 });

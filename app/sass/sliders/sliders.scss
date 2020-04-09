@@ -275,12 +275,20 @@
 			align-items: center;
 			justify-content: center;
 			flex-wrap: wrap;
+			text-align: center;
 			@media (min-width: $desk-w) {
 				flex-wrap: nowrap;
 			};
 			img {
 				margin: 0 10px 20px;
+				display: inline-block;
 				max-height: 100px;
+				position: relative;
+				@for $i from 1 through 6 {
+					&:nth-child(#{$i}) {
+						top: 20px + $i*(-15);
+					}
+				}
 			}
 			&:nth-child(1) {
 				img {
