@@ -1,0 +1,26 @@
+{% extends "layouts/default.twig" %}
+{% set title="Главная" %}
+{% set theme="theme-pink" %}
+{% 
+	set data = {
+		bgURL: 'img/media/main-banner-4-1440x730.png',
+		title: 'Для самых активных людей',
+		subtitle: 'на планете',
+		flyBox: {
+			isset: true,
+			img: 'img/media/egg-box-3.png'
+		}
+	} 
+%}
+
+{% block content %}
+
+	{% include './includes/components/main-banner.twig' with {'data': data} %}
+	{% include './includes/components/advantages-section.twig' with {'theme': 'pink'} %}
+	{% include './includes/components/advantages-h-section.twig' with {'theme': 'pink'} %}
+
+	{% include './includes/components/typebox-section.twig' with {'theme': 'pink'} %}
+	{% include './includes/components/brands-slider.twig' %}
+	{% include './includes/components/time-section.twig' %}
+	{% include './includes/components/slider-section.twig' %}
+{% endblock %}

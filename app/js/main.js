@@ -4,14 +4,18 @@ $(function() {
 
 	/*______ Активный пункт меня (на время разработки) ______*/
 	if((window.location.href.indexOf('localhost') > 1) || (window.location.href.indexOf('verstka') > 1)) {
-		const pageList = ['index', 'ugodie'];
+		const pageList = ['index', 'ugodie', 'junior'];
 		const currentPage = window.location.href;
 		const mainNav = $('.main-nav li');
 		let idx = null;
 
 		pageList.forEach(function (el, idxS) {
 			if(currentPage.indexOf(el) > 1) {
-				idx = idxS;
+				if(idxS == 2) {
+					idx = 3;
+				} else {
+					idx = idxS;
+				}
 			};
 		});
 		mainNav.eq(idx).addClass('active');
