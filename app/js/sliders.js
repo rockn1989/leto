@@ -98,8 +98,7 @@ $(function() {
 		arrows: true,
 		dots: false,
 		slidesToShow: 1,
-		lazyLoad: 'progressive',
-		adaptiveHeight: true
+		lazyLoad: 'progressive'
 	});	
 
 

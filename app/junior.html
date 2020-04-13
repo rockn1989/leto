@@ -80,7 +80,7 @@
 	<div class="uk-container">
 		<ul class="main-nav">
 			<li>
-				<a href="#">
+				<a href="/">
 					<svg width="82px" height="59px" class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-1"></use>
 					</svg>
@@ -88,7 +88,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="ugodie.html">
 					<svg width="233px" height="71px" class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-2"></use>
 					</svg>
@@ -101,7 +101,7 @@
 				</span>
 			</li>
 			<li>
-				<a href="#">
+				<a href="junior.html">
 					<svg class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-3"></use>
 					</svg>
@@ -109,7 +109,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="nov.html">
 					<svg class="nav-ellipse">
 					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-4"></use>
 					</svg>
@@ -136,9 +136,14 @@
 	<div class="main-banner">
 		<div class="uk-container uk-container--large">
 
-			<div class="main-banner__img" style="background-image: url(img/media/main-banner-4-1440x730.png)" uk-scrollspy="cls:border-anim">
+			<div class="main-banner__img"  uk-scrollspy="cls:border-anim">
+				<picture>
+					<source srcset="img/media/main-banner-4-1440x730.png" media="(min-width: 961px)">
+					<source srcset="img/media/main-banner-4-960x487-tablet.png" media="(min-width: 641px) and (max-width: 960px)">
+					<source srcset="img/media/main-banner-4-640x325-mob-xs.png" media="(max-width: 640px)">
+					<img src="img/media/main-banner-4-1440x730.png" alt="">
+				</picture>
 			</div>
-
 			<div class="main-banner__text">
 				<div class="main-banner__title">
 					<h1 uk-scrollspy="cls:slide-up">Для самых активных людей</h1>
@@ -150,12 +155,10 @@
 				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-down"></use>
 				</svg>
 			</div>
-			
-			<div class="fly-box " uk-scrollspy="cls: slide-up-abs uk-visible; delay: 500">
+						<div class="fly-box " uk-scrollspy="cls: slide-up-abs uk-visible; delay: 500">
 				<img src="img/media/egg-box-3.png" alt="Лето">
 			</div>
-			
-		</div>
+					</div>
 	</div>
 	
 	
@@ -200,7 +203,7 @@
 								<img data-src="img/media/advantage-img/advantage-img-21.svg" alt="" uk-img>
 							</div>
 							<div class="advantage-item__text">
-								<div class="title-h3">Лучше всего подходит в кулинарии, поскольку эффективнее взбивается и держит форму</div>
+								<div class="title-h3">Эффективно взбивается и держит форму</div>
 							</div>
 						</div>
 					</li>

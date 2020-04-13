@@ -38,10 +38,14 @@
 		&__text {
 			margin:  0 auto;
 			max-width: 770px;
-			font-size: 20px;
+			font-size: 24px;
 			line-height: 24px;
 			font-weight: bold;
 			font-family: $secondFont;
+			p {
+				font-size: 24px;
+				line-height: 26px;
+			}
 		}
 		&.show {
 			@media (min-width: $desk-w) {

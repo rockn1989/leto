@@ -2,9 +2,14 @@
 	<div class="main-banner">
 		<div class="uk-container uk-container--large">
 
-			<div class="main-banner__img" style="background-image: url({{data.bgURL}})" uk-scrollspy="cls:border-anim">
+			<div class="main-banner__img"  uk-scrollspy="cls:border-anim">
+				<picture>
+					<source srcset="{{data.bgURL.desk}}" media="(min-width: 961px)">
+					<source srcset="{{data.bgURL.tablet}}" media="(min-width: 641px) and (max-width: 960px)">
+					<source srcset="{{data.bgURL.mob}}" media="(max-width: 640px)">
+					<img src="{{data.bgURL.desk}}" alt="">
+				</picture>
 			</div>
-
 			<div class="main-banner__text">
 				<div class="main-banner__title">
 					<h1 uk-scrollspy="cls:slide-up">{{data.title}}</h1>

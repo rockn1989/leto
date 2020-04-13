@@ -4,7 +4,11 @@
 {% block content %}
 {% 
 	set data = {
-		bgURL: 'img/media/main-banner-2-1440x730.png',
+		bgURL: {
+			desk: 'img/media/main-banner-2-1440x730.png',
+			tablet: 'img/media/main-banner-2-960x487-tablet.png',
+			mob: 'img/media/main-banner-2-640x325-mob-xs.png'
+		},
 		title: 'Группа компаний «Лето»',
 		subtitle: 'Входим в топ-10 производителей яйца в России',
 		flyBox: {
@@ -103,11 +107,8 @@
 			</div>
 			<div class="about-egg__text">
 				<p>
-					Яйцо — один из немногих продуктов, остающийся неизменным 
-					в потреблении человеком на протяжении тысячелетий.
-				</p>
-				<p>
-					Миссия нашей компании — бережно сохранять и нести людям ценность этого натурального продукта
+					Миссия нашей компании — бережно сохранять и нести людям ценность яйца, которое остаётся неизменным в потреблении
+					 человеком на протяжении тысячелетий.
 				</p>
 			</div>
 		</div>
@@ -255,7 +256,10 @@
 							<img src="img/media/sliders/slider-company-1.png" alt="">
 						</div>
 						<div class="slide">
-							<img src="img/media/sliders/composition-slide.svg" alt="Состав яйца">
+							<img src="img/media/sliders/slider-company-2.jpg" alt="">
+						</div>
+						<div class="slide">
+							<img src="img/media/sliders/slider-company-3.jpg" alt="">
 						</div>
 					</div>
 					<div class="slider__arrows">
@@ -301,7 +305,7 @@
 										<div class="brands-grid">
 											<div class="row">
 												<img src="img/media/brands/okey.jpg" alt="">
-												<img src="img/media/brands/karusel.png" alt="">
+												<img src="img/media/brands/karusel.webp" alt="">
 											</div>
 											<div class="row">
 												<img src="img/media/brands/perekrestok.png" alt="">

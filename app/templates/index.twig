@@ -3,7 +3,11 @@
 {% set theme="theme-green" %}
 {% 
 	set data = {
-		bgURL: 'img/media/main-banner-1-1440x730.png',
+		bgURL: {
+			desk: 'img/media/main-banner-1-1440x730.png',
+			tablet: 'img/media/main-banner-1-960x487-tablet.png',
+			mob: 'img/media/main-banner-1-640x325-mob-xs.png'
+		},
 		title: 'Натуральный продукт',
 		subtitle: 'для всей семьи',
 		flyBox: {

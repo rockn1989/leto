@@ -252,7 +252,6 @@
 			left: 0;
 			counter-increment: item;	
 			content: "0"counter(item);
-			//transform: translateY(-50%);
 			z-index: 500;
 			color: $green;
 			opacity: 0;
@@ -298,8 +297,11 @@
 			}
 		}
 		&:nth-child(4) {
-			@media (min-width: $tablet-w) {
+			@media (min-width: $mob-xs) {
 				margin-top: 80px;
+			};
+			@media (min-width: $mob-s) {
+				margin-top: 0;
 			};
 			@media (min-width: $desk-w) {
 				margin-top: 0;

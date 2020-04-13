@@ -1965,7 +1965,29 @@ nav.nav {
 
 .main-banner {
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
+}
+
+.main-banner picture {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.main-banner picture img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'object-fit: cover; object-position: cover;';
 }
 
 .main-banner__img {
@@ -2134,7 +2156,7 @@ nav.nav {
 }
 
 .advantages-section--pink .advantages-list li:nth-child(1) .advantage-item__img img {
-  top: 40px;
+  top: 30px;
 }
 
 .advantages-section--pink .advantages-list li:nth-child(2) .advantage-item__img img {
@@ -2245,8 +2267,8 @@ nav.nav {
   transition: opacity .3s, transform 1.2s, top 1.2s, bottom 1.2s, left 1.2s, right 1.2s ease-out, -webkit-transform 1.2s, -moz-transform 1.2s;
   will-change: transform, top, bottom, left, right;
   width: 100%;
-  max-width: 230px;
   margin: 0 auto;
+  max-width: 230px;
 }
 
 .advantages-list li:before {
@@ -2285,6 +2307,10 @@ nav.nav {
 .advantages-list li:nth-child(6) .advantage-item__img img {
   top: 40px;
   left: 30px;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .advantage-item {
@@ -2325,6 +2351,11 @@ nav.nav {
 
 .advantage-item__img img {
   position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 15;
 }
 
@@ -2585,6 +2616,7 @@ nav.nav {
 .typebox-list .item__img .content-img img {
   max-width: 100%;
   max-height: 100%;
+  height: 100%;
 }
 
 .typebox-list .item__text {
@@ -3013,10 +3045,15 @@ nav.nav {
 .about-egg__text {
   margin: 0 auto;
   max-width: 770px;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 24px;
   font-weight: bold;
   font-family: "Museo";
+}
+
+.about-egg__text p {
+  font-size: 24px;
+  line-height: 26px;
 }
 
 /*______ End About egg ______*/
@@ -3474,6 +3511,14 @@ nav.nav {
   display: block;
 }
 
+.custom-slider .slider .slide {
+  text-align: center;
+}
+
+.custom-slider .slider .slide img {
+  display: inline-block;
+}
+
 .custom-slider .slider button {
   width: 0;
   height: 0;
@@ -3874,6 +3919,10 @@ nav.nav {
     max-width: 320px;
   }
 
+  .steps-list li:nth-child(4) {
+    margin-top: 80px;
+  }
+
   .round-item__img {
     margin-bottom: -50px;
   }
@@ -4109,6 +4158,10 @@ nav.nav {
     width: 50%;
   }
 
+  .steps-list li:nth-child(4) {
+    margin-top: 0;
+  }
+
   .round-item br {
     display: block;
   }
@@ -4290,10 +4343,6 @@ nav.nav {
     margin-top: 120px;
   }
 
-  .steps-list li:nth-child(4) {
-    margin-top: 80px;
-  }
-
   .round-item__img {
     margin-bottom: -80px;
   }
@@ -4346,6 +4395,10 @@ nav.nav {
     left: 5px;
     right: 5px;
     bottom: 5px;
+  }
+
+  .main-banner {
+    margin-bottom: 120px;
   }
 
   .main-banner > .uk-container {
@@ -4869,7 +4922,6 @@ nav.nav {
     -moz-transition-delay: 1.2s;
     -o-transition-delay: 1.2s;
     transition-delay: 1.2s;
-    width: 355px;
   }
 
   .advantages-list--five-items li:nth-child(4) {
@@ -4920,10 +4972,10 @@ nav.nav {
 
   .advantages-list--five-items.show li:nth-child(3) {
     bottom: 0;
-    -webkit-transform: translate(15%, -35%);
-    -moz-transform: translate(15%, -35%);
-    -ms-transform: translate(15%, -35%);
-    transform: translate(15%, -35%);
+    -webkit-transform: translate(25%, -60%);
+    -moz-transform: translate(25%, -60%);
+    -ms-transform: translate(25%, -60%);
+    transform: translate(25%, -60%);
   }
 
   .advantages-list--five-items.show li:nth-child(4) {

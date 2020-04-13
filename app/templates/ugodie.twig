@@ -3,7 +3,11 @@
 {% set theme="theme-blue" %}
 {% 
 	set data = {
-		bgURL: 'img/media/main-banner-3-1440x730.png',
+		bgURL: {
+			desk: 'img/media/main-banner-3-1440x730.png',
+			tablet: 'img/media/main-banner-3-960x487-tablet.png',
+			mob: 'img/media/main-banner-3-640x325-mob-xs.png'
+		},
 		title: 'Когда качество имеет размер!',
 		subtitle: 'для силы и здоровья',
 		flyBox: {

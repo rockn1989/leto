@@ -3,7 +3,11 @@
 {% set theme="theme-pink" %}
 {% 
 	set data = {
-		bgURL: 'img/media/main-banner-4-1440x730.png',
+		bgURL: {
+			desk: 'img/media/main-banner-4-1440x730.png',
+			tablet: 'img/media/main-banner-4-960x487-tablet.png',
+			mob: 'img/media/main-banner-4-640x325-mob-xs.png'
+		},
 		title: 'Для самых активных людей',
 		subtitle: 'на планете',
 		flyBox: {
