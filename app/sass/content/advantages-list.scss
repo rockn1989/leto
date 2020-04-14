@@ -83,6 +83,13 @@
 			}
 		}
 	}
+	&--brown {
+		.advantages-section__inner {
+			@media (min-width: $desk-w) {
+				padding: 360px 0;
+			};
+		}
+	}
 	&__inner {
 		position: relative;
 		display: flex;

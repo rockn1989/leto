@@ -4,7 +4,7 @@ $(function() {
 
 	/*______ Активный пункт меня (на время разработки) ______*/
 	if((window.location.href.indexOf('localhost') > 1) || (window.location.href.indexOf('verstka') > 1)) {
-		const pageList = ['index', 'ugodie', 'junior'];
+		const pageList = ['index', 'ugodie','logo', 'junior', "nov"];
 		const currentPage = window.location.href;
 		const mainNav = $('.main-nav li');
 		let idx = null;
@@ -12,7 +12,7 @@ $(function() {
 		pageList.forEach(function (el, idxS) {
 			if(currentPage.indexOf(el) > 1) {
 				if(idxS == 2) {
-					idx = 3;
+					idx = null;
 				} else {
 					idx = idxS;
 				}

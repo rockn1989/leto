@@ -2073,7 +2073,7 @@ nav.nav {
 }
 
 .main-banner__title {
-  max-width: 980px;
+  max-width: 990px;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -4677,6 +4677,10 @@ nav.nav {
   }
 
   .advantages-section--pink .advantages-section__inner {
+    padding: 360px 0;
+  }
+
+  .advantages-section--brown .advantages-section__inner {
     padding: 360px 0;
   }
 
