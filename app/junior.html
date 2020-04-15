@@ -141,7 +141,7 @@
 					<source srcset="img/media/main-banner-4-1440x730.png" media="(min-width: 961px)">
 					<source srcset="img/media/main-banner-4-960x487-tablet.png" media="(min-width: 641px) and (max-width: 960px)">
 					<source srcset="img/media/main-banner-4-640x325-mob-xs.png" media="(max-width: 640px)">
-					<img src="img/media/main-banner-4-1440x730.png" alt="">
+					<img src="img/media/main-banner-4-1440x730.png" alt="" loading="lazy">
 				</picture>
 			</div>
 			<div class="main-banner__text">
@@ -156,7 +156,7 @@
 				</svg>
 			</div>
 						<div class="fly-box " uk-scrollspy="cls: slide-up-abs uk-visible; delay: 500">
-				<img src="img/media/egg-box-3.png" alt="Лето">
+				<img data-src="img/media/egg-box-3.png" alt="Лето" uk-img>
 			</div>
 					</div>
 	</div>
@@ -280,7 +280,7 @@
 						</svg>
 					</div>
 					<div class="content-img">
-						<img src="img/icon-svg/adv-icon-10.svg" alt="">
+						<img data-src="img/icon-svg/adv-icon-10.svg" alt="" uk-img>
 					</div>
 				</div>
 				<div class="item__text">
@@ -375,8 +375,8 @@
 
 		<!-- begin brands-slider -->
 	<div class="brands-slider preload">
-		<h2 class="uk-text-center">Купить онлайн</h2>
-		<div class="uk-container">
+		<h2 class="uk-text-center" uk-scrollspy="cls:slide-up">Купить онлайн</h2>
+		<div class="uk-container" uk-scrollspy="cls:slide-up; delay: 300">
 			<div class="slider">
 				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-1.svg" alt=""></a></div>
 				<div class="slide"><a href=""><img data-lazy="img/media/sliders/slider-brand-img-2.svg" alt=""></a></div>
@@ -573,7 +573,7 @@
 			</div>
 		</div>
 		<div class="slide">
-			<img src="img/media/eggs-big-img.png" alt="">
+			<img data-lazy="img/media/eggs-big-img.png" alt="">
 		</div>
 	</div>
 	<div class="slider__arrows">
@@ -604,7 +604,7 @@
 	<div class="uk-container">
 		<div class="slider">
 			<div class="slide">
-				<img src="img/media/sliders/composition-slide.png" alt="Состав яйца">
+				<img data-lazy="img/media/sliders/composition-slide.png" alt="Состав яйца">
 				<div class="custom-slider__text">
 					<p>
 						Ниже представлены таблицы химического состава и диаграммы, из которых Вы можете узнать какая пищевая ценность, какие витамины, минералы, и сколько калорий содержится в данном продукте питания. Со временем Вам достаточно будет одного взгляда на графики, чтобы понять питательную ценность пищи.В таблицах приводятся данные %РСП.

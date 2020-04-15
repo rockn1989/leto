@@ -14,6 +14,27 @@ const copy = require("gulp-copy");
 const del = require("del");
 const clean = require("gulp-clean");
 const svgmin = require("gulp-svgmin");
+const critical = require('critical').stream;
+
+
+/*______ Critical Css ______*/
+
+gulp.task('critical', () => {
+  return gulp
+    .src('app/*.html')
+    .pipe(critical({
+      base: 'app/',
+      inline: true,
+      css: [
+        'app/css/style.css'
+      ]
+    }))
+    .on('error', err => {
+      log.error(err.message);
+    })
+    .pipe(gulp.dest('app'));
+});
+
 
 
 /*______ Local-server ______*/

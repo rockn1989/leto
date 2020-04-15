@@ -2,6 +2,12 @@
 
 $(function() {	
 
+	if ('loading' in HTMLImageElement.prototype) {
+		console.log('Yes')
+	} else {
+		console.log('No')
+	};
+
 	/*______ Активный пункт меня (на время разработки) ______*/
 	if((window.location.href.indexOf('localhost') > 1) || (window.location.href.indexOf('verstka') > 1)) {
 		const pageList = ['index', 'ugodie','logo', 'junior', "nov"];
