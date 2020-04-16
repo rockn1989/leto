@@ -1,5 +1,9 @@
 /*______ MAIN CONTENT ______*/
 
+main.main-container {
+	min-height: 100vh;
+}
+
 .advantages-h-section {
 	@media (min-width: $mob-xs) {
 		margin-bottom: 60px;
@@ -66,6 +70,19 @@
 }
 
 .career-section {
+	@media (min-width: $mob-xs) {
+		margin-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 90px;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 130px;
+	};
+}
+
+.timer-section {
+	padding-top: 70px;
 	@media (min-width: $mob-xs) {
 		margin-bottom: 60px;
 	};

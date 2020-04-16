@@ -1,0 +1,153 @@
+
+/*______ Timer ______*/
+
+.timer-app {
+	padding-top: 65px;
+	&__label {
+		margin-bottom: 36px;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+	}
+	*+.timer-app__label {
+		margin-top: 36px;
+	}
+	&__controls {
+		margin-bottom: 20px;
+	}
+	&__countdown {
+		margin-bottom: 34px;
+		font-weight: bold;
+		text-align: center;
+		font-size: 48px;
+		line-height: 48px;
+		@media (min-width: $mob-s) {
+			font-size: 60px;
+			line-height: 60px;
+		}
+		@media (min-width: $tablet-w) {
+			font-size: 72px;
+			line-height: 72px;
+		};
+		@media (min-width: $desk-w) {
+			font-size: 96px;
+			line-height: 96px;
+		};
+	}
+	&__img {
+		margin: 0 80px;
+		img {
+			filter: drop-shadow(25px 25px 15px rgba(0, 0, 0, 0.3));
+		}
+	}
+	&__start {
+		.circle-timer-wrapper {
+			height: 100%;
+			display: flex;
+		}
+		.btn {
+			margin: 0;
+		}
+	}
+	.start__timer {
+		border: 2px solid $yellow;
+    border-radius: 72px;
+    padding: 4px 110px 4px 15px;
+    margin-right: -60px;
+	}
+}
+
+.toggle {
+	text-align: center;
+	&__btn {
+		position: relative;
+		padding: 3px 2px;
+		display: inline-block;
+		width: 36px;
+		height: 68px;
+		border: 2px solid $salat;
+		border-radius: 72px;
+		cursor: pointer;
+/* 		&-on,
+&-off {
+	position: absolute;
+	left: 2px;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #000;
+	z-index: 10;
+	cursor: pointer;
+}
+&-on {
+	top: 3px;
+	border-radius: 72px 72px 0 0;
+}
+&-off {
+	border-radius: 0 0 72px 72px;	
+	bottom: 3px;
+} */
+		&-pin {
+			position: relative;
+			width: 28px;
+			height: 28px;
+			background: linear-gradient(90deg, #FFA722 0%, #FFB422 100%);
+			box-shadow: 0px 4px 4px rgba(255, 167, 34, 0.25);
+			border-radius: 72px;
+			transition: transform .2s linear;
+			z-index: 15;
+			&.toggle {
+				transform: translateY(100%);
+			}
+		}
+	}
+}
+
+.sort-list {
+	@include list-reset;
+	display: flex;
+	align-items: center;
+	li {
+		margin-right: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid $salat;
+		color: $tColor;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: bold;
+		cursor: pointer;
+		transition: background .3s, color .3s ease;
+		border-radius: 50%;
+		&.active {
+			color: #ffffff;
+			background: $salat;
+		}
+		&:nth-child(1) {
+			width: 53px;
+			height: 63px;
+		}
+		&:nth-child(2) {
+			width: 48px;
+			height: 57px;
+		}
+		&:nth-child(3) {
+			width: 43px;
+			height: 50px;
+		}
+		&:nth-child(4) {
+			width: 37px;
+			height: 44px;
+		}
+		&:nth-child(5) {
+			width: 32px;
+			height: 38px;
+		}
+	}
+}
+
+/*______ Timer end ______*/

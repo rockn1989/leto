@@ -453,6 +453,21 @@
 	}
 }
 
+
+/*______ Circle Timer ______*/
+
+.circle-timer-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	.circle-timer__text {
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: .05px;
+	}
+}
+
+
 /*______ END COMPONENTS ______*/
 
 

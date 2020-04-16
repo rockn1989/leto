@@ -37,8 +37,12 @@ $(function() {
 
 	/*______ Анимация круглого таймера ______*/
 
-	$('.eggs-section').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
-		const timer = $(this).find('.circle-timer');
+	$('.eggs-section, .start__timer').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+		circleTimer($(this));
+	});
+
+	function circleTimer(section) {
+		const timer = section.find('.circle-timer');
 		$.each(timer, function (idx, el) {
 			const	timerValue = $(el).data("time");
 			const	circleOne = $(el).find('.circle-1');
@@ -49,9 +53,8 @@ $(function() {
 			circleOne.css('stroke-dashoffset', circleOneValue);
 			circleTwo.css('stroke-dashoffset', circleTwoValue);
 		});
+	};
 
-		
-	});
 
 	/*______ Показывать форму на мобильных устройствах ______*/
 

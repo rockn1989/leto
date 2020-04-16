@@ -2,6 +2,7 @@
 
 .advantages-section {
 	margin-bottom: 40px;
+
 	@media (min-width: $desk-w) {
 		margin-bottom: 115px;
 	};
@@ -408,6 +409,30 @@
 	} 
 }
 
+
+.advantages-section {
+	&--pink {
+		.advantages-list {
+			li {
+				&:nth-child(1) {
+					img {
+						top: 30px;
+					}
+				}
+				&:nth-child(2) {
+					img {
+						top: 30px;
+					}
+				}
+				&:nth-child(3) {
+					img {
+						top: 30px;
+					}
+				}
+			}
+		}
+	}
+}
 
 .advantage-item {
 	position: relative;

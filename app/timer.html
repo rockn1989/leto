@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Таймер для варки яиц</title>
+	<meta property="og:url" content="">
+	<meta property="og:type" content="Article">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" href="libs/uikit-3/css/uikit.min.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lte IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="libs/html5shiv.min.js"></script>
+		<script src="libs/placeholders.min.js"></script>
+	<![endif]-->
+</head>
+<body class="theme-green">
+
+<!-- begin header -->
+<header class="header">
+	<div class="header__desk ">
+	<!-- begin top-panel -->
+<div class="top-panel">
+	<div class="uk-container">
+
+		<div class="top-panel__inner">
+
+			<a href="/timer.html" class="timer-link">
+				<span class="timer-link__icon icon-clock"></span>
+				<span class="timer-link__text">Таймер <span class="uk-visible@s">для варки яиц</span></span>
+			</a>
+
+			
+			<div class="top-panel-nav">
+				<ul class="nav-list uk-visible@m">
+					<li><a href="#">Яйцо</a></li>
+					<li><a href="#">Рецепты</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Переработка</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<a href="#" class="close-btn js__toggle-mobile-left-menu uk-hidden@m" uk-toggle="target: #offcanvas-menu"></a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- begin offcanvas-menu -->
+	<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>
+		<div class="uk-offcanvas-bar">
+			<ul class="uk-nav">
+				<li><a href="#">Яйцо</a></li>
+				<li><a href="#">Рецепты</a></li>
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Переработка</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="contacts">
+				<a href="tel:+74957815404" class="contacts__tel">+7 495 781-54-04</a>
+				<div class="subtitle">Напишите нам:</div>
+				<a href="mailto:info@leto-group.ru" class="green-link">info@leto-group.ru</a>
+			</div>
+		</div>
+	</div><!-- end offcanvas-menu -->
+
+</div><!-- end top-panel -->
+
+	
+<!-- begin nav -->
+<nav class="nav">
+	<div class="uk-container">
+		<ul class="main-nav">
+			<li>
+				<a href="/">
+					<svg width="82px" height="59px" class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-1"></use>
+					</svg>
+					<span>Лето</span>
+				</a>
+			</li>
+			<li>
+				<a href="ugodie.html">
+					<svg width="233px" height="71px" class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-2"></use>
+					</svg>
+					<span>Деревенское угодье</span>
+				</a>
+			</li>
+			<li>
+				<span class="logo1">
+					<a href="/"><img src="img/media/logo.svg" alt="Leto"></a>
+				</span>
+			</li>
+			<li>
+				<a href="junior.html">
+					<svg class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-3"></use>
+					</svg>
+					<span>Junior</span>
+				</a>
+			</li>
+			<li>
+				<a href="nov.html">
+					<svg class="nav-ellipse">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#nav-ellipse-4"></use>
+					</svg>
+					<span>Сельская новь</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav><!-- end nav -->
+
+</div>
+
+	<!-- begin header__mobile -->
+<div class="header__mobile uk-hidden">
+	555
+</div><!-- end header__mobile -->
+
+</header><!-- end header -->
+
+<main class="main-container">	
+	
+	<!-- begin timer-section -->
+	<section class="timer-section">
+		<div class="uk-container uk-container--small">
+			<h2 class="title-h2 uk-text-center">Таймер для варки яиц</h2>
+
+			<div class="custom-tabs">
+				<ul class="tab-sw" uk-switcher="swiping: false">
+					<li><a href="#">Всмятку</a></li>
+					<li><a href="#">В мешочек</a></li>
+					<li><a href="#">Вкрутую</a></li>
+				</ul>
+				<ul class="uk-switcher">
+					<li>
+						<div class="timer-app">
+							<div class="timer-app__controls uk-flex uk-flex-center uk-flex-top">
+								<div>
+									<div class="timer-app__label">Сорт яйца:</div>
+									<ul class="sort-list">
+										<li class="active">CB</li>
+										<li>C0</li>
+										<li>C1</li>
+										<li>C2</li>
+										<li>C3</li>
+									</ul>
+								</div>
+								<div>
+									<div class="timer-app__img">
+										<img src="img/media/egg-img-1.svg" alt="">
+									</div>
+								</div>
+								<div>
+									<div class="toggle">
+										<div class="timer-app__label">Из холодильника</div>
+										<div class="toggle__btn">
+											<!-- <div class="toggle__btn-on"></div>
+											<div class="toggle__btn-off"></div> -->
+											<div class="toggle__btn-pin"></div>
+										</div>
+										<div class="timer-app__label">Комнатная температура</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="timer-app__countdown uk-margin-auto">
+								03:59
+							</div>
+							
+							<div class="timer-app__start uk-flex uk-flex-center">
+								<div class="start__timer" uk-scrollspy="cls:uk-animation-fade">
+									<div class="circle-timer-wrapper">
+										<div class="circle-timer" data-time="4">
+											<div class="circle-timer__outer">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+													<circle class="circle-2" cx="27" cy="27" r="27"></circle>
+												</svg>
+											</div>
+											<div class="circle-timer__inner">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+													<circle class="circle-1" cx="25" cy="25" r="25"></circle>
+												</svg>
+									
+											</div>
+											<div class="circle-timer__value">4</div>
+										</div>
+										<div class="circle-timer__text">Минуты</div>
+									</div>
+								</div>
+								<a href="" class="timer-btn-start btn btn--yellow"><span>Старт</span></a>
+							</div>
+
+
+						</div>
+					</li>
+					<li>123</li>
+					<li>123</li>
+				</ul>
+			</div>
+		
+		</div>
+	</section><!-- end timer-section -->
+	
+	
+<section class="slider-section wave-bg" uk-scrollspy="cls: wave-anim">
+	<div class="uk-container uk-container--small">
+		<h2 class="uk-text-center" uk-scrollspy="cls:slide-up">Какие элементы содержит яйцо?</h2>
+		<!-- begin composition-slider -->
+<div class="custom-slider">
+	<div class="uk-container">
+		<div class="slider">
+			<div class="slide">
+				<img data-lazy="img/media/sliders/composition-slide.png" alt="Состав яйца">
+				<div class="custom-slider__text">
+					<p>
+						Ниже представлены таблицы химического состава и диаграммы, из которых Вы можете узнать какая пищевая ценность, какие витамины, минералы, и сколько калорий содержится в данном продукте питания. Со временем Вам достаточно будет одного взгляда на графики, чтобы понять питательную ценность пищи.В таблицах приводятся данные %РСП.
+					</p>
+					<a href="" class="green-link">Подробнее</a>
+				</div>
+			</div>
+			<div class="slide">
+				<img src="img/media/sliders/composition-slide.svg" alt="Состав яйца">
+			</div>
+		</div>
+		<div class="slider__arrows">
+			<div class="slide-prev">
+				<svg width="154px" height="29px" class="slider-arrow">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-left"></use>
+				</svg>
+			</div>
+			<div class="slide-next">
+				<svg width="154px" height="29px" class="slider-arrow">
+				  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-right"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
+</div><!-- end composition-slider -->
+
+		<a href="" class="btn btn--yellow uk-margin-auto" uk-scrollspy="cls:slide-up"><span>Посмотреть все факты о яйце</span></a>
+	</div>
+</section>
+
+</main>
+<!-- begin footer -->
+<footer class="footer">
+	<div class="uk-container uk-container--medium">
+		<div class="footer__top">
+			<div class="uk-grid">
+				<div class="uk-width-2-3@m">
+					<div class="uk-grid">
+						<div class="uk-width-1-3@s">
+							<div class="footer__column-wrapper">
+								<div class="footer__title" data-role="toggle-list">
+									Наши марки
+									<i class="icon-arrow-up uk-hidden@s"></i>
+								</div>
+								<ul class="footer__list">
+									<li><a href="#">Лето</a></li>
+									<li><a href="#">Деревенское угодье</a></li>
+									<li><a href="#">Junior</a></li>
+									<li><a href="#">Сельская новь</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="uk-width-1-3@s">
+							<div class="footer__column-wrapper">
+								<div class="footer__title" data-role="toggle-list">
+									О компании
+									<i class="icon-arrow-up uk-hidden@s"></i>
+								</div>
+								<ul class="footer__list">
+									<li>
+										<a href="#">О компании</a>
+									</li>
+									<li>
+										<a href="#">Партнёрам</a>
+									</li>
+									<li>
+										<a href="#">Поставщикам</a>
+									</li>
+									<li>
+										<a href="#">Вакансии</a>
+									</li>
+									<li>
+										<a href="#">Новости</a>
+									</li>
+									<li>
+										<a href="#">Контакты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="uk-width-1-3@s">
+							<div class="footer__column-wrapper">
+								<div class="footer__title" data-role="toggle-list">
+									Потребителям
+									<i class="icon-arrow-up uk-hidden@s"></i>
+								</div>
+								<ul class="footer__list">
+									<li>
+										<a href="#">Факты о яйце</a>
+									</li>
+									<li>
+										<a href="#">Рецепты</a>
+									</li>
+									<li>
+										<a href="#">Сообщить о проблеме</a>
+									</li>
+									<li>
+										<a href="#">Задать вопрос</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-1-3@m">
+					<div class="footer__column-wrapper">
+						<div class="padding-left-25">
+							<div class="footer__title">Группа компаний «Лето»</div>
+							<div class="contacts">
+								<a href="tel:+74957815404" class="contacts__tel">+7 495 781-54-04</a>
+								<div class="subtitle">Напишите нам:</div>
+								<a href="mailto:info@leto-group.ru" class="green-link">info@leto-group.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="uk-grid">
+				<div class="uk-width-1-2@s uk-width-2-3@m">
+					<div class="copyright">Группа компаний «Лето» 2020</div>
+					<a href="" class="politics">Политика в отношении персональных данных</a>
+				</div>
+				<div class="uk-width-1-2@s uk-width-1-3@m">
+					<div class="padding-left-25">
+						<a href="https://aevrika.ru/" target="_blank" class="dev-ae">
+							<svg width="16px" height="22px" class="ae-logo">
+							  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#ae-logo"></use>
+							</svg>
+							Разработка и продвижение —ЭВРИКА
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer><!-- end footer -->
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+<script src="libs/uikit-3/js/uikit.min.js" defer></script>
+<script src="libs/svg4everybody.min.js" defer></script>
+<script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
+<script src="libs/slick/slick.min.js" defer></script>
+<script src="libs/ofi.min.js" defer></script>
+<script src="libs/countUp/countUp.min.js" defer></script>
+<script src="js/sliders.js" defer></script>
+<script src="js/flybox.js" defer></script>
+<script src="js/timer-app.js" defer></script>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

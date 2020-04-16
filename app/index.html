@@ -22,7 +22,6 @@
 		<script src="libs/placeholders.min.js"></script>
 	<![endif]-->
 </head>
-
 <body class="theme-green">
 
 <!-- begin header -->
@@ -129,9 +128,8 @@
 
 </header><!-- end header -->
 
-
+<main class="main-container">	
 	
-
 	
 	<div class="main-banner">
 		<div class="uk-container uk-container--large">
@@ -156,7 +154,7 @@
 				</svg>
 			</div>
 						<div class="fly-box " uk-scrollspy="cls: slide-up-abs uk-visible; delay: 500">
-				<img data-src="img/media/egg-box-1.png" alt="Лето" uk-img>
+				<img src="img/media/egg-box-1.png" alt="Лето">
 			</div>
 					</div>
 	</div>
@@ -478,7 +476,7 @@
 						<div class="egg-section__img">
 							<img src="img/media/egg-img-1.svg" alt="">
 						</div>
-						<div class="egg-section__timer">
+						<div class="circle-timer-wrapper">
 							<div class="circle-timer" data-time="2">
 								<div class="circle-timer__outer">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
@@ -493,7 +491,7 @@
 								</div>
 								<div class="circle-timer__value">2</div>
 							</div>
-							<div class="egg-section__text">Минуты</div>
+							<div class="circle-timer__text">Минуты</div>
 						</div>
 					</div>
 				</div>
@@ -503,7 +501,7 @@
 						<div class="egg-section__img">
 							<img src="img/media/egg-img-2.svg" alt="">
 						</div>
-						<div class="egg-section__timer">
+						<div class="circle-timer-wrapper">
 							<div class="circle-timer" data-time="4">
 								<div class="circle-timer__outer">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
@@ -518,7 +516,7 @@
 								</div>
 								<div class="circle-timer__value">4</div>
 							</div>
-							<div class="egg-section__text">Минуты</div>
+							<div class="circle-timer__text">Минуты</div>
 						</div>
 					</div>
 				</div>
@@ -528,7 +526,7 @@
 						<div class="egg-section__img">
 							<img src="img/media/egg-img-3.svg" alt="">
 						</div>
-						<div class="egg-section__timer">
+						<div class="circle-timer-wrapper">
 							<div class="circle-timer" data-time="6">
 								<div class="circle-timer__outer">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
@@ -543,7 +541,7 @@
 								</div>
 								<div class="circle-timer__value">6</div>
 							</div>
-							<div class="egg-section__text">Минут</div>
+							<div class="circle-timer__text">Минут</div>
 						</div>
 					</div>
 				</div>
@@ -553,7 +551,7 @@
 						<div class="egg-section__img">
 							<img src="img/media/egg-img-4.svg" alt="">
 						</div>
-						<div class="egg-section__timer">
+						<div class="circle-timer-wrapper">
 							<div class="circle-timer" data-time="8">
 								<div class="circle-timer__outer">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
@@ -568,7 +566,7 @@
 								</div>
 								<div class="circle-timer__value">8</div>
 							</div>
-							<div class="egg-section__text">Минут</div>
+							<div class="circle-timer__text">Минут</div>
 						</div>
 					</div>
 				</div>
@@ -578,7 +576,7 @@
 						<div class="egg-section__img">
 							<img src="img/media/egg-img-5.svg" alt="">
 						</div>
-						<div class="egg-section__timer">
+						<div class="circle-timer-wrapper">
 							<div class="circle-timer" data-time="10">
 								<div class="circle-timer__outer">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
@@ -593,7 +591,7 @@
 								</div>
 								<div class="circle-timer__value">10</div>
 							</div>
-							<div class="egg-section__text">Минут</div>
+							<div class="circle-timer__text">Минут</div>
 						</div>
 					</div>
 				</div>
@@ -603,7 +601,7 @@
 						<div class="egg-section__img">
 							<img src="img/media/egg-img-6.svg" alt="">
 						</div>
-						<div class="egg-section__timer">
+						<div class="circle-timer-wrapper">
 							<div class="circle-timer" data-time="15">
 								<div class="circle-timer__outer">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
@@ -618,7 +616,7 @@
 								</div>
 								<div class="circle-timer__value">15</div>
 							</div>
-							<div class="egg-section__text">Минут</div>
+							<div class="circle-timer__text">Минут</div>
 						</div>
 					</div>
 				</div>
@@ -694,8 +692,7 @@
 		<a href="" class="btn btn--yellow uk-margin-auto" uk-scrollspy="cls:slide-up"><span>Посмотреть все факты о яйце</span></a>
 	</div>
 </section>
-
-
+</main>
 <!-- begin footer -->
 <footer class="footer">
 	<div class="uk-container uk-container--medium">
@@ -809,8 +806,6 @@
 
 
 
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
 <script src="libs/svg4everybody.min.js" defer></script>
@@ -820,8 +815,8 @@
 <script src="libs/countUp/countUp.min.js" defer></script>
 <script src="js/sliders.js" defer></script>
 <script src="js/flybox.js" defer></script>
+<script src="js/timer-app.js" defer></script>
 <script src="js/main.js" defer></script>
-
 
 </body>
 </html>
