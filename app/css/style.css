@@ -3237,6 +3237,16 @@ nav.nav {
   padding-top: 65px;
 }
 
+.timer-app.start .sort-list,
+.timer-app.start .toggle__btn {
+  opacity: .7;
+  cursor: no-drop;
+}
+
+.timer-app.start .sort-list li {
+  cursor: no-drop;
+}
+
 .timer-app__label {
   margin-bottom: 36px;
   font-size: 16px;
@@ -3264,7 +3274,7 @@ nav.nav {
 }
 
 .timer-app__img {
-  margin: 0 80px;
+  text-align: center;
 }
 
 .timer-app__img img {
@@ -3305,25 +3315,6 @@ nav.nav {
   border: 2px solid #9bc045;
   border-radius: 72px;
   cursor: pointer;
-  /* 		&-on,
-&-off {
-	position: absolute;
-	left: 2px;
-	display: inline-block;
-	width: 28px;
-	height: 28px;
-	border: 1px solid #000;
-	z-index: 10;
-	cursor: pointer;
-}
-&-on {
-	top: 3px;
-	border-radius: 72px 72px 0 0;
-}
-&-off {
-	border-radius: 0 0 72px 72px;	
-	bottom: 3px;
-} */
 }
 
 .toggle__btn-pin {
@@ -3435,10 +3426,6 @@ nav.nav {
 
 main.main-container {
   min-height: 100vh;
-}
-
-.timer-section {
-  padding-top: 70px;
 }
 
 .steps-work-section__inner.uk-scrollspy-inview li:before {
@@ -4307,6 +4294,58 @@ main.main-container {
     height: 200px;
   }
 
+  .timer-tabs li {
+    margin: 0 2.5px;
+    width: auto;
+  }
+
+  .timer-tabs li a {
+    font-size: 12px;
+    padding: 0.45em;
+    height: 40px;
+  }
+
+  .timer-app {
+    padding-top: 35px;
+  }
+
+  .timer-app__label {
+    margin-bottom: 20px;
+  }
+
+  .timer-app * + .timer-app__label {
+    margin-top: 20px;
+  }
+
+  .timer-app__controls {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .timer-app__controls > div {
+    width: 100%;
+  }
+
+  .timer-app__img {
+    margin: 30px auto;
+  }
+
+  .toggle__btn {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  .sort-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
   .advantages-h-section {
     margin-bottom: 60px;
   }
@@ -4333,6 +4372,7 @@ main.main-container {
 
   .timer-section {
     margin-bottom: 60px;
+    padding-top: 35px;
   }
 
   .steps-work-section {
@@ -4553,6 +4593,31 @@ main.main-container {
   }
 }
 
+@media (min-width: 800px) {
+  .timer-app {
+    padding-top: 65px;
+  }
+
+  .timer-app__controls {
+    margin-bottom: 40px;
+  }
+
+  .timer-app__controls > div {
+    width: auto;
+  }
+
+  .timer-app__img {
+    margin: -20px 30px 0;
+  }
+
+  .toggle__btn {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+
 @media (min-width: 960px) {
   h1,
   .title-h1 {
@@ -4742,9 +4807,25 @@ main.main-container {
     height: 500px;
   }
 
+  .timer-app__label {
+    margin-bottom: 36px;
+  }
+
+  .timer-app * + .timer-app__label {
+    margin-top: 36px;
+  }
+
   .timer-app__countdown {
     font-size: 72px;
     line-height: 72px;
+  }
+
+  .sort-list {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .advantages-h-section {
@@ -4773,6 +4854,7 @@ main.main-container {
 
   .timer-section {
     margin-bottom: 90px;
+    padding-top: 50px;
   }
 
   .steps-work-section {
@@ -5448,9 +5530,17 @@ main.main-container {
     padding-top: 95px;
   }
 
+  .timer-app__controls {
+    margin-bottom: 20px;
+  }
+
   .timer-app__countdown {
     font-size: 96px;
     line-height: 96px;
+  }
+
+  .timer-app__img {
+    margin: -20px 80px 0;
   }
 
   .advantages-h-section {
@@ -5483,6 +5573,7 @@ main.main-container {
 
   .timer-section {
     margin-bottom: 130px;
+    padding-top: 70px;
   }
 
   .steps-work-section {
@@ -5602,5 +5693,11 @@ main.main-container {
   .main-banner__title h1 {
     font-size: 40px;
     line-height: 40px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 800px) {
+  .toggle .timer-app__label {
+    margin: 0;
   }
 }

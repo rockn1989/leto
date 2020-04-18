@@ -3,6 +3,24 @@
 
 .timer-app {
 	padding-top: 65px;
+	@media (min-width: $mob-xs) {
+		padding-top: 35px;
+	}
+	@media (min-width: 800px) {
+		padding-top: 65px;
+	};
+	&.start {
+		.sort-list,
+		.toggle__btn {
+			opacity: .7;
+			cursor: no-drop;
+		}
+		.sort-list {
+			li {
+				cursor: no-drop
+			}
+		}
+	}
 	&__label {
 		margin-bottom: 36px;
 		font-size: 16px;
@@ -11,12 +29,39 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		text-align: center;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 20px;
+		}
+		@media (min-width: $tablet-w) {
+			margin-bottom: 36px;
+		};
 	}
 	*+.timer-app__label {
 		margin-top: 36px;
+		@media (min-width: $mob-xs) {
+			margin-top: 20px;
+		}
+		@media (min-width: $tablet-w) {
+			margin-top: 36px;
+		};
 	}
 	&__controls {
 		margin-bottom: 20px;
+		@media (min-width: $mob-xs) {
+			flex-wrap: wrap;
+			&>div {
+				width: 100%;
+			}
+		}
+		@media (min-width: 800px) {
+			margin-bottom: 40px;
+			&>div {
+				width: auto;
+			}
+		};
+		@media (min-width: $desk-w) {
+			margin-bottom: 20px;
+		};
 	}
 	&__countdown {
 		margin-bottom: 34px;
@@ -38,7 +83,16 @@
 		};
 	}
 	&__img {
-		margin: 0 80px;
+		text-align: center;
+		@media (min-width: $mob-xs) {
+			margin: 30px auto;
+		}
+		@media (min-width: 800px) {
+			margin: -20px 30px 0;
+		};
+		@media (min-width: $desk-w) {
+			margin: -20px 80px 0;
+		};
 		img {
 			filter: drop-shadow(25px 25px 15px rgba(0, 0, 0, 0.3));
 		}
@@ -62,6 +116,11 @@
 
 .toggle {
 	text-align: center;
+	.timer-app__label {
+		@media (min-width: $mob-xs) and (max-width: 800px) {
+			margin: 0;
+		}
+	}
 	&__btn {
 		position: relative;
 		padding: 3px 2px;
@@ -71,25 +130,12 @@
 		border: 2px solid $salat;
 		border-radius: 72px;
 		cursor: pointer;
-/* 		&-on,
-&-off {
-	position: absolute;
-	left: 2px;
-	display: inline-block;
-	width: 28px;
-	height: 28px;
-	border: 1px solid #000;
-	z-index: 10;
-	cursor: pointer;
-}
-&-on {
-	top: 3px;
-	border-radius: 72px 72px 0 0;
-}
-&-off {
-	border-radius: 0 0 72px 72px;	
-	bottom: 3px;
-} */
+		@media (min-width: $mob-xs) {
+			transform: rotate(-90deg);
+		}
+		@media (min-width: 800px) {
+			transform: rotate(0);
+		};
 		&-pin {
 			position: relative;
 			width: 28px;
@@ -110,6 +156,12 @@
 	@include list-reset;
 	display: flex;
 	align-items: center;
+	@media (min-width: $mob-xs) {
+		justify-content: center;
+	}
+	@media (min-width: $tablet-w) {
+		justify-content: flex-start;
+	};
 	li {
 		margin-right: 5px;
 		display: flex;

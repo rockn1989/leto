@@ -9,6 +9,7 @@ $(function() {
 	};
 
 	/*______ Активный пункт меня (на время разработки) ______*/
+
 	if((window.location.href.indexOf('localhost') > 1) || (window.location.href.indexOf('verstka') > 1)) {
 		const pageList = ['index', 'ugodie','logo', 'junior', "nov"];
 		const currentPage = window.location.href;
@@ -184,6 +185,26 @@ $(function() {
 		};
 	});
 
+
+	/*______ Таймер App ______*/
+
+	const timerInstance1 = new TimerApp($('#timer-1'));
+
+	let timerInstance2 = null;
+	let timerInstance3 = null;
+
+	let $ukSwitcherTimerTabs = $('.timer-tabs[uk-switcher]'),
+	$ukSwitcherTimerTabsContent = $('.timer-tabs').find('ul.uk-switcher');
+
+	$ukSwitcherTimerTabs.on('click', 'li', function () {
+		if(timerInstance2 instanceof TimerApp === false) {
+			timerInstance2 = new TimerApp($('#timer-2'));
+		};
+		
+		if(timerInstance3 instanceof TimerApp === false) {
+			timerInstance3 = new TimerApp($('#timer-3'));
+		};
+	});
 
 	/*______ Подгрузка фона в табаха с адресами ______*/
 

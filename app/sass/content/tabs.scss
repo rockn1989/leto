@@ -164,4 +164,19 @@
 	}
 }
 
+
+.timer-tabs {
+	li {
+		@media (min-width: $mob-xs) {
+			margin: 0 2.5px;
+			width: auto;
+			a {
+				font-size: 12px;
+				padding: 0.45em;
+				height: 40px;
+			}
+		}
+	}
+}
+
 /*______ End Tabs ______*/
