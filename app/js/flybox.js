@@ -27,7 +27,6 @@
 	};
 
 	FlyBox.prototype.watch = function() {
-		console.log(this.windowParams.height)
 		document.addEventListener('scroll', this.onScroll);
 	};
 

@@ -51,6 +51,13 @@ body {
 			}
 		}
 	}
+	&.is-loaded {
+		.main-nav {
+			svg {
+				display: block;
+			}
+		}
+	}
 }
 
 * {

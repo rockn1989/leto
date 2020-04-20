@@ -494,6 +494,19 @@
 	animation: rotate-back 1.2s linear infinite;
 }
 
+.on-finish{
+	animation: blick 3s linear infinite;
+}
+
+
+@keyframes blick {
+	0%, 100% {
+		background-color: #ffffff;
+	}
+	50% {
+		background-color: $yellow;
+	}
+}
 
 @keyframes slide-up {
 	0%{

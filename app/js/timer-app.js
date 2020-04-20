@@ -4,6 +4,30 @@
 $(function () {
 	'use strict';
 
+	const timeArray = [
+		[
+		'{"cold": "6:20", "room": "5:00"}',
+		'{"cold": "5:40", "room": "4:30"}',
+		'{"cold": "5:20", "room": "4:10"}',
+		'{"cold": "4:40", "room": "3:40"}',
+		'{"cold": "4:00", "room": "3:10"}'
+		],
+		[
+		'{"cold": "7:30", "room": "6:10"}',
+		'{"cold": "6:50", "room": "5:40"}',
+		'{"cold": "6:20", "room": "5:10"}',
+		'{"cold": "5:40", "room": "4:40"}',
+		'{"cold": "5:00", "room": "4:10"}'
+		],
+		[
+		'{"cold": "12:20", "room": "11:00"}',
+		'{"cold": "11:30", "room": "10:20"}',
+		'{"cold": "10:40", "room": "9:30"}',
+		'{"cold": "9:40", "room": "8:40"}',
+		'{"cold": "8:50", "room": "8:10"}'
+		]
+	]
+
 	/**
 	* @constructor
 	* @param {DomElementId}
@@ -14,23 +38,29 @@ $(function () {
 		this.timerParent = element;
 
 		this.domElements = {
+			btnsList: this.timerParent.find($('.btns-list')),
 			timerCounter: this.timerParent.find($('.timer-app__countdown')),
 			toggleBtn:  this.timerParent.find($('.toggle__btn')),
 			toggleBtnPin: this.timerParent.find($('.toggle__btn-pin')),
 			startBtn: this.timerParent.find($('.timer-btn-start')),
 			stopBtn: this.timerParent.find($('.timer-btn-stop')),
-			typeList: this.timerParent.find($('.sort-list'))
+			typeList: this.timerParent.find($('.sort-list')),
+			audio: this.timerParent.find($('.timer-app__signal audio'))
 		};
 		
 		this.timerId = null;
+		this.timerSignalId = null;
 
 		this.onToggle = this.onToggle.bind(this);
 		this.onStart = this.onStart.bind(this);
 		this.onStop = this.onStop.bind(this);
+		this.onCheckBtn = this.onCheckBtn.bind(this);
 		this.onCheck = this.onCheck.bind(this);
 		this.onRestart = this.onRestart.bind(this);
 		this.onCountDown = this.onCountDown.bind(this);
 		this.parseTime = this.parseTime.bind(this);
+		this.onSignal = this.onSignal.bind(this);
+		this.onPlayAudio = this.onPlayAudio.bind(this);
 
 		this.timerState = {
 			state: 'cold'
@@ -95,6 +125,19 @@ $(function () {
 
 
 	/**
+	* Выбор активной кнопки в верхней панели
+	* @param {DomElementId}
+	*/
+
+	Timer.prototype.onCheckBtn = function(el) {
+		if(!this.timerParent.hasClass('start')) {
+			$(el).siblings('li').removeClass('active');
+			$(el).addClass('active');
+		};
+	};
+
+
+	/**
 	* Переключатель режимов температуры
 	* 
 	*/
@@ -123,6 +166,31 @@ $(function () {
 		if(!this.timerParent.hasClass('start')) {
 			$(el).siblings('li').removeClass('active');
 			$(el).addClass('active');
+		};
+	};
+
+
+
+	/**
+	* Обновление значений таймеров в data-time элементов li
+	* @param {num} num - индекс активного элемента
+	* @param {DomCollection} - коллекция элементов
+ 	*/
+
+	Timer.prototype.onUpdateDataValue = function(idx,elList) {
+		if(!this.timerParent.hasClass('start')) {
+			const data = timeArray[idx];
+			const listWrapper = elList;
+			const listEl = listWrapper.find('li');
+			const self = this;
+
+			listEl.each(function(idx, el) {
+				el.setAttribute('data-time', data[idx]);
+			});
+
+			this.domElements.typeList.html(listWrapper.html())
+			const activeElement = listWrapper.find('li.active');
+			this.onSetTime(activeElement);
 		};
 	};
 
@@ -165,10 +233,14 @@ $(function () {
 		this.domElements.toggleBtn.on('click', this.onToggle);
 		this.domElements.startBtn.on('click', this.onStart);
 		this.domElements.stopBtn.on('click', this.onRestart);
-		this.domElements.typeList.on('click', 'li', function() {
+		this.domElements.btnsList.on('click', 'li', function(e) {
+			e.preventDefault();
+			let idxActiveBtn = self.domElements.btnsList.find('li').index($(this));
 			self.onCheck(this);
+			self.onUpdateDataValue(idxActiveBtn, self.domElements.typeList);
 		});
 		this.domElements.typeList.on('click', 'li', function() {
+			self.onCheck(this);
 			self.onSetTime(this);
 		});
 	};
@@ -185,6 +257,7 @@ $(function () {
 		this.domElements.toggleBtn.unbind('click');
 		this.domElements.startBtn.unbind('click');
 		this.domElements.stopBtn.unbind('click');
+		this.domElements.btnsList.unbind('click');
 		this.domElements.typeList.unbind('click');
 		this.domElements.typeList.unbind('click');
 	};
@@ -238,8 +311,48 @@ $(function () {
 
 	Timer.prototype.onStop = function() {
 		clearInterval(this.timerId);
+		this.onSignal();
 	};
 
+
+	/**
+	* Оповещение об окончании работы таймера
+	* @param {boolean} - true/false для активации или остановки оповещения
+	*/
+
+	Timer.prototype.onSignal = function(stop) {
+		const self = this;
+		const signalTarget = $('.timer-section');
+
+		signalTarget.addClass('on-finish');
+		if(!stop) {
+			self.onPlayAudio(true);
+			this.timerSignalId = setTimeout(function() {
+				
+				signalTarget.removeClass('on-finish');
+			}, 15000)
+		} else {
+			self.onPlayAudio(false);
+			signalTarget.removeClass('on-finish');
+		}
+
+	};
+
+
+	/**
+	* Воспроизведение аудио-сигнала для оповещения
+	* @param {boolean} - true/false проигрывать/оставить аудио
+	*/
+
+	Timer.prototype.onPlayAudio = function(status) {
+		if(status) {
+			this.domElements.audio[0].play();	
+		} else {
+			this.domElements.audio[0].pause();
+			this.domElements.audio[0].currentTime = 0.0;
+		}
+		
+	};
 
 	/**
 	* Остановка и сброс таймера по нажатию на кнопку СТОП
@@ -248,8 +361,12 @@ $(function () {
 
 	Timer.prototype.onRestart = function(e) {
 		e.preventDefault();
+
 		clearInterval(this.timerId);
+		clearInterval(this.timerSignalId);
+
 		this.removeHandlersEvents();
+		this.onSignal(stop);
 		this.timerParent.removeClass('start');
 		this.domElements.stopBtn.addClass('uk-hidden');
 		this.domElements.startBtn.removeClass('uk-hidden');

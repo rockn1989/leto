@@ -135,190 +135,54 @@
 		<div class="uk-container uk-container--small">
 			<h2 class="title-h2 uk-text-center">Таймер для варки яиц</h2>
 
-			<div class="custom-tabs">
-				<ul class="tab-sw timer-tabs" uk-switcher="swiping: false">
-					<li><a href="#">Всмятку</a></li>
+			<div id="timer-1" class="timer-app">
+				<ul class="btns-list">
+					<li class="active"><a href="#">Всмятку</a></li>
 					<li><a href="#">В мешочек</a></li>
 					<li><a href="#">Вкрутую</a></li>
 				</ul>
-				<ul class="uk-switcher">
-					<li>
-						<div id="timer-1" class="timer-app">
-							<div class="timer-app__controls uk-flex uk-flex-center uk-flex-top">
-								<div>
-									<div class="timer-app__label">Сорт яйца:</div>
-									<ul class="sort-list">
-										<li class="active" data-time='{"cold": "6:20", "room": "5:00"}'>CB</li>
-										<li data-time='{"cold": "5:40", "room": "4:30"}'>C0</li>
-										<li data-time='{"cold": "5:20", "room": "4:10"}'>C1</li>
-										<li data-time='{"cold": "4:40", "room": "3:40"}'>C2</li>
-										<li data-time='{"cold": "4:00", "room": "3:10"}'>C3</li>
-									</ul>
-								</div>
-								<div>
-									<div class="timer-app__img">
-										<img src="img/media/egg-img-1.svg" alt="">
-									</div>
-								</div>
-								<div>
-									<div class="toggle">
-										<div class="timer-app__label">Из холодильника</div>
-										<div class="toggle__btn">
-											<div class="toggle__btn-pin"></div>
-										</div>
-										<div class="timer-app__label">Комнатная температура</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="timer-app__countdown uk-margin-auto"></div>
-							
-							<div class="timer-app__start uk-flex uk-flex-center">
-								<div class="start__timer" uk-scrollspy="cls:uk-animation-fade" style="display: none;">
-									<div class="circle-timer-wrapper">
-										<div class="circle-timer" data-time="4">
-											<div class="circle-timer__outer">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
-													<circle class="circle-2" cx="27" cy="27" r="27"></circle>
-												</svg>
-											</div>
-											<div class="circle-timer__inner">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-													<circle class="circle-1" cx="25" cy="25" r="25"></circle>
-												</svg>
-									
-											</div>
-											<div class="circle-timer__value">4</div>
-										</div>
-										<div class="circle-timer__text">Минуты</div>
-									</div>
-								</div>
-								<a href="" class="timer-btn-start btn btn--yellow"><span>Старт</span></a>
-								<a href="" class="timer-btn-stop btn btn--yellow uk-hidden"><span>Стоп</span></a>
-							</div>
-
-
+				<div class="timer-app__controls uk-flex uk-flex-center uk-flex-top">
+					<div>
+						<div class="timer-app__label">Сорт яйца:</div>
+						<ul class="sort-list">
+							<li class="active" data-time='{"cold": "0:03", "room": "5:00"}'>CB</li>
+							<li data-time='{"cold": "5:40", "room": "4:30"}'>C0</li>
+							<li data-time='{"cold": "5:20", "room": "4:10"}'>C1</li>
+							<li data-time='{"cold": "4:40", "room": "3:40"}'>C2</li>
+							<li data-time='{"cold": "4:00", "room": "3:10"}'>C3</li>
+						</ul>
+					</div>
+					<div>
+						<div class="timer-app__img">
+							<img src="img/media/egg-img-1.svg" alt="">
 						</div>
-					</li>
-					<li>
-						<div id="timer-2" class="timer-app">
-							<div class="timer-app__controls uk-flex uk-flex-center uk-flex-top">
-								<div>
-									<div class="timer-app__label">Сорт яйца:</div>
-									<ul class="sort-list">
-										<li class="active" data-time='{"cold": "7:30", "room": "6:10"}'>CB</li>
-										<li data-time='{"cold": "6:50", "room": "5:40"}'>C0</li>
-										<li data-time='{"cold": "6:20", "room": "5:10"}'>C1</li>
-										<li data-time='{"cold": "5:40", "room": "4:40"}'>C2</li>
-										<li data-time='{"cold": "5:00", "room": "4:10"}'>C3</li>
-									</ul>
-								</div>
-								<div>
-									<div class="timer-app__img">
-										<img src="img/media/egg-img-2.svg" alt="">
-									</div>
-								</div>
-								<div>
-									<div class="toggle">
-										<div class="timer-app__label">Из холодильника</div>
-										<div class="toggle__btn">
-											<div class="toggle__btn-pin"></div>
-										</div>
-										<div class="timer-app__label">Комнатная температура</div>
-									</div>
-								</div>
+					</div>
+					<div>
+						<div class="toggle">
+							<div class="timer-app__label">Из холодильника</div>
+							<div class="toggle__btn">
+								<div class="toggle__btn-pin"></div>
 							</div>
-
-							<div class="timer-app__countdown uk-margin-auto"></div>
-							
-							<div class="timer-app__start uk-flex uk-flex-center">
-								<div class="start__timer" uk-scrollspy="cls:uk-animation-fade" style="display: none;">
-									<div class="circle-timer-wrapper">
-										<div class="circle-timer" data-time="4">
-											<div class="circle-timer__outer">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
-													<circle class="circle-2" cx="27" cy="27" r="27"></circle>
-												</svg>
-											</div>
-											<div class="circle-timer__inner">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-													<circle class="circle-1" cx="25" cy="25" r="25"></circle>
-												</svg>
-									
-											</div>
-											<div class="circle-timer__value">4</div>
-										</div>
-										<div class="circle-timer__text">Минуты</div>
-									</div>
-								</div>
-								<a href="" class="timer-btn-start btn btn--yellow"><span>Старт</span></a>
-								<a href="" class="timer-btn-stop btn btn--yellow uk-hidden"><span>Стоп</span></a>
-							</div>
-
-
+							<div class="timer-app__label">Комнатная температура</div>
 						</div>
-					</li>
-					<li>
-						<div id="timer-3" class="timer-app">
-							<div class="timer-app__controls uk-flex uk-flex-center uk-flex-top">
-								<div>
-									<div class="timer-app__label">Сорт яйца:</div>
-									<ul class="sort-list">
-										<li class="active" data-time='{"cold": "12:20", "room": "11:00"}'>CB</li>
-										<li data-time='{"cold": "11:30", "room": "10:20"}'>C0</li>
-										<li data-time='{"cold": "10:40", "room": "9:30"}'>C1</li>
-										<li data-time='{"cold": "9:40", "room": "8:40"}'>C2</li>
-										<li data-time='{"cold": "8:50", "room": "8:10"}'>C3</li>
-									</ul>
-								</div>
-								<div>
-									<div class="timer-app__img">
-										<img src="img/media/egg-img-3.svg" alt="">
-									</div>
-								</div>
-								<div>
-									<div class="toggle">
-										<div class="timer-app__label">Из холодильника</div>
-										<div class="toggle__btn">
-											<div class="toggle__btn-pin"></div>
-										</div>
-										<div class="timer-app__label">Комнатная температура</div>
-									</div>
-								</div>
-							</div>
+					</div>
+				</div>
 
-							<div class="timer-app__countdown uk-margin-auto"></div>
-							
-							<div class="timer-app__start uk-flex uk-flex-center">
-								<div class="start__timer" uk-scrollspy="cls:uk-animation-fade" style="display: none;">
-									<div class="circle-timer-wrapper">
-										<div class="circle-timer" data-time="4">
-											<div class="circle-timer__outer">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
-													<circle class="circle-2" cx="27" cy="27" r="27"></circle>
-												</svg>
-											</div>
-											<div class="circle-timer__inner">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-													<circle class="circle-1" cx="25" cy="25" r="25"></circle>
-												</svg>
-									
-											</div>
-											<div class="circle-timer__value">4</div>
-										</div>
-										<div class="circle-timer__text">Минуты</div>
-									</div>
-								</div>
-								<a href="" class="timer-btn-start btn btn--yellow"><span>Старт</span></a>
-								<a href="" class="timer-btn-stop btn btn--yellow uk-hidden"><span>Стоп</span></a>
-							</div>
+				<div class="timer-app__countdown uk-margin-auto"></div>
+				
+				<div class="timer-app__start uk-flex uk-flex-center">
+					<a href="" class="timer-btn-start btn btn--yellow"><span>Старт</span></a>
+					<a href="" class="timer-btn-stop btn btn--yellow uk-hidden"><span>Стоп</span></a>
+				</div>
+				
+				<div class="timer-app__signal uk-hidden">
+					<audio controls src="img/signal.mp3">
+						<source src="img/signal.mp3" type="audio/mpeg">
+					</audio>
+				</div>
 
-
-						</div>
-					</li>
-				</ul>
 			</div>
-		
+
 		</div>
 	</section><!-- end timer-section -->
 	

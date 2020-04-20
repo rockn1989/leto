@@ -666,6 +666,42 @@ p {
   animation: rotate-back 1.2s linear infinite;
 }
 
+.on-finish {
+  -webkit-animation: blick 3s linear infinite;
+  -moz-animation: blick 3s linear infinite;
+  animation: blick 3s linear infinite;
+}
+
+@-webkit-keyframes blick {
+  0%, 100% {
+    background-color: #ffffff;
+  }
+
+  50% {
+    background-color: #ffb422;
+  }
+}
+
+@-moz-keyframes blick {
+  0%, 100% {
+    background-color: #ffffff;
+  }
+
+  50% {
+    background-color: #ffb422;
+  }
+}
+
+@keyframes blick {
+  0%, 100% {
+    background-color: #ffffff;
+  }
+
+  50% {
+    background-color: #ffb422;
+  }
+}
+
 @-webkit-keyframes slide-up {
   0% {
     opacity: 0;
@@ -1168,6 +1204,10 @@ body.theme-brown .main-nav li:hover span {
   color: #ffffff;
 }
 
+body.is-loaded .main-nav svg {
+  display: block;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1541,6 +1581,7 @@ nav.nav {
   -o-transition: color .3s ease;
   -moz-transition: color .3s ease;
   transition: color .3s ease;
+  display: none;
 }
 
 .main-nav li span {
@@ -3233,17 +3274,18 @@ nav.nav {
 
 /*______ Timer ______*/
 
-.timer-app {
-  padding-top: 65px;
-}
-
 .timer-app.start .sort-list,
-.timer-app.start .toggle__btn {
+.timer-app.start .toggle__btn,
+.timer-app.start .btns-list {
   opacity: .7;
   cursor: no-drop;
 }
 
 .timer-app.start .sort-list li {
+  cursor: no-drop;
+}
+
+.timer-app.start .btns-list li:hover a {
   cursor: no-drop;
 }
 
@@ -3342,6 +3384,90 @@ nav.nav {
   -moz-transform: translateY(100%);
   -ms-transform: translateY(100%);
   transform: translateY(100%);
+}
+
+.btns-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 65px;
+}
+
+.btns-list li {
+  display: block;
+}
+
+.btns-list li a {
+  position: relative;
+  padding: 0 1.25em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 60px;
+  border-radius: 72px;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 2px solid #9bc045;
+  color: #5b6356;
+  letter-spacing: .8px;
+  font-weight: bold;
+  -webkit-transition: background-color .3s, color .3s ease;
+  -o-transition: background-color .3s, color .3s ease;
+  -moz-transition: background-color .3s, color .3s ease;
+  transition: background-color .3s, color .3s ease;
+}
+
+.btns-list li a:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 15px;
+  height: 7.5px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url("../img/icon-svg/triangle-down.svg") center 0 no-repeat;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  -o-transition: opacity .3s ease;
+  -moz-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.btns-list li.active a {
+  color: #ffffff;
+  background-color: #9bc045;
+}
+
+.btns-list li.active a:after {
+  opacity: 1;
 }
 
 .sort-list {
@@ -4305,10 +4431,6 @@ main.main-container {
     height: 40px;
   }
 
-  .timer-app {
-    padding-top: 35px;
-  }
-
   .timer-app__label {
     margin-bottom: 20px;
   }
@@ -4336,6 +4458,21 @@ main.main-container {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
+  }
+
+  .btns-list {
+    margin-bottom: 35px;
+  }
+
+  .btns-list li {
+    margin: 0 2.5px;
+    width: auto;
+  }
+
+  .btns-list li a {
+    font-size: 12px;
+    padding: 0.45em;
+    height: 40px;
   }
 
   .sort-list {
@@ -4371,7 +4508,7 @@ main.main-container {
   }
 
   .timer-section {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     padding-top: 35px;
   }
 
@@ -4557,6 +4694,11 @@ main.main-container {
     line-height: 60px;
   }
 
+  .btns-list li a {
+    font-size: 12px;
+    height: 50px;
+  }
+
   .footer__column-wrapper {
     margin-bottom: 30px !important;
   }
@@ -4594,10 +4736,6 @@ main.main-container {
 }
 
 @media (min-width: 800px) {
-  .timer-app {
-    padding-top: 65px;
-  }
-
   .timer-app__controls {
     margin-bottom: 40px;
   }
@@ -4615,6 +4753,10 @@ main.main-container {
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
     transform: rotate(0);
+  }
+
+  .btns-list {
+    margin-bottom: 65px;
   }
 }
 
@@ -4820,6 +4962,16 @@ main.main-container {
     line-height: 72px;
   }
 
+  .btns-list li {
+    margin: 0 15px;
+  }
+
+  .btns-list li a {
+    padding: 0 2.25em;
+    font-size: 16px;
+    height: 60px;
+  }
+
   .sort-list {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -4853,7 +5005,7 @@ main.main-container {
   }
 
   .timer-section {
-    margin-bottom: 90px;
+    padding-bottom: 90px;
     padding-top: 50px;
   }
 
@@ -5543,6 +5695,10 @@ main.main-container {
     margin: -20px 80px 0;
   }
 
+  .btns-list li a {
+    padding: 0 3.25em;
+  }
+
   .advantages-h-section {
     margin-bottom: 130px;
   }
@@ -5572,7 +5728,7 @@ main.main-container {
   }
 
   .timer-section {
-    margin-bottom: 130px;
+    padding-bottom: 130px;
     padding-top: 70px;
   }
 
