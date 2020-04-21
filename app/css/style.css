@@ -394,6 +394,7 @@ p {
   padding: 0;
   list-style: none;
   margin: 200px 0 30px;
+  padding-bottom: 20px;
   counter-reset: item;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1234,6 +1235,38 @@ svg {
   transition: fill .3s linear;
 }
 
+.preloader {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 400%;
+  height: 400%;
+  background: #ffb422;
+  z-index: 9999;
+  border-radius: 0 50% 0 50%;
+  -webkit-transition: all 1.25s ease-out;
+  -o-transition: all 1.25s ease-out;
+  -moz-transition: all 1.25s ease-out;
+  transition: all 1.25s ease-out;
+}
+
+.preloader.page-leave {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.preloader.another-page {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
 .uk-container {
   margin: 0 auto;
   max-width: 1360px;
@@ -1643,6 +1676,7 @@ nav.nav {
 .logo1 {
   display: block;
   border-radius: 50%;
+  background: #ffffff;
 }
 
 .logo1 a {
@@ -2691,6 +2725,8 @@ nav.nav {
   max-width: 100%;
   max-height: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .typebox-list .item__text {
@@ -2753,6 +2789,7 @@ nav.nav {
 }
 
 .egg-section__inner {
+  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -3104,6 +3141,10 @@ nav.nav {
 .about-egg__text p {
   font-size: 24px;
   line-height: 26px;
+}
+
+.about-egg__text p:first-child {
+  margin-bottom: 40px;
 }
 
 /*______ End About egg ______*/
@@ -3652,6 +3693,7 @@ main.main-container {
 .brands-slider .slider__arrows {
   position: absolute;
   top: 50%;
+  left: 30px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -3745,7 +3787,7 @@ main.main-container {
 }
 
 .brands-slider .slide-next {
-  right: 0;
+  right: 30px;
 }
 
 .composition-slider .uk-container {
@@ -5069,6 +5111,7 @@ main.main-container {
 
   .steps-list {
     margin-top: 200px;
+    min-height: 520px;
   }
 
   .steps-list li {
@@ -5093,17 +5136,17 @@ main.main-container {
 
   .steps-list li:nth-child(4) {
     margin-top: 0;
-    -webkit-transform: translate(15px, 70px);
-    -moz-transform: translate(15px, 70px);
-    -ms-transform: translate(15px, 70px);
-    transform: translate(15px, 70px);
+    -webkit-transform: translate(15px, 135px);
+    -moz-transform: translate(15px, 135px);
+    -ms-transform: translate(15px, 135px);
+    transform: translate(15px, 135px);
   }
 
   .steps-list li:nth-child(5) {
-    -webkit-transform: translateX(-40%) translateY(25%);
-    -moz-transform: translateX(-40%) translateY(25%);
-    -ms-transform: translateX(-40%) translateY(25%);
-    transform: translateX(-40%) translateY(25%);
+    -webkit-transform: translateX(-40%) translateY(60%);
+    -moz-transform: translateX(-40%) translateY(60%);
+    -ms-transform: translateX(-40%) translateY(60%);
+    transform: translateX(-40%) translateY(60%);
   }
 
   .padding-left-25 {
@@ -5733,7 +5776,7 @@ main.main-container {
   }
 
   .steps-work-section {
-    margin-bottom: 130px;
+    margin-bottom: 180px;
   }
 
   .brands-slider {
@@ -5742,7 +5785,9 @@ main.main-container {
 
   .brands-slider .slider__arrows {
     display: block;
-    max-width: 1140px;
+    max-width: -webkit-calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    max-width: calc(100% - 30px);
   }
 
   .custom-slider .slide-prev {
@@ -5773,10 +5818,6 @@ main.main-container {
 
   .total-section__inner {
     background: url("../img/ui/long-line.svg") center 30px no-repeat;
-  }
-
-  .brands-slider .slider__arrows {
-    max-width: 1300px;
   }
 }
 

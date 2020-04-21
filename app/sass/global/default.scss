@@ -77,6 +77,28 @@ svg {
   transition: fill .3s linear;
 }
 
+.preloader {
+	position: fixed;
+	display: block;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 400%;
+	height: 400%;
+	background: $yellow;
+	z-index: 9999;
+	border-radius: 0 50% 0 50%;
+	//transform: translate(-100%, 100%);
+	transition: all 1.25s ease-out;
+	&.page-leave {
+		transform: translate(0, 0);
+	}
+	&.another-page {
+		transform: scale(0);
+	}
+}
+
 .uk-container {
   margin: 0 auto;
   max-width: $containerWidth;

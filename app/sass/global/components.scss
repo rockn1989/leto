@@ -207,6 +207,7 @@
 	position: relative;
 	@include list-reset;
 	margin: 200px 0 30px;
+	padding-bottom: 20px;
 	counter-reset: item;
 	display: flex;
 	align-items: flex-start;
@@ -226,6 +227,7 @@
 	};
 	@media (min-width: $desk-w) {
 		margin-top: 200px;
+		min-height: 520px;
 	};
 	@media (min-width: 1300px) {
 		background: url('../img/icon-svg/step-line.svg') center 0 no-repeat;
@@ -305,7 +307,7 @@
 			};
 			@media (min-width: $desk-w) {
 				margin-top: 0;
-				transform: translate(15px, 70px);
+				transform: translate(15px, 135px);
 			};
 			&:before {
 				transition-delay: 1.8s;
@@ -318,7 +320,7 @@
 		}
 		&:nth-child(5) {
 			@media (min-width: $desk-w) {
-				transform: translateX(-40%) translateY(25%);
+				transform: translateX(-40%) translateY(60%);
 			};
 			&:before {
 				transition-delay: 2s;

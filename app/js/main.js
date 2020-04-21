@@ -1,7 +1,30 @@
 'use strict';
 
 $(document).ready(function() {
+
 	$('body').addClass('is-loaded');
+
+/*	const preloader = $('<div></div>', {
+		class: 'preloader'
+	});
+
+	setTimeout(function () {
+		preloader.addClass('another-page');
+		preloader.removeClass('page-leave');
+	}, 800);
+
+	$('body').append(preloader);
+
+
+	$('.main-nav a').on('click', function(e){
+		e.preventDefault();
+		var redirect = $(this).attr('href');
+		preloader.addClass('page-leave');
+		preloader.on('transitionend', function () {
+			window.location = redirect;
+		});		
+	});*/
+
 });
 
 $(function() {	
