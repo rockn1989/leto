@@ -53,8 +53,12 @@ body {
 	}
 	&.is-loaded {
 		.main-nav {
-			svg {
-				display: block;
+			li {
+				a {
+					img[src*="img/icon-svg"] {
+						display: block;
+					}
+				}
 			}
 		}
 	}

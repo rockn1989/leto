@@ -343,6 +343,7 @@
 				}
 			}
 			&:nth-child(4) {
+				width: 320px;
 				.advantage-item__img {
 					img {
 						top: 15px;
@@ -412,6 +413,13 @@
 
 .advantages-section {
 	&--pink {
+		.center-box {
+			transform: translateX(45px);
+			svg {
+				width: 95%;
+				height: 95%;
+			}
+		}
 		.advantages-list {
 			li {
 				&:nth-child(1) {

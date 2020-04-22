@@ -91,6 +91,13 @@ nav.nav {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		&.active {
+			a {
+				img {
+					opacity: 1;
+				}
+			}
+		}
 		@media (min-width: $mob-xs) and (max-width: $tablet-w) {
 			margin-right: 0;
 			padding: 0;
@@ -153,6 +160,11 @@ nav.nav {
 			text-transform: uppercase;
 			font-weight: 700;
 			color: $white;
+			&:hover {
+				img {
+					opacity: 1;
+				}
+			}
 			@media (min-width: $mob-xs) {
 				font-size: 12px;
 				line-height: 18px;
@@ -170,14 +182,15 @@ nav.nav {
 		.logo2 {
 			margin: 0;
 		}
-		svg {
+		img[src*="img/icon-svg"] {
 			position: absolute;
 			top: 0;
 			left: 0;
 			z-index: 15;
 			width: 100%;
 			height: 100%;
-			transition: color .3s ease;
+			opacity: 0;
+			transition: opacity .3s ease;
 			display: none;
 		}
 		span {
@@ -312,124 +325,6 @@ nav.nav {
 	}
 }
 
-.logo2 {
-	position: relative;
-	display: block;
-	width: 150px;
-	height: 150px;
-	a {
-		position: relative;
-		display: block;
-		width: 100%;
-		height: 100%;
-	  span {
-	  	position: absolute;
-	  	top: 0;
-	  	left: 0;
-	  	width: 100%;
-	  	height: 100%;
-	  	border-radius: 50%;
-	  	z-index: 100;
-	  	&:before {
-				content: '';
-				position: absolute;
-				top: 5px;
-				left: 5px;
-				right: 5px;
-				bottom: 5px;
-				z-index: 141;
-				border-radius: 75px 70px 60px 65px;
-				animation: egg 7s linear infinite;
-	  		background: linear-gradient(75deg, #ff9300 0%, #ffc90e 100%);
-	  	}
-	  }
-		&:before {
-			content: '';
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			right: 10px;
-			bottom: 10px;
-			background: linear-gradient(75deg, #ff8100 0%, #ffb906 100%);
-			z-index: 141;
-			border-radius: 75px 70px 60px 65px;
-			animation: egg 5s linear infinite;
-		}
-		&:after {
-			content: '';
-			position: absolute;
-			top: 15px;
-			left: 15px;
-			right: 15px;
-			bottom: 15px;
-			background: linear-gradient(75deg, #ff6e00 0%, #ffad02 100%);
-			z-index: 141;
-			border-radius: 75px 70px 60px 65px;
-			animation: egg 4.5s linear infinite;
-		}
-	}
-	img {
-		position: relative;
-		border: none;
-		z-index: 150;
-	}
-}
-
-.logo3 {
-	position: relative;
-	display: block;
-	width: 150px;
-	height: 150px;
-	&:before {
-		content: '';
-		position: absolute;
-		top: 5px;
-		left: 5px;
-		right: 5px;
-		bottom: 5px;
-		border-radius: 50%;
-		background-color: #ffa722;
-		background: linear-gradient(75deg, #ff9300 0%, #ffc90e 100%);
-		animation: egg 7s linear infinite;
-	}
-	a {
-		position: relative;
-		display: block;
-		width: 100%;
-		height: 100%;
-		&:before {
-			content: '';
-			position: absolute;
-			top: 5px;
-			left: 5px;
-			right: 5px;
-			bottom: 5px;
-			background-color: #ffb422;
-			background: linear-gradient(75deg, #ff8100 0%, #ffb906 100%);
-			z-index: 141;
-			border-radius: 75px 70px 60px 65px;
-			animation: egg 5s linear infinite;
-		}
-		&:after {
-			content: '';
-			position: absolute;
-			top: 15px;
-			left: 15px;
-			right: 15px;
-			bottom: 15px;
-			background-color: #ffb422;
-			background: linear-gradient(75deg, #ff6e00 0%, #ffad02 100%);
-			z-index: 141;
-			border-radius: 75px 70px 60px 65px;
-			animation: egg 4.5s linear infinite;
-		}
-	}
-	img {
-		position: relative;
-		border: none;
-		z-index: 150;
-	}
-}
 
 .egg {
 	margin: 100px auto;
