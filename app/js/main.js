@@ -1,31 +1,40 @@
 'use strict';
 
-$(document).ready(function() {
+(function($) {
 
-	$('body').addClass('is-loaded');
+	const images = document.images;
+	const imagesTotalCount = images.length;
+	let imagesLoadedCount = 0;
+	let percDisplay  = document.querySelector('.preloader__indicator-value');
+	let preloaderId = null;
 
-/*	const preloader = $('<div></div>', {
-		class: 'preloader'
-	});
+	function imageLoaded() {
+		imagesLoadedCount++;
+		percDisplay.innerHTML = (((100 / imagesTotalCount) * imagesLoadedCount ) << 0) + '%';
 
-	setTimeout(function () {
-		preloader.addClass('another-page');
-		preloader.removeClass('page-leave');
-	}, 800);
+		if(imagesLoadedCount >= imagesTotalCount) {
 
-	$('body').append(preloader);
+			preloaderId = setTimeout(function() {
+				$('.preloader').addClass('loaded');
 
+				$('.preloader__indicator').on('transitionend', function() {
+					$('.preloader').addClass('hidden');
+					$('body').addClass('is-loaded');
+					clearInterval(preloaderId);
+				});
+			}, 500);
+		}
+	};
 
-	$('.main-nav a').on('click', function(e){
-		e.preventDefault();
-		var redirect = $(this).attr('href');
-		preloader.addClass('page-leave');
-		preloader.on('transitionend', function () {
-			window.location = redirect;
-		});		
-	});*/
+	for(let i = 0; i < imagesTotalCount; i++) {
+		let imageClone = new Image();
+		imageClone.src = images[i].src;
+		imageClone.onload = imageLoaded;
+		imageClone.onerror = imageLoaded;
+	};
 
-});
+})($);
+
 
 $(function() {	
 
@@ -239,5 +248,14 @@ $(function() {
 
 		$('.address').css('backgroundImage', 'url('+imgSrc+')');
 	};
+
+
+	/*______ Переключение табов по hash ______*/
+
+	var $currentTab = $('[uk-switcher]').find('a[href="'+location.hash+'"]');
+
+	if ($currentTab.length > 0) {
+		UIkit.switcher($('[uk-switcher]')).show($currentTab.closest('li'));
+	}
 
 });

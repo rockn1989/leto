@@ -2,15 +2,21 @@
 <html lang="ru">
 {% include "../includes/head.twig" %}
 <body class="{{theme}}">
-{% include "../includes/header/header.twig" %}
-<main class="main-container">	
-	{% block content %}{% endblock %}
-</main>
-{% include "../includes/footer.twig" %}
+	<div class="preloader">
+		<div class="preloader__indicator">
+			<img src="img/preloader.gif" alt="">
+			<div class="preloader__indicator-value">0%</div>
+		</div>
+	</div>
+	{% include "../includes/header/header.twig" %}
+	<main class="main-container">	
+		{% block content %}{% endblock %}
+	</main>
+	{% include "../includes/footer.twig" %}
 
-{% include "../includes/modals.twig" %}
+	{% include "../includes/modals.twig" %}
 
-{% include "../includes/scripts.twig" %}
+	{% include "../includes/scripts.twig" %}
 
 </body>
 </html>

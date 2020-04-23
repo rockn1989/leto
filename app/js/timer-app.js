@@ -26,7 +26,13 @@ $(function () {
 		'{"cold": "9:40", "room": "8:40"}',
 		'{"cold": "8:50", "room": "8:10"}'
 		]
-	]
+	];
+
+	const imgArray = [
+		'img/media/egg-img-1.svg',
+		'img/media/egg-img-2.svg',
+		'img/media/egg-img-3.svg'
+	];
 
 	/**
 	* @constructor
@@ -45,7 +51,8 @@ $(function () {
 			startBtn: this.timerParent.find($('.timer-btn-start')),
 			stopBtn: this.timerParent.find($('.timer-btn-stop')),
 			typeList: this.timerParent.find($('.sort-list')),
-			audio: this.timerParent.find($('.timer-app__signal audio'))
+			audio: this.timerParent.find($('.timer-app__signal audio')),
+			image: this.timerParent.find($('.timer-app__img img'))
 		};
 		
 		this.timerId = null;
@@ -61,6 +68,7 @@ $(function () {
 		this.parseTime = this.parseTime.bind(this);
 		this.onSignal = this.onSignal.bind(this);
 		this.onPlayAudio = this.onPlayAudio.bind(this);
+		this.onChangeImage = this.onChangeImage.bind(this);
 
 		this.timerState = {
 			state: 'cold'
@@ -212,6 +220,19 @@ $(function () {
 
 
 	/**
+	* Замена картинки 
+	*	@param {num} num - индекс для поиска в массиве с изображениями
+	*
+	*/
+
+	Timer.prototype.onChangeImage = function(idx) {
+		if(!this.timerParent.hasClass('start')) {
+			this.domElements.image.attr('src', imgArray[idx]);
+		};
+	};
+
+
+	/**
 	* Вывод значения таймера обратного отсчета
 	* @param {DomElementId} target Где выводить таймер
 	* @param {num} time Объект со значением времени
@@ -238,6 +259,7 @@ $(function () {
 			let idxActiveBtn = self.domElements.btnsList.find('li').index($(this));
 			self.onCheck(this);
 			self.onUpdateDataValue(idxActiveBtn, self.domElements.typeList);
+			self.onChangeImage(idxActiveBtn);
 		});
 		this.domElements.typeList.on('click', 'li', function() {
 			self.onCheck(this);

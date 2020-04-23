@@ -135,10 +135,10 @@
 		border-radius: 72px;
 		cursor: pointer;
 		@media (min-width: $mob-xs) {
-			transform: rotate(-90deg);
+			margin: 10px 0;
 		}
 		@media (min-width: 800px) {
-			transform: rotate(0);
+			margin: 0;
 		};
 		&-pin {
 			position: relative;

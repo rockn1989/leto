@@ -1,3 +1,56 @@
+
+.preloader {
+	position: fixed;
+	display: block;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	z-index: 9999;
+	transition: background-color 1s linear;
+	&__indicator {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		transition: all .3s linear;
+		img {
+			margin-bottom: 30px;
+		}
+	}
+	&__indicator-value {
+		display: flex;
+		justify-content: center;
+		height: 40px;
+		width: 100%;
+		text-align: left;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: bold;
+		font-family: $secondFont;
+	}
+	&.loaded {
+		.preloader__indicator {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+	&.hidden {
+		background-color: transparent;
+		z-index: -1;
+	}
+	&.page-leave {
+		transform: translate(0, 0);
+	}
+	&.another-page {
+		transform: scale(0);
+	}
+}
+
+
 html,
 body,
 table {
@@ -7,6 +60,7 @@ table {
   font-weight: $fontWeight;
   color: $tColor;
 }
+
 
 body {
 	overflow-x: hidden;
@@ -79,28 +133,6 @@ a {
 
 svg {
   transition: fill .3s linear;
-}
-
-.preloader {
-	position: fixed;
-	display: block;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	width: 400%;
-	height: 400%;
-	background: $yellow;
-	z-index: 9999;
-	border-radius: 0 50% 0 50%;
-	//transform: translate(-100%, 100%);
-	transition: all 1.25s ease-out;
-	&.page-leave {
-		transform: translate(0, 0);
-	}
-	&.another-page {
-		transform: scale(0);
-	}
 }
 
 .uk-container {
@@ -206,20 +238,3 @@ svg {
 		background-position: 50% 50%;
 	}
 }
-
-/* body {
-	& >* {
-		display: none;
-	}
-
-	header.header,
-	footer.footer,
-	.main-banner,
-	.advantages-h-section,
-	.typebox-section,
-	.brands-slider,
-	.time-section {
-		display: block !important;
-	}
-}
- */
