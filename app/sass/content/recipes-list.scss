@@ -1,0 +1,65 @@
+
+/*______ Recipes list ______*/
+
+.recipes-list {
+	@include list-reset;
+	.recipe-item {
+		position: relative;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		@media (min-width: $mob-xs) {
+			padding-top: 35px;
+			padding-bottom: 0;
+		}
+		@media (min-width: $mob-s) {
+			padding-top: 50px;
+			padding-bottom: 10px;
+		};
+		@media (min-width: $tablet-w) {
+			padding-top: 70px;
+			padding-bottom: 40px;
+		};
+		&:nth-child(even) {
+			position: relative;
+    	background-color: #faf4ef;
+    	&:before,&:after {
+		    content: '';
+		    position: absolute;
+		    left: 0;
+		    width: 100%;
+		    height: 50px;
+		    background-repeat: repeat-x;
+		    background-size: 100%;
+		    z-index: 1;
+    	}
+    	&:before {
+		    background-position: 100% 100%;
+		    background-image: url(../img/ui/wave-top.png);
+		    top: -48px;
+    	}
+    	&:after {
+				background-position: 0 0;
+				bottom: -48px;
+				background-image: url(../img/ui/wave-bottom.png);
+    	}
+		}
+		&__inner {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 0 15px;
+		}
+		img {
+	    max-width: 100%;
+	    max-height: 100%;
+		}
+	}
+	.recipe-img {
+		margin-bottom: 30px;
+		text-align: center;
+		img {
+			display: inline;
+		}
+	}
+}
+
+/*______ End Recipes list ______*/

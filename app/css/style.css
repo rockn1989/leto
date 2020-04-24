@@ -1512,14 +1512,27 @@ svg {
   vertical-align: top;
 }
 
-.nav-list li:first-child {
-  margin-left: 0;
+.nav-list li.active a {
+  background-color: #ffb422;
+  color: #ffffff;
 }
 
 .nav-list li a {
   font-size: 14px;
   line-height: 21px;
   color: #5b6356;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  -webkit-transition: background-color .3s, color .3s ease;
+  -o-transition: background-color .3s, color .3s ease;
+  -moz-transition: background-color .3s, color .3s ease;
+  transition: background-color .3s, color .3s ease;
+}
+
+.nav-list li a:hover {
+  background-color: #ffb422;
+  color: #ffffff;
 }
 
 /*______ End Top Panel ______*/
@@ -2624,6 +2637,7 @@ nav.nav {
 .typebox-list .item__img .content-img img {
   max-width: 100%;
   max-height: 100%;
+  max-width: 300px;
 }
 
 .typebox-list .item__text {
@@ -3050,6 +3064,71 @@ nav.nav {
 }
 
 /*______ End About egg ______*/
+
+/*______ Recipes list ______*/
+
+.recipes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipes-list .recipe-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.recipes-list .recipe-item:nth-child(even) {
+  position: relative;
+  background-color: #faf4ef;
+}
+
+.recipes-list .recipe-item:nth-child(even):before,
+.recipes-list .recipe-item:nth-child(even):after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-repeat: repeat-x;
+  background-size: 100%;
+  z-index: 1;
+}
+
+.recipes-list .recipe-item:nth-child(even):before {
+  background-position: 100% 100%;
+  background-image: url(../img/ui/wave-top.png);
+  top: -48px;
+}
+
+.recipes-list .recipe-item:nth-child(even):after {
+  background-position: 0 0;
+  bottom: -48px;
+  background-image: url(../img/ui/wave-bottom.png);
+}
+
+.recipes-list .recipe-item__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.recipes-list .recipe-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.recipes-list .recipe-img {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.recipes-list .recipe-img img {
+  display: inline;
+}
+
+/*______ End Recipes list ______*/
 
 /*______ Tabs ______*/
 
@@ -3494,7 +3573,9 @@ nav.nav {
 /*______ MAIN CONTENT ______*/
 
 main.main-container {
-  min-height: 100vh;
+  min-height: -webkit-calc(100vh - 305px);
+  min-height: -moz-calc(100vh - 305px);
+  min-height: calc(100vh - 305px);
 }
 
 .steps-work-section__inner.uk-scrollspy-inview li:before {
@@ -4189,6 +4270,18 @@ main.main-container {
     display: block;
   }
 
+  .steps-list:before {
+    /* 			content: '';
+position: absolute;
+top: 0;
+left: 50%;
+display: block;
+width: 2px;
+height: calc(100% - 100px);
+background:  $bgColorUI;
+transform: translateX(-10px); */
+  }
+
   .steps-list li {
     margin: 0 auto 30px;
     max-width: 320px;
@@ -4221,6 +4314,10 @@ main.main-container {
   .wave-bg {
     margin-bottom: 160px !important;
     padding: 60px 0;
+  }
+
+  .nav-list li a {
+    padding: 0 10px;
   }
 
   .main-nav {
@@ -4347,6 +4444,11 @@ main.main-container {
     margin-bottom: 50px;
   }
 
+  .recipes-list .recipe-item {
+    padding-top: 35px;
+    padding-bottom: 0;
+  }
+
   .tab-sw li {
     width: 100%;
     margin: 0 0 15px;
@@ -4449,6 +4551,11 @@ main.main-container {
   }
 
   .timer-section {
+    padding-bottom: 60px;
+    padding-top: 35px;
+  }
+
+  .content-section {
     padding-bottom: 60px;
     padding-top: 35px;
   }
@@ -4616,6 +4723,11 @@ main.main-container {
     top: -75px;
   }
 
+  .recipes-list .recipe-item {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
   .tab-sw li {
     width: 30%;
     margin: 0 5px;
@@ -4751,8 +4863,8 @@ main.main-container {
     padding-left: 30px;
   }
 
-  .nav-list li {
-    margin-left: 20px;
+  .top-panel__inner {
+    padding: 0;
   }
 
   .main-nav li:first-child:after {
@@ -4868,6 +4980,11 @@ main.main-container {
     margin-bottom: 80px;
   }
 
+  .recipes-list .recipe-item {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+
   .tab-sw li {
     width: auto;
     margin: 0 15px;
@@ -4943,6 +5060,11 @@ main.main-container {
   }
 
   .timer-section {
+    padding-bottom: 90px;
+    padding-top: 50px;
+  }
+
+  .content-section {
     padding-bottom: 90px;
     padding-top: 50px;
   }
@@ -5054,8 +5176,8 @@ main.main-container {
     margin-bottom: 170px !important;
   }
 
-  .nav-list li {
-    margin-left: 30px;
+  .nav-list li a {
+    padding: 0 15px;
   }
 
   .main-nav li a {
@@ -5667,6 +5789,11 @@ main.main-container {
   }
 
   .timer-section {
+    padding-bottom: 130px;
+    padding-top: 70px;
+  }
+
+  .content-section {
     padding-bottom: 130px;
     padding-top: 70px;
   }

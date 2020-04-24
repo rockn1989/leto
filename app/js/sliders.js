@@ -82,9 +82,15 @@ $(function() {
 	/*______ Custom Slider ______*/
 
 	const $customSlider = $('.custom-slider .slider');
-
+	
+	$.each($customSlider, function(idx, el) {
+		const customSliderLength = $(el).find('.slide').length;
+		if(customSliderLength == 1) {
+			$(el).siblings('.slider__arrows').addClass('uk-hidden');
+		};
+	});
+	
 	$customSlider.init(function(event, slick) {
-
 		$('.custom-slider .slide-prev').on('click', function () {
 			$customSlider.slick('slickPrev');
 		});

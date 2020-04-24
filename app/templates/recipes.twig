@@ -1,0 +1,35 @@
+{% extends "layouts/default.twig" %}
+{% set title="Факты и рцепты" %}
+{% set theme="theme-green" %}
+{% block content %}
+
+	<main class="main-container">
+			
+		<section class="content-section">
+			<div class="uk-container">
+				<h1 class="title-h2 uk-text-center">Рецепты и факты</h1>
+			</div>
+			<ul class="recipes-list" uk-scrollspy="target: .recipe-item; cls: slide-up;">
+				{% for i in 0..4 %}
+				<li class="recipe-item">
+					<div class="recipe-item__inner">
+						<div class="recipe-img">
+							<picture>
+								<source srcset="https://via.placeholder.com/1080x1080" media="(min-width: 961px)">
+								<source srcset="https://via.placeholder.com/780x780" media="(min-width: 641px) and (max-width: 960px)">
+								<source srcset="https://via.placeholder.com/480x480" media="(max-width: 640px)">
+								<img src="https://via.placeholder.com/1080x1080" alt="" loading="lazy">
+							</picture>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt enim alias minus id, architecto fugiat. Nostrum deserunt at consequuntur, alias, suscipit aut ea itaque nulla magnam, laborum odit. Dignissimos ullam quam nam reprehenderit, accusantium quod modi magnam neque cum optio ea, voluptate possimus numquam architecto ex minima! Suscipit numquam corporis tempore architecto necessitatibus laboriosam quibusdam quaerat deserunt est rem enim quos fuga odio fugiat deleniti alias aliquam adipisci illo rerum eos quod omnis, voluptatibus illum provident. Amet animi molestias vero repellendus rem dolorem deserunt, cupiditate fugit labore, aliquam fuga, ipsam architecto dolore sapiente laboriosam a atque distinctio maxime! Quod, eum.
+						</p>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+
+	</main>
+
+{% endblock %}

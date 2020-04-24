@@ -216,6 +216,17 @@
 	@media (min-width: $mob-xs) {
 		margin-top: 50px;
 		display: block;
+		&:before {
+/* 			content: '';
+position: absolute;
+top: 0;
+left: 50%;
+display: block;
+width: 2px;
+height: calc(100% - 100px);
+background:  $bgColorUI;
+transform: translateX(-10px); */
+		}
 	}
 	@media (min-width: $mob-s) {
 		margin-top: 70px;

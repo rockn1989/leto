@@ -1,7 +1,7 @@
 /*______ MAIN CONTENT ______*/
 
 main.main-container {
-	min-height: 100vh;
+	min-height: calc(100vh - 305px);
 }
 
 .advantages-h-section {
@@ -82,6 +82,21 @@ main.main-container {
 }
 
 .timer-section {
+	@media (min-width: $mob-xs) {
+		padding-bottom: 60px;
+		padding-top: 35px;
+	};
+	@media (min-width: $tablet-w) {
+		padding-bottom: 90px;
+		padding-top: 50px;
+	};
+	@media (min-width: $desk-w) {
+		padding-bottom: 130px;
+		padding-top: 70px;
+	};
+}
+
+.content-section {
 	@media (min-width: $mob-xs) {
 		padding-bottom: 60px;
 		padding-top: 35px;
