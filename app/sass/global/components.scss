@@ -217,21 +217,25 @@
 		margin-top: 50px;
 		display: block;
 		&:before {
-/* 			content: '';
-position: absolute;
-top: 0;
-left: 50%;
-display: block;
-width: 2px;
-height: calc(100% - 100px);
-background:  $bgColorUI;
-transform: translateX(-10px); */
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			display: block;
+			width: 20px;
+			height: calc(100% - 100px);
+			background: url('../img/ui/vertical-line-2.svg') center 0 repeat-y;
+			transform: translateX(-10px);
+			background-size: 20px;
 		}
 	}
 	@media (min-width: $mob-s) {
 		margin-top: 70px;
 		display: flex;
 		justify-content: space-around;
+		&:before {
+			display: none;
+		}
 	};
 	@media (min-width: $tablet-w) {
 		margin-top: 120px;

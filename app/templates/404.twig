@@ -1,0 +1,30 @@
+{% extends "layouts/default.twig" %}
+{% set title="Контакты" %}
+{% set theme="theme-green" %}
+{% block content %}
+
+<section class="content-section">
+	<div class="uk-container uk-container--medium">
+		<div class="page-not-found">
+			<!-- begin about-egg -->
+			<section class="about-egg uk-text-center" uk-scrollspy="cls: slide-up show;">
+				<h1 class="title-h1 uk-text-center">404</h1>
+				<div class="about-egg__img">
+					<svg width="100%" height="100%" class="yellow-ellipse-3">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#yellow-ellipse-3"></use>
+					</svg>
+					<svg width="100%" height="100%" class="yellow-ellipse-4">
+					  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#yellow-ellipse-4"></use>
+					</svg>
+					<img data-src="img/media/egg.png" alt="" uk-img>
+				</div>
+				<div class="about-egg__text">
+					<p>Извините, такой страницы у нас нет</p>
+					<a href="/" class="btn btn--small btn--yellow uk-margin-auto"><span>Перейти на главную</span></a>
+				</div>
+			</section><!-- end about-egg -->
+		</div>
+	</div>
+</section>
+
+{% endblock %}

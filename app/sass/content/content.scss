@@ -132,4 +132,44 @@ main.main-container {
 	}
 }
 
+
+.page-not-found {
+	@media (min-width: $mob-s) {
+		margin-top: 80px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-top: 100px;
+	};
+	.title-h1 {
+		z-index: 500;
+		color: $white;
+		@media (min-width: $mob-xs) {
+			font-size: 75px;
+			line-height: 75px;
+			position: relative;
+			color: $tColor;
+		}
+		@media (min-width: $mob-s) {
+			position: absolute;
+			font-size: 100px;
+			line-height: 100px;
+			top: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+				color: $white;
+		};
+		@media (min-width: $tablet-w) {
+			position: absolute;
+			font-size: 130px;
+			line-height: 130px;
+		};
+		@media (min-width: $desk-w) {
+			font-size: 130px;
+			line-height: 130px;
+			top: -40px;
+			left: 50%;
+		};
+	}
+}
+
 /*______ END MAIN CONTENT ______*/

@@ -190,8 +190,6 @@ $(function() {
 		let elId = $(el).attr('id');
 		let numberValue = $(el).data('val');
 
-		console.log($(el))
-
 		$(el).on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
 
 
@@ -239,14 +237,14 @@ $(function() {
 		let liActive = $ukSwitcherTabsContent.find('li.uk-active');
 		let imgSrc = liActive.data('img');
 
-		$('.address').css('backgroundImage', 'url('+imgSrc+')');
+		//$('.address').css('backgroundImage', 'url('+imgSrc+')');
 	});
 
 	if($ukSwitcherTabs) {
 		let liActive = $ukSwitcherTabsContent.find('li.uk-active');
 		let imgSrc = liActive.data('img');
 
-		$('.address').css('backgroundImage', 'url('+imgSrc+')');
+		//$('.address').css('backgroundImage', 'url('+imgSrc+')');
 	};
 
 
@@ -256,6 +254,74 @@ $(function() {
 
 	if ($currentTab.length > 0) {
 		UIkit.switcher($('[uk-switcher]')).show($currentTab.closest('li'));
+	};
+
+
+
+	/*______ Яндекс карта ______*/
+
+	if($('div').is('#map')) {
+		ymaps.ready(init);
 	}
+
+
+function init() {
+
+ var myMap = new ymaps.Map('map', {
+   center: [55.78574522960528,37.24092823483275],
+   controls: ['zoomControl'],
+   zoom: 15
+ });
+
+ function clickGoto() {
+
+   // Переключаем checkbox
+
+   //$(this).find('input').prop('checked', true);
+
+   // адрес
+   var branch = $(this).data('goto');
+   console.log(branch)
+   // получение координат по адресу - асинхронная функция
+   var myGeocoder = ymaps.geocode([55.78574522960528,37.24092823483275]);
+   console.log(myGeocoder)
+   myGeocoder.then(
+     function(res) {
+       coords = res.geoObjects.get(0).geometry.getCoordinates();
+
+       // переходим по координатам
+       myMap.panTo(coords, {
+         flying: true,
+         timingFunction: 'linear',
+         duration: 600,
+         checkZoomRange: true
+       });
+       // добавляем маркер
+       var placeMark = new ymaps.Placemark(coords, {
+         balloonContent: branch
+       }, {
+         iconLayout: 'default#image',
+         iconImageHref: '../img/ui/pin.svg',
+         iconImageSize: [27, 32],
+         iconImageOffset:  [0, 0]
+       });
+       myMap.geoObjects.add(placeMark);
+     },
+     function(err) {
+       //alert('Ошибка');
+     }
+   );
+   return false;
+ }
+
+ // навешиваем обработчики
+ var col = document.getElementsByClassName('js__go-to');
+ for (var i = 0, n = col.length; i < n; ++i) {
+   col[i].onclick = clickGoto;
+ }
+
+ // имитируем клик по первому элементу в списке после загрузки
+ $('.js__go-to').eq(0).click()
+}
 
 });

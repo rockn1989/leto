@@ -104,16 +104,39 @@
 	}
 }
 
+
+.map {
+	margin: 0 auto;
+	width: 100%;
+	height: 400px;
+	max-width: 960px;
+}
+
 .address {
-	background-size: contain;
+	position: relative;
+	background: $bgColor;
+/* 	background-size: contain;
+background-position: center center;
+background-repeat: no-repeat;
+@media (min-width: $mob-xs) {
+	background-position: center 100%;
+}
+@media (min-width: $tablet-w) {
 	background-position: center center;
-	background-repeat: no-repeat;
-	@media (min-width: $mob-xs) {
-		background-position: center 100%;
+}; */
+	.map {
+		margin-top: 40px;
+		//position: absolute;
+		top: 180px;
+		left: 50%;
+		//transform: translateX(-50%);
+		@media (min-width: $mob-xs) {
+			top: 240px;
+		}
+		@media (min-width: $mob-s) {
+			top: 180px;
+		};
 	}
-	@media (min-width: $tablet-w) {
-		background-position: center center;
-	};
 }
 
 .address-tabs {
@@ -122,20 +145,20 @@
 		padding-top: 50px;
 		li {
 			
-			height: 500px;
+			//height: 500px;
 			overflow: hidden;
 			background-repeat: no-repeat;
 			background-position: center 0;
 			background-size: contain;
-			@media (min-width: $mob-xs) {
-				height: 200px;
-			};
-			@media (min-width: $mob-s) {
-				height: 300px;
-			};
-			@media (min-width: $tablet-w) {
-				height: 500px;
-			};
+/* 			@media (min-width: $mob-xs) {
+	height: 200px;
+};
+@media (min-width: $mob-s) {
+	height: 300px;
+};
+@media (min-width: $tablet-w) {
+	height: 500px;
+}; */
 			&:after {
 				//content: '';
 				position: absolute;
@@ -154,6 +177,7 @@
 				z-index: 120;
 			}
 			img {
+				display: none;
 				position: absolute;
 				top: 50%;
 				left: 50%;

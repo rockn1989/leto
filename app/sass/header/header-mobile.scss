@@ -9,6 +9,12 @@
 		li {
 			padding: 10px 25px;
 			border-bottom: 1px solid #ece6e1;
+			&.active {
+				background: $yellow;
+				a {
+					color: $white;
+				}
+			}
 			a {
 				color: $tColor;	
 			}
