@@ -206,7 +206,7 @@
 .steps-list {
 	position: relative;
 	@include list-reset;
-	margin: 200px 0 30px;
+	
 	padding-bottom: 20px;
 	counter-reset: item;
 	display: flex;
@@ -216,23 +216,25 @@
 	@media (min-width: $mob-xs) {
 		margin-top: 50px;
 		display: block;
+		margin: 200px auto 30px;
+		max-width: 320px;
 		&:before {
 			content: '';
 			position: absolute;
-			top: 0;
-			left: 50%;
+			top: 160px;
+			left: 35px;
 			display: block;
-			width: 20px;
-			height: calc(100% - 100px);
-			background: url('../img/ui/vertical-line-2.svg') center 0 repeat-y;
-			transform: translateX(-10px);
-			background-size: 20px;
+			width: 100%;
+			height: calc(100% - 260px);
+			background: url('../img/ui/vertical-line-3.svg') 0 0 repeat-y;
 		}
 	}
 	@media (min-width: $mob-s) {
+		margin: 200px 0 30px;
 		margin-top: 70px;
 		display: flex;
 		justify-content: space-around;
+		max-width: 100%;
 		&:before {
 			display: none;
 		}

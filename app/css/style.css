@@ -393,7 +393,6 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin: 200px 0 30px;
   padding-bottom: 20px;
   counter-reset: item;
   display: -webkit-box;
@@ -4311,24 +4310,21 @@ main.main-container {
   .steps-list {
     margin-top: 50px;
     display: block;
+    margin: 200px auto 30px;
+    max-width: 320px;
   }
 
   .steps-list:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 160px;
+    left: 35px;
     display: block;
-    width: 20px;
-    height: -webkit-calc(100% - 100px);
-    height: -moz-calc(100% - 100px);
-    height: calc(100% - 100px);
-    background: url("../img/ui/vertical-line-2.svg") center 0 repeat-y;
-    -webkit-transform: translateX(-10px);
-    -moz-transform: translateX(-10px);
-    -ms-transform: translateX(-10px);
-    transform: translateX(-10px);
-    background-size: 20px;
+    width: 100%;
+    height: -webkit-calc(100% - 260px);
+    height: -moz-calc(100% - 260px);
+    height: calc(100% - 260px);
+    background: url("../img/ui/vertical-line-3.svg") 0 0 repeat-y;
   }
 
   .steps-list li {
@@ -4656,6 +4652,7 @@ main.main-container {
   }
 
   .steps-list {
+    margin: 200px 0 30px;
     margin-top: 70px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -4665,6 +4662,7 @@ main.main-container {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    max-width: 100%;
   }
 
   .steps-list:before {
