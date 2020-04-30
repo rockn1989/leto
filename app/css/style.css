@@ -3241,7 +3241,28 @@ nav.nav {
 .custom-tabs {
   position: relative;
   z-index: 20;
-  /* min-height: 800px; */
+}
+
+.custom-tabs.all-brands .uk-switcher {
+  padding-top: 40px;
+}
+
+.custom-tabs.all-brands .uk-switcher li.uk-active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .contacts-tabs .uk-switcher {
@@ -3253,20 +3274,22 @@ nav.nav {
   width: 100%;
   height: 400px;
   max-width: 960px;
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+.ymaps-2-1-76-balloon {
+  border-radius: 36px;
+}
+
+.ymaps-2-1-76-balloon__layout {
+  padding: 5px;
+  border-radius: 36px;
 }
 
 .address {
   position: relative;
   background: #faf4ef;
-  /* 	background-size: contain;
-background-position: center center;
-background-repeat: no-repeat;
-@media (min-width: $mob-xs) {
-	background-position: center 100%;
-}
-@media (min-width: $tablet-w) {
-	background-position: center center;
-}; */
 }
 
 .address .map {
@@ -3284,32 +3307,6 @@ background-repeat: no-repeat;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: contain;
-  /* 			@media (min-width: $mob-xs) {
-	height: 200px;
-};
-@media (min-width: $mob-s) {
-	height: 300px;
-};
-@media (min-width: $tablet-w) {
-	height: 500px;
-}; */
-}
-
-.address-tabs .uk-switcher li:after {
-  position: absolute;
-  display: block;
-  width: 64px;
-  height: 70px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background: url("../img/ui/pin.svg") center no-repeat;
-  background-size: 100%;
-  z-index: 250;
 }
 
 .address-tabs .uk-switcher li div {
@@ -3640,7 +3637,6 @@ main.main-container {
 
 .footer__title {
   position: relative;
-  margin-bottom: 25px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -3648,41 +3644,10 @@ main.main-container {
   text-transform: uppercase;
 }
 
-.footer__title[data-role] {
-  margin-bottom: 0;
-  padding-bottom: 15px;
-}
-
-.footer__title .icon-arrow-up {
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform-origin: center;
-  -moz-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-  -webkit-transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  -o-transition: transform .5s ease;
-  -moz-transition: transform .5s ease, -moz-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease, -moz-transform .5s ease;
-}
-
-.footer__title .icon-arrow-up.open {
-  -webkit-transform: rotateX(0);
-  -moz-transform: rotateX(0);
-  transform: rotateX(0);
-}
-
 .footer__list {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: none;
 }
 
 .footer__list li {
@@ -3914,6 +3879,7 @@ main.main-container {
 
 .custom-slider .slider .slide img {
   display: inline-block;
+  border-radius: 36px;
 }
 
 .custom-slider .slider button {
@@ -4317,14 +4283,14 @@ main.main-container {
   .steps-list:before {
     content: '';
     position: absolute;
-    top: 160px;
+    top: 170px;
     left: 35px;
     display: block;
     width: 100%;
-    height: -webkit-calc(100% - 260px);
-    height: -moz-calc(100% - 260px);
-    height: calc(100% - 260px);
-    background: url("../img/ui/vertical-line-3.svg") 0 0 repeat-y;
+    height: -webkit-calc(100% - 220px);
+    height: -moz-calc(100% - 220px);
+    height: calc(100% - 220px);
+    background: url("../img/ui/vertical-line-3.svg") 0 0 no-repeat;
   }
 
   .steps-list li {
@@ -4491,7 +4457,7 @@ main.main-container {
 
   .recipes-list .recipe-item {
     padding-top: 35px;
-    padding-bottom: 0;
+    padding-bottom: 10px;
   }
 
   .tab-sw li {
@@ -4613,12 +4579,16 @@ main.main-container {
   }
 
   .footer__column-wrapper {
-    margin-bottom: 15px !important;
+    margin-bottom: 30px !important;
   }
 
   .footer__top {
     margin-bottom: 30px;
     padding-bottom: 0px;
+  }
+
+  .footer__title {
+    margin-bottom: 15px;
   }
 
   .footer__list {
@@ -4779,7 +4749,6 @@ main.main-container {
 
   .recipes-list .recipe-item {
     padding-top: 50px;
-    padding-bottom: 10px;
   }
 
   .tab-sw li {
@@ -4823,13 +4792,8 @@ main.main-container {
     color: #ffffff;
   }
 
-  .footer__column-wrapper {
-    margin-bottom: 30px !important;
-  }
-
-  .footer__title[data-role] {
+  .footer__title {
     margin-bottom: 25px;
-    padding-bottom: 0;
   }
 
   .footer__list {
@@ -5065,6 +5029,10 @@ main.main-container {
     padding: 0 2.25em;
     font-size: 16px;
     height: 60px;
+  }
+
+  .custom-tabs.all-brands .uk-switcher li {
+    min-height: 550px;
   }
 
   .timer-app__label {

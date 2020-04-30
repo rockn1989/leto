@@ -9,11 +9,10 @@
 		padding-bottom: 40px;
 		@media (min-width: $mob-xs) {
 			padding-top: 35px;
-			padding-bottom: 0;
+			padding-bottom: 10px;
 		}
 		@media (min-width: $mob-s) {
 			padding-top: 50px;
-			padding-bottom: 10px;
 		};
 		@media (min-width: $tablet-w) {
 			padding-top: 70px;

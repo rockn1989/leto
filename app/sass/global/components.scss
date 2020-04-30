@@ -221,12 +221,12 @@
 		&:before {
 			content: '';
 			position: absolute;
-			top: 160px;
+			top: 170px;
 			left: 35px;
 			display: block;
 			width: 100%;
-			height: calc(100% - 260px);
-			background: url('../img/ui/vertical-line-3.svg') 0 0 repeat-y;
+			height: calc(100% - 220px);
+			background: url('../img/ui/vertical-line-3.svg') 0 0 no-repeat;
 		}
 	}
 	@media (min-width: $mob-s) {

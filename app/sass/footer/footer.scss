@@ -1,15 +1,8 @@
 /*______ FOOTER ______*/
 
 .footer {
-	//padding-top: 30px;
-	@media (min-width: $tablet-w) {
-		//padding-top: 70px;
-	};
 	&__column-wrapper {
 		@media (min-width: $mob-xs) {
-			margin-bottom: 15px !important;
-		};
-		@media (min-width: $mob-s) {
 			margin-bottom: 30px !important;
 		};
 	}
@@ -34,35 +27,20 @@
 	}
 	&__title {
 		position: relative;
-		margin-bottom: 25px;
 		font-size: 16px;
 		line-height: 21px;
 		font-weight: 700;
 		letter-spacing: 0.8px;
-		text-transform: uppercase;
-		&[data-role] {
-			margin-bottom: 0;
-			padding-bottom: 15px;
-			@media (min-width: $mob-s) {
-				margin-bottom: 25px;
-				padding-bottom: 0;
-			};
+		text-transform: uppercase;	
+		@media (min-width: $mob-xs) {
+			margin-bottom: 15px;
 		}
-		.icon-arrow-up {
-			position: absolute;
-			top: 0;
-			right: 0;
-			transform-origin: center;
-			transform: rotateX(180deg);
-			transition: transform .5s ease;
-			&.open {
-				transform: rotateX(0);
-			}
-		}
+		@media (min-width: $mob-s) {
+			margin-bottom: 25px;
+		};
 	}
 	&__list {
 		@include list-reset;
-		display: none;
 		@media (min-width: $mob-xs) {
 			padding-bottom: 0px !important;
 		};
