@@ -3676,6 +3676,10 @@ main.main-container {
   position: relative;
 }
 
+.brands-slider .slick-track {
+  margin: 0 auto;
+}
+
 .brands-slider .slider > button {
   display: none !important;
 }

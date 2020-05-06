@@ -24,6 +24,9 @@
 	.uk-container {
 		position: relative;
 	}
+	.slick-track {
+		margin: 0 auto;
+	}
 	.slider {
 		&>button {
 			display: none !important;
