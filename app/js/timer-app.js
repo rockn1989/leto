@@ -54,7 +54,7 @@ $(function () {
 			audio: this.timerParent.find($('.timer-app__signal audio')),
 			image: this.timerParent.find($('.timer-app__img img'))
 		};
-		
+
 		this.timerId = null;
 		this.timerSignalId = null;
 
@@ -347,11 +347,13 @@ $(function () {
 		const signalTarget = $('.timer-section');
 
 		signalTarget.addClass('on-finish');
+
 		if(!stop) {
 			self.onPlayAudio(true);
 			this.timerSignalId = setTimeout(function() {
 				
 				signalTarget.removeClass('on-finish');
+				self.onSignal(true);
 			}, 15000)
 		} else {
 			self.onPlayAudio(false);
@@ -368,8 +370,10 @@ $(function () {
 
 	Timer.prototype.onPlayAudio = function(status) {
 		if(status) {
+			this.domElements.audio[0].loop = true;
 			this.domElements.audio[0].play();	
 		} else {
+			this.domElements.audio[0].loop = false;
 			this.domElements.audio[0].pause();
 			this.domElements.audio[0].currentTime = 0.0;
 		}

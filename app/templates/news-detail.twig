@@ -1,0 +1,120 @@
+{% extends "layouts/default.twig" %}
+{% set title="Новости компании «Лето-Групп»" %}
+{% set theme="theme-green" %}
+{% block content %}
+
+	<!-- begin news-section -->
+	<section class="news-detail-section">
+		<div class="uk-container">
+			<h2 class="title-h2 uk-text-center" uk-scrollspy="cls: slide-up;">Новости компании «Лето-Групп»</h2>
+			
+			<div class="news-detail-content">
+				<time datetime="2020-13-29" class="date-time">
+					<span>13</span>
+					<span>февраля</span>
+					<span>2020</span>
+				</time>
+				<div class="img uk-text-center">
+					<img data-src="img/media/detail-news.png" alt="" uk-img>
+				</div>
+				<div class="text">
+					<p>
+						В основу процессов взят опыт аналогичных проектов в ведущих странах Европы (Англия, Голландия, Германия). Плюс добавлены свои разработки и накопленный опыт в логистике и производстве куриного яйца. Выбрано самое современное и рпоизводительное на сегодняшний день в мире.
+					</p>
+
+					<p>
+						Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+					</p>
+
+					<p>
+						Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов.
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section><!-- end news-section -->
+
+	<!-- begin news-pagination -->
+	<div class="news-pagination">
+		<div class="uk-container">
+			<div class="arrows">
+				<div class="arrows__arrow-left">
+					<a href="">
+						<svg width="57px" height="27px" class="">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-left"></use>
+						</svg>
+						Предыдущая новость
+					</a>
+				</div>
+				<div class="arrows__arrow-right">
+					<a href="">
+						<svg width="57px" height="27px" class="">
+						  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#arrow-right"></use>
+						</svg>
+						Следующая новость
+					</a>
+				</div>
+			</div>
+
+			<ul class="pagination-news-list">
+				<li class="pagination-item">
+					<article>
+						<header>
+							<figure>
+								<a href="">
+									<img data-src="img/media/news-img-1.png" alt="" uk-img>
+								</a>
+							</figure>
+						</header>
+						<section>
+							<time datetime="2020-02-29">
+								<span>29</span> 
+								<span>февраля</span> 
+								<span>2020</span>
+							</time>
+							<h3 class="title-h3">
+								<a href="">
+									Численность наших сотрудников возрасла до 2233 человек
+								</a>
+							</h3>
+							<p>
+								Оригинальные запатентованные торговые марки в разных ценовых категориях
+							</p>
+						</section>
+					</article>
+				</li>
+				<li class="pagination-item">
+					<article>
+						<header>
+							<figure>
+								<a href="">
+									<img data-src="img/media/news-img-2.png" alt="" uk-img>
+								</a>
+							</figure>
+						</header>
+						<section>
+							<time datetime="2020-13-29">
+								<span>13</span>
+								<span>февраля</span>
+								<span>2020</span>
+							</time>
+							<h3 class="title-h3">
+								<a href="">
+									Новые удобные короба для лотков
+								</a>
+							</h3>
+							<p>
+								Продукция упакована в красочные короба-шоубоксы, которые удобно размещаются непосредственно на яичной полке магазина без дополнительного ручного труда.
+							</p>
+						</section>
+					</article>
+				</li>
+			</ul>
+			
+			<a href="" class="btn btn--yellow uk-margin-auto"><span>Все новости</span></a>
+
+		</div>
+	</div><!-- end news-pagination -->
+
+{% endblock %}
