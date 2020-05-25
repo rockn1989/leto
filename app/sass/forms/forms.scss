@@ -145,10 +145,32 @@
 	}
 }
 
+.contacts-form-wrapper {
+	height: 100%;
+}
+
 .contacts-form {
+	height: 100%;
 	@media (min-width: $tablet-w) {
 		margin-left: auto;
 		max-width: 440px;
+	};
+}
+
+.contact-form-success {	
+	font-size: 30px;
+	line-height: 36px;
+	font-family: "Museo";
+	@media (min-width: $tablet-w) {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+	};
+	@media (min-width: $desk-w) {
+		top: 50%;
+		transform: translate(-50%,-50%);
 	};
 }
 

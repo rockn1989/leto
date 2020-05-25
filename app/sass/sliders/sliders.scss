@@ -208,6 +208,7 @@
 			}
 		}
 		.slide {
+			position: relative;
 			text-align: center;
 			img {
 				display: inline-block;
@@ -228,6 +229,12 @@
 			transform: translateY(-50%);
 			width: 100%;
 			z-index: 650;
+			@media (min-width: $mob-xs) {
+				top: -30px;
+			}
+			@media (min-width: $tablet-w) {
+				top: 50%;
+			};
 			@media (min-width: 1460px) {
 				max-width: 1300px;	
 			};
@@ -241,7 +248,12 @@
 		transform: translateY(-50%);
 		cursor: pointer;
 		svg {
-			width: 100px;
+			@media (min-width: $mob-xs) {
+				width: 60px;
+			}
+			@media (min-width: $tablet-w) {
+				width: 100px;
+			};
 			@media (min-width: 1460px) {
 				width: auto;
 			};
@@ -271,9 +283,35 @@
 	&__text {
 		margin-top: 50px;
 		text-align: left;
+		a {
+			color: $green;
+		}
 	}
 }
 
+
+.wave-bg {
+	.slider {
+		.slide {
+			&:before {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    display: block;
+		    width: 100%;
+		    height: 100%;
+		    background-color: #faf4ef;
+		    z-index: -1;
+			}
+			img {
+				display: inline-block;
+				border-radius: 36px;
+				mix-blend-mode: multiply;
+			}
+		}
+	}
+}
 
 /*______ Tab slider ______*/
 

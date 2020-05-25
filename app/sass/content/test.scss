@@ -1,0 +1,99 @@
+
+/*______ Remove this style from site ______*/
+
+
+.task-list {
+	@include list-reset;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+	overflow: hidden;
+	.row {
+		margin: 0 20px;
+		padding: 20px 10px;
+		width: calc(25% - 40px);
+		min-height: calc(100vh - 40px);
+		border: 1px solid $tColor;
+	}
+}
+
+.task-card {
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #d4d4d4;
+	transition: all .3s ease;
+	&__title {
+		margin-bottom: 10px;
+		padding: 5px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+		background: #7878f1;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	&__text {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	&:hover,&:focus,&:active {
+		cursor: move;
+	}
+}
+
+
+.ondrag {
+	border-color: gray;
+	cursor: no-drop;
+}
+
+
+.dragover {
+	background: lighten(green, 50%);
+	border-style: dashed !important;
+}
+
+
+.users-list-wrapper {
+	margin-bottom: 50px;
+	padding: 10px;
+	
+	width: 100%;
+	overflow-x: auto;
+	border: 1px solid #d4d4d4;
+}
+
+.users-list {
+	@include list-reset;
+	display: table;
+	border-spacing: 5px;
+	min-width: 1000px;
+	li {
+		margin-right: 10px;
+		display: table-cell;
+		vertical-align: top;
+		padding: 15px;
+		width: 200px;
+		border: 2px solid #d4d4d4;
+		.photo {
+			margin-bottom: 5px;
+			text-align: center;
+			img {
+				display: inline;
+			}
+		}
+		.fio {
+			span {
+				display: block;
+				font-size: 24px;
+				line-height: 30px;
+				font-weight: bold;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+		.address {
+			background: none;
+		}
+	}
+}

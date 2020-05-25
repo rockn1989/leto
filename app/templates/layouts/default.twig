@@ -2,12 +2,17 @@
 <html lang="ru">
 {% include "../includes/head.twig" %}
 <body class="{{theme}}">
-	<div class="preloader">
-		<div class="preloader__indicator">
-			<img src="img/preloader.gif" alt="">
-			<div class="preloader__indicator-value">0%</div>
+	{% if preloader == false %}
+		
+	{% else %}
+		<div class="preloader">
+			<div class="preloader__indicator">
+				<img src="img/preloader.gif" alt="">
+				<div class="preloader__indicator-value">0%</div>
+			</div>
 		</div>
-	</div>
+	{% endif %}
+
 	{% include "../includes/header/header.twig" %}
 	<main class="main-container">	
 		{% block content %}{% endblock %}

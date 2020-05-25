@@ -3,12 +3,22 @@
 		<div class="uk-container uk-container--large">
 
 			<div class="main-banner__img"  uk-scrollspy="cls:border-anim">
-				<picture>
-					<source srcset="{{data.bgURL.desk}}" media="(min-width: 961px)">
-					<source srcset="{{data.bgURL.tablet}}" media="(min-width: 641px) and (max-width: 960px)">
-					<source srcset="{{data.bgURL.mob}}" media="(max-width: 640px)">
-					<img src="{{data.bgURL.desk}}" alt="" loading="lazy">
-				</picture>
+
+				{% if data.video is defined %}
+					<video autoplay preload loop playsinline muted>
+							<source src="{{data.video.url.mp4}}" type="video/mp4">
+							<source src="{{data.video.url.webm}}" type="video/webm">
+				</video>
+				{% else %}
+					<picture>
+						<source srcset="{{data.bgURL.desk}}" media="(min-width: 961px)">
+						<source srcset="{{data.bgURL.tablet}}" media="(min-width: 641px) and (max-width: 960px)">
+						<source srcset="{{data.bgURL.mob}}" media="(max-width: 640px)">
+						<img src="{{data.bgURL.desk}}" alt="" loading="lazy">
+					</picture>
+				{% endif %}
+
+
 			</div>
 			<div class="main-banner__text">
 				<div class="main-banner__title">

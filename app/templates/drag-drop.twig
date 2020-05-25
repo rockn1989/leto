@@ -1,0 +1,55 @@
+{% extends "layouts/default.twig" %}
+{% set title="Контакты" %}
+{% set theme="theme-green" %}
+{% set preloader=false %}
+{% block content %}
+
+<section class="content-section">
+	<div class="uk-container uk-container--medium">
+		<h1 class="uk-text-center">Drag&Drop</h1>
+		
+
+		<div class="users-list-wrapper">
+			<ul class="users-list">
+			</ul>
+		</div>
+
+		<ul class="task-list">
+			<li class="row">
+				<div class="task-card" draggable="true">
+					<div class="task-card__title">Task-1</div>
+					<div class="task-card__text">Lorem ipsum.</div>
+				</div>
+				<div class="task-card" draggable="true">
+					<div class="task-card__title">Task-2</div>
+					<div class="task-card__text">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="row">
+			</li>
+			<li class="row">
+				<div class="task-card" draggable="true">
+					<div class="task-card__title">Task-3</div>
+					<div class="task-card__text">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li class="row">
+				<div class="task-card" draggable="true">
+					<div class="task-card__title">Task-4</div>
+					<div class="task-card__text">Lorem ipsum.</div>
+				</div>
+				<div class="task-card" draggable="true">
+					<div class="task-card__title">Task-5</div>
+					<div class="task-card__text">Lorem ipsum.</div>
+				</div>
+				<div class="task-card" draggable="true">
+					<div class="task-card__title">Task-6</div>
+					<div class="task-card__text">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+{% endblock %}

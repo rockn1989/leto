@@ -337,8 +337,25 @@ p {
 .close-btn {
   position: relative;
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-btn span {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #5b6356;
+  -webkit-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  transition: opacity .2s linear;
 }
 
 .close-btn:after,
@@ -368,6 +385,10 @@ p {
 
 .close-btn:after {
   bottom: 8px;
+}
+
+.close-btn.active span {
+  opacity: 0;
 }
 
 .close-btn.active:before {
@@ -1995,6 +2016,25 @@ nav.nav {
   font-family: 'object-fit: cover; object-position: cover;';
 }
 
+.main-banner video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'object-fit: cover; object-position: cover;';
+}
+
 .main-banner__img {
   position: relative;
   padding-top: 100%;
@@ -3326,6 +3366,26 @@ nav.nav {
   background-image: url(../img/ui/wave-bottom.png);
 }
 
+.recipes-list .recipe-item:nth-child(even) a {
+  position: relative;
+}
+
+.recipes-list .recipe-item:nth-child(even) a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #faf4ef;
+  z-index: -1;
+}
+
+.recipes-list .recipe-item:nth-child(even) a img {
+  mix-blend-mode: multiply;
+}
+
 .recipes-list .recipe-item__inner {
   max-width: 960px;
   margin: 0 auto;
@@ -3340,6 +3400,10 @@ nav.nav {
 .recipes-list .recipe-img {
   margin-bottom: 30px;
   text-align: center;
+}
+
+.recipes-list .recipe-img a {
+  display: block;
 }
 
 .recipes-list .recipe-img img {
@@ -4089,6 +4153,7 @@ main.main-container {
 }
 
 .custom-slider .slider .slide {
+  position: relative;
   text-align: center;
 }
 
@@ -4134,11 +4199,6 @@ main.main-container {
   cursor: pointer;
 }
 
-.custom-slider .slide-prev svg,
-.custom-slider .slide-next svg {
-  width: 100px;
-}
-
 .custom-slider .slide-prev {
   left: 0;
 }
@@ -4150,6 +4210,28 @@ main.main-container {
 .custom-slider__text {
   margin-top: 50px;
   text-align: left;
+}
+
+.custom-slider__text a {
+  color: #549537;
+}
+
+.wave-bg .slider .slide:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #faf4ef;
+  z-index: -1;
+}
+
+.wave-bg .slider .slide img {
+  display: inline-block;
+  border-radius: 36px;
+  mix-blend-mode: multiply;
 }
 
 /*______ Tab slider ______*/
@@ -4457,7 +4539,144 @@ main.main-container {
   width: 100%;
 }
 
+.contacts-form-wrapper {
+  height: 100%;
+}
+
+.contacts-form {
+  height: 100%;
+}
+
+.contact-form-success {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "Museo";
+}
+
 /*______ END FORMS ______*/
+
+/*______ Remove this style from site ______*/
+
+.task-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.task-list .row {
+  margin: 0 20px;
+  padding: 20px 10px;
+  width: -webkit-calc(25% - 40px);
+  width: -moz-calc(25% - 40px);
+  width: calc(25% - 40px);
+  min-height: -webkit-calc(100vh - 40px);
+  min-height: -moz-calc(100vh - 40px);
+  min-height: calc(100vh - 40px);
+  border: 1px solid #5b6356;
+}
+
+.task-card {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #d4d4d4;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.task-card__title {
+  margin-bottom: 10px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #7878f1;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.task-card__text {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.task-card:hover,
+.task-card:focus,
+.task-card:active {
+  cursor: move;
+}
+
+.ondrag {
+  border-color: gray;
+  cursor: no-drop;
+}
+
+.dragover {
+  background: #80ff80;
+  border-style: dashed !important;
+}
+
+.users-list-wrapper {
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d4d4d4;
+}
+
+.users-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  border-spacing: 5px;
+  min-width: 1000px;
+}
+
+.users-list li {
+  margin-right: 10px;
+  display: table-cell;
+  vertical-align: top;
+  padding: 15px;
+  width: 200px;
+  border: 2px solid #d4d4d4;
+}
+
+.users-list li .photo {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.users-list li .photo img {
+  display: inline;
+}
+
+.users-list li .fio span {
+  display: block;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.users-list li .address {
+  background: none;
+}
 
 @media (min-width: 0px) {
   h1,
@@ -4833,6 +5052,15 @@ main.main-container {
 
   .brands-slider .slider .slide a {
     height: 60px;
+  }
+
+  .custom-slider .slider__arrows {
+    top: -30px;
+  }
+
+  .custom-slider .slide-prev svg,
+  .custom-slider .slide-next svg {
+    width: 60px;
   }
 }
 
@@ -5389,6 +5617,15 @@ main.main-container {
     bottom: -50px;
   }
 
+  .custom-slider .slider__arrows {
+    top: 50%;
+  }
+
+  .custom-slider .slide-prev svg,
+  .custom-slider .slide-next svg {
+    width: 100px;
+  }
+
   .tab-slider .slick-dots {
     bottom: -50px;
   }
@@ -5400,6 +5637,17 @@ main.main-container {
   .contacts-form {
     margin-left: auto;
     max-width: 440px;
+  }
+
+  .contact-form-success {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
   }
 }
 
@@ -6146,6 +6394,14 @@ main.main-container {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+  }
+
+  .contact-form-success {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 

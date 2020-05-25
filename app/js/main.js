@@ -1,6 +1,8 @@
 'use strict';
 
 (function($) {
+	if($('.preloader__indicator-value').is('div')) {
+
 
 	const images = document.images;
 	const imagesTotalCount = images.length;
@@ -32,7 +34,7 @@
 		imageClone.onload = imageLoaded;
 		imageClone.onerror = imageLoaded;
 	};
-
+}
 })($);
 
 
@@ -315,7 +317,7 @@ function init() {
  }
 
  // навешиваем обработчики
- var col = document.getElementsByClassName('js__go-to');
+ var col = document.getElementsByclass('js__go-to');
  for (var i = 0, n = col.length; i < n; ++i) {
    col[i].onclick = clickGoto;
  }
@@ -323,5 +325,210 @@ function init() {
  // имитируем клик по первому элементу в списке после загрузки
  $('.js__go-to').eq(0).click()
 }
+
+});
+
+
+
+/*______ TEST!! ______*/
+
+$(function() {
+
+	const cards = document.querySelectorAll(`.task-card`);
+	const dragLayer = document.querySelectorAll(`.task-list .row`);
+	let item = null;
+
+	cards.forEach(function(el, idx) {
+
+		el.addEventListener('dragstart', function () {
+			item = this;
+			let _self = this;
+			setTimeout(function() {
+				_self.style.display = 'none';
+			},0);
+		});
+
+		el.addEventListener('dragend', function () {
+			item = null;
+		})
+	});
+
+
+	dragLayer.forEach(function(el, idx) {
+
+		el.addEventListener('dragover', function (e) {
+			e.preventDefault();
+			this.classList.add('dragover');
+		});
+
+		el.addEventListener('dragenter', function (e) {
+			e.preventDefault();
+			
+		});
+
+		el.addEventListener('dragleave', function () {
+			this.classList.remove('dragover');
+		});
+
+		el.addEventListener('drop', function () {
+			this.append(item);
+			item.style.display = `block`;
+			this.classList.remove('dragover');
+		});
+
+	});
+
+
+	/*______ Users list ______*/
+
+
+	const apiService = (count) => {
+	  const api = `https://api.randomuser.me/?nat=US&results=${count}`;
+	  return fetch(api).then((response) => {
+	    if (response.ok) {
+	      return response.json();
+	    } else {
+	      return Error(response.status);
+	    }
+	  });
+	};
+
+
+	function renderItem(data) {
+		const {
+	    picture: { large },
+	    name: { first, last },
+	    location: {
+	      state,
+	      street: { name },
+	    },
+	    nat,
+	    tab,
+		} = data;
+
+		return `<li class="user-item">
+		    <div class="photo">
+		      <img src=${large} loading="lazy" alt=${first} />
+		    </div>
+		    <div class="about">
+		      <div class="fio">
+		        <span>
+		          ${first} ${last}
+		        </span>
+		      </div>
+		      <div class="address">
+		        <div>
+		          ${state} <sup>${nat}</sup>
+		        </div>
+		        <div>Street: ${name}</div>
+		      </div>
+		    </div>
+			</li>
+		`;
+	};
+
+
+	const showConsole = (value) => {
+		console.log(value)
+	};
+
+/*	const debounce = (fn, time) => {
+		let timeout;
+		return function(args) {
+			const context = this;
+			let later = function() {
+				timeout = null;
+				fn.apply(context, ...args)
+			}
+		};
+		return function(...args) {
+			fn(...args)
+		}
+	};	
+*/
+
+	var observer = new IntersectionObserver(function(entries, observer) {
+		entries.forEach((entry) => {;
+			if(entry.isIntersecting) {
+	      observer.unobserve(entry.target)
+	      observer.observe(document.querySelector('.user-item:last-child'));
+	      console.log('obs')
+			}
+		});
+	}, {
+    threshold: 1.0
+	});
+
+
+
+	function debounce(func, wait, immediate) {
+		var timeout;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	};
+
+	const throttling = (fn, time) => {
+		let timeNow = 0;
+		let timerId = null;
+		return function(...args) {
+
+			timerId = setTimeout(() => {
+				if(new Date() - timeNow > time) {
+					fn(...args);
+					timeNow = Date.now();
+					clearInterval(timerId);
+				}
+			}, time);
+		}
+
+	};
+
+
+	const thrShowConsole = throttling(showConsole, 300);
+	const dbShowConsole = debounce(showConsole, 300);
+
+	const usersListWrapper = document.querySelector(`.users-list-wrapper`);
+	const usersListHTML = document.querySelector(`.users-list`);
+
+	let usersList = [];
+	let cloneNodes = document.createElement(`div`);
+	
+	apiService(15).then((resolve) => {
+		const {results} = resolve;
+		return results;
+	}).then((arr) => {
+		usersList = [...arr];
+		return usersList;
+	}).then((data) => {
+		
+		const clones = data.map((userData, idx) => {
+			cloneNodes.innerHTML = ``;
+			cloneNodes.insertAdjacentHTML(`beforeend`,renderItem(userData));
+			return cloneNodes.firstChild;
+		});
+
+		usersListHTML.append(...clones);
+
+		var target = document.querySelector('.user-item');
+		
+
+		usersListWrapper.addEventListener(`scroll`, () => {
+			dbShowConsole(123);
+			observer.observe(target);
+		})
+	});
+
+	
+	
+
 
 });

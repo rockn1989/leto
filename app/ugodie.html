@@ -26,12 +26,13 @@
 	<![endif]-->
 </head>
 <body class="theme-blue">
-	<div class="preloader">
-		<div class="preloader__indicator">
-			<img src="img/preloader.gif" alt="">
-			<div class="preloader__indicator-value">0%</div>
+			<div class="preloader">
+			<div class="preloader__indicator">
+				<img src="img/preloader.gif" alt="">
+				<div class="preloader__indicator-value">0%</div>
+			</div>
 		</div>
-	</div>
+	
 	
 <!-- begin header -->
 <header class="header">
@@ -56,7 +57,9 @@
 					<li><a href="#">Переработка</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
-				<a href="#" class="close-btn js__toggle-mobile-left-menu uk-hidden@m" uk-toggle="target: #offcanvas-menu"></a>
+				<a href="#" class="close-btn js__toggle-mobile-left-menu uk-hidden@m" uk-toggle="target: #offcanvas-menu">
+					<span></span>
+				</a>
 			</div>
 		</div>
 
@@ -136,12 +139,15 @@
 		<div class="uk-container uk-container--large">
 
 			<div class="main-banner__img"  uk-scrollspy="cls:border-anim">
-				<picture>
-					<source srcset="img/media/main-banner-3-1440x730.png" media="(min-width: 961px)">
-					<source srcset="img/media/main-banner-3-960x487-tablet.png" media="(min-width: 641px) and (max-width: 960px)">
-					<source srcset="img/media/main-banner-3-640x325-mob-xs.png" media="(max-width: 640px)">
-					<img src="img/media/main-banner-3-1440x730.png" alt="" loading="lazy">
-				</picture>
+
+									<picture>
+						<source srcset="img/media/main-banner-3-1440x730.png" media="(min-width: 961px)">
+						<source srcset="img/media/main-banner-3-960x487-tablet.png" media="(min-width: 641px) and (max-width: 960px)">
+						<source srcset="img/media/main-banner-3-640x325-mob-xs.png" media="(max-width: 640px)">
+						<img src="img/media/main-banner-3-1440x730.png" alt="" loading="lazy">
+					</picture>
+				
+
 			</div>
 			<div class="main-banner__text">
 				<div class="main-banner__title">
