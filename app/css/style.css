@@ -84,6 +84,25 @@ p {
   line-height: 26px;
 }
 
+.content-section ul:not([class]),
+.content-section ol:not([class]) {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.content-section ul:not([class]) li,
+.content-section ol:not([class]) li {
+  margin-bottom: 5px;
+}
+
+.content-section ul:not([class]) {
+  padding-left: 25px;
+}
+
+.content-section ol:not([class]) {
+  padding-left: 20px;
+}
+
 /*______ COMPONENTS ______*/
 
 * + .btn {
@@ -1351,6 +1370,11 @@ svg {
 
 .uk-container--large {
   max-width: 1440px;
+}
+
+.small-container {
+  margin: 0 auto;
+  max-width: 720px;
 }
 
 .wave-bg {
@@ -3461,16 +3485,16 @@ nav.nav {
   text-transform: uppercase;
   border: 2px solid #9bc045;
   color: #5b6356;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   font-weight: bold;
-  -webkit-transition: background-color .3s, color .3s ease;
-  -o-transition: background-color .3s, color .3s ease;
-  -moz-transition: background-color .3s, color .3s ease;
-  transition: background-color .3s, color .3s ease;
+  -webkit-transition: background-color 0.3s, color 0.3s ease;
+  -o-transition: background-color 0.3s, color 0.3s ease;
+  -moz-transition: background-color 0.3s, color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s ease;
 }
 
 .tab-sw li a:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: -9px;
@@ -3482,10 +3506,10 @@ nav.nav {
   transform: translateX(-50%);
   background: url("../img/icon-svg/triangle-down.svg") center 0 no-repeat;
   opacity: 0;
-  -webkit-transition: opacity .3s ease;
-  -o-transition: opacity .3s ease;
-  -moz-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .tab-sw li.uk-active a {
@@ -3519,7 +3543,7 @@ nav.nav {
 }
 
 .custom-tabs.all-brands .uk-switcher {
-  padding-top: 40px;
+  padding-top: 15px;
 }
 
 .custom-tabs.all-brands .uk-switcher li.uk-active {
@@ -4555,129 +4579,6 @@ main.main-container {
 
 /*______ END FORMS ______*/
 
-/*______ Remove this style from site ______*/
-
-.task-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: 100px;
-  overflow: hidden;
-}
-
-.task-list .row {
-  margin: 0 20px;
-  padding: 20px 10px;
-  width: -webkit-calc(25% - 40px);
-  width: -moz-calc(25% - 40px);
-  width: calc(25% - 40px);
-  min-height: -webkit-calc(100vh - 40px);
-  min-height: -moz-calc(100vh - 40px);
-  min-height: calc(100vh - 40px);
-  border: 1px solid #5b6356;
-}
-
-.task-card {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #d4d4d4;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.task-card__title {
-  margin-bottom: 10px;
-  padding: 5px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #7878f1;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.task-card__text {
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.task-card:hover,
-.task-card:focus,
-.task-card:active {
-  cursor: move;
-}
-
-.ondrag {
-  border-color: gray;
-  cursor: no-drop;
-}
-
-.dragover {
-  background: #80ff80;
-  border-style: dashed !important;
-}
-
-.users-list-wrapper {
-  margin-bottom: 50px;
-  padding: 10px;
-  width: 100%;
-  overflow-x: auto;
-  border: 1px solid #d4d4d4;
-}
-
-.users-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: table;
-  border-spacing: 5px;
-  min-width: 1000px;
-}
-
-.users-list li {
-  margin-right: 10px;
-  display: table-cell;
-  vertical-align: top;
-  padding: 15px;
-  width: 200px;
-  border: 2px solid #d4d4d4;
-}
-
-.users-list li .photo {
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-.users-list li .photo img {
-  display: inline;
-}
-
-.users-list li .fio span {
-  display: block;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.users-list li .address {
-  background: none;
-}
-
 @media (min-width: 0px) {
   h1,
   .title-h1 {
@@ -5388,10 +5289,6 @@ main.main-container {
 
   .main-banner {
     margin-bottom: 120px;
-  }
-
-  .main-banner > .uk-container {
-    padding: 0 15px;
   }
 
   .main-banner__img {
