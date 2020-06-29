@@ -1,0 +1,65 @@
+{% extends "layouts/default.twig" %}
+{% set title="Новости компании «Лето-Групп»" %}
+{% set theme="theme-green" %}
+{% set preloader = false %}
+{% block content %}
+
+<div class="uk-container">
+		<h1 class="uk-text-center">Promise</h1>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+
+		const getFakesMembers = (count) => {
+				const api = `https://api.randomuser.me/?nat=US&results=${count}`;
+				return fetch(api).then((response) => {
+						if (response.ok) {
+								return response.json();
+						} else {
+								return Error(response.status);
+						}
+				});
+		};
+
+		getFakesMembers(10)
+				.then(({ results }) => {
+						return new Promise((resolve) => {
+								const data = results.map((el) => trans(el));
+								resolve(data);
+						});
+				}).then((newData) => {
+						console.log(newData)
+				})
+
+
+		function trans(object) {
+				return {
+						gender: object.gender,
+						name: object.name.first
+				}
+		}
+
+		/*			const promise = new Promise((resolve, reject) => {
+						setTimeout(() => {
+							resolve(`Done`)
+						}, 4000);
+					});
+
+					promise
+					.then(res => {
+						console.log(res)
+						return new Promise((resolve) => {
+							setTimeout(() => {
+								resolve(`${res} 2`)
+							}, 2000)
+						})
+					})
+					.then(res => {
+						console.log(res)
+					});*/
+
+})
+
+</script>
+{% endblock %}

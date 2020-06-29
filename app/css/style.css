@@ -615,6 +615,7 @@ p {
 
 .green-link {
   color: #549537;
+  cursor: pointer;
 }
 
 .green-link--large {
@@ -4569,6 +4570,21 @@ main.main-container {
 
 .contacts-form {
   height: 100%;
+}
+
+.file-remove {
+  width: 20px;
+  height: 20px;
+  background: url("../img/ui/close.svg") center no-repeat;
+  background-size: 10px;
+  position: absolute;
+  top: 16px;
+  right: -20px;
+  display: none;
+}
+
+.file-remove.visible {
+  display: block;
 }
 
 .contact-form-success {

@@ -1,30 +1,116 @@
 {% extends "layouts/default.twig" %}
 {% set title="Главная" %}
 {% set theme="theme-blue" %}
-{% 
-	set data = {
-		bgURL: {
-			desk: 'img/media/main-banner-3-1440x730.png',
-			tablet: 'img/media/main-banner-3-960x487-tablet.png',
-			mob: 'img/media/main-banner-3-640x325-mob-xs.png'
-		},
-		title: 'Когда качество имеет размер!',
-		subtitle: 'для силы и здоровья',
-		flyBox: {
-			isset: true,
-			img: 'img/media/egg-box-2.png'
-		}
-	} 
+{%
+set data = {
+bgURL: {
+desk: 'img/media/main-banner-3-1440x730.png',
+tablet: 'img/media/main-banner-3-960x487-tablet.png',
+mob: 'img/media/main-banner-3-640x325-mob-xs.png'
+},
+title: 'Когда качество имеет размер!',
+subtitle: 'для силы и здоровья',
+flyBox: {
+isset: true,
+img: 'img/media/egg-box-2.png'
+}
+}
 %}
-
 {% block content %}
-
-	{% include './includes/components/main-banner.twig' with {'data': data} %}
-	{% include './includes/components/advantages-section.twig' with {'theme': 'blue'} %}
-	{% include './includes/components/advantages-h-section.twig' with {'theme': 'blue'} %}
-
-	{% include './includes/components/typebox-section.twig' with {'theme': 'blue'} %}
-	{% include './includes/components/brands-slider.twig' %}
-	{% include './includes/components/time-section.twig' %}
-	{% include './includes/components/slider-section.twig' %}
+{% include './includes/components/main-banner.twig' with {'data': data} %}
+{% include './includes/components/advantages-section.twig' with {'theme': 'blue'} %}
+{% include './includes/components/advantages-h-section.twig' with {'theme': 'blue'} %}
+{% include './includes/components/typebox-section.twig' with {'theme': 'blue'} %}
+{% include './includes/components/brands-slider.twig' %}
+{% include './includes/components/time-section.twig' %}
+{% include './includes/components/slider-section.twig' %}
 {% endblock %}
+
+
+<div class="service-top-banner trade-in">
+		<div class="center-box">
+				<div class="service-top-banner__text">
+						<h1>Обменяй старую квартиру на новую за 1 месяц!</h1>
+						<div class="text">Услуга Трейд-ин от агентства Novoc Realty – это быстрый и выгодный обмен вашей вторичной недвижимости на квартиру в новостройке</div>
+						<a class="call-me form-open button" title="Связаться с нами">Связаться с нами</a>
+				</div>
+		</div>
+</div>
+<div class="gray-bg">
+		<div class="center-box">
+				<h2 class="h2-services margin-top-none">Условия сделки:</h2>
+				<ul class="round-list">
+						<li class="item">
+								<div class="item__img"><img src="templates/miel/images-new/icons/share.svg" alt="" /></div>
+								<div class="item__text">Максимальный срок обмена – 30 дней</div>
+						</li>
+						<li class="item">
+								<div class="item__img"><img src="templates/miel/images-new/icons/competition.svg" alt="" /></div>
+								<div class="item__text">Бронирование и фиксация цены новой квартиры до завершения сделки</div>
+						</li>
+						<li class="item">
+								<div class="item__img"><img src="templates/miel/images-new/icons/court.svg" alt="" /></div>
+								<div class="item__text">Помощь в оформлении всех необходимых документов</div>
+						</li>
+						<li class="item">
+								<div class="item__img"><img src="templates/miel/images-new/icons/help.svg" alt="" /></div>
+								<div class="item__text">Бесплатная юридическая экспертиза и полное сопровождение</div>
+						</li>
+				</ul>
+				<section class="white-bg">
+						<div class="center-box-small">
+								<h2 class="h2-services margin-top-none">Этапы сделки</h2>
+								<ol class="vertical-list">
+										<li class="item">
+												<div class="item__title">Обращение к нам</div>
+												<div class="item__text">Оставьте заявку, закажите обратный звонок или позвоните нам сами</div>
+										</li>
+										<li class="item">
+												<div class="item__title">Оценка вашей старой квартиры и подбор новой</div>
+												<div class="item__text">Проведём бесплатную оценку вашей квартиры, подберем и забронируем понравившуюся квартиру в новостройке с фиксацией её стоимости</div>
+										</li>
+										<li class="item">
+												<div class="item__title">Заключение агентского договора</div>
+												<div class="item__text">Зафиксируем официально все нюансы и договоренности по сделке</div>
+										</li>
+										<li class="item">
+												<div class="item__title">Использование современных методов рекламы</div>
+												<div class="item__text">Разработаем стратегию продажи по желаемой стоимости и срокам, подберем площадки для размещения и наиболее эффективные форматы на них, сделаем качественные фотографии</div>
+										</li>
+										<li class="item">
+												<div class="item__title">Полное сопровождение сделки</div>
+												<div class="item__text">Проведем сделку по продаже старой и покупке новой квартиры до регистрации прав собственности</div>
+										</li>
+										<li class="item">
+												<div class="item__title">Проведение безопасных расчетов</div>
+												<div class="item__text">ООрганизуем проведение полностью безопасных финансовых взаиморасчетов при любых способах оплаты</div>
+										</li>
+								</ol>
+						</div>
+				</section>
+				<section class="consultation">
+						<div class="flex-row">
+								<div class="consultation__title">Есть вопросы?</div>
+								<span class="green-line">123</span> <a class="big-tel" href="tel:+74952494603">+7 (495) 249-46-03</a>
+						</div>
+						<div class="flex-row"><span class="consultation__text"> Звоните или закажите бесплатную консультацию </span> <a class="call-me form-open button" title="Связаться с нами"> Бесплатная консультация </a></div>
+				</section>
+		</div>
+</div>
+<div class="white-bg">
+		<div class="center-box">
+				<section class="order-service">
+						<div class="order-service__img"><img src="templates/miel/images-new/icons/tel-icon.svg" alt="" /></div>
+						<h2 class="h2-services">Заполните заявку на помощь в обмене квартиры</h2>
+						<div class="order-service__content">
+								<div class="left-block">
+										<p class="bold-text">Агентство NOVOC Realty специализируется на сделках с обменом недвижимости более 10 лет.</p>
+										<p>Мы поможем осуществить обмен Вашей квартиры на новую без рисков и с экономией Вашего времени, сил и финансов!</p>
+								</div>
+								<div class="right-block">
+										<form class="order-service-form"><input name="name" required="" type="text" placeholder="Ваше имя" /> <input class="need-int" name="tel" required="" type="tel" placeholder="Телефон" /> <input name="url" type="hidden" /> <input name="title" type="hidden" value="Форма с сайта novoc.ru: Срочный выкуп" /><button class="button" type="submit">Перезвоните мне<br /></button></form>
+								</div>
+						</div>
+				</section>
+		</div>
+</div>

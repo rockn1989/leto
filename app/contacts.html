@@ -171,16 +171,16 @@
 								<form action="" class="custom-form contacts-form">
 									<div class="form-title">Заполните форму</div>
 									<fieldset>
-										<input type="text" placeholder="Ваше имя">
+										<input type="text" name="userName" placeholder="Ваше имя">
 									</fieldset>
 									<fieldset>
-										<input type="text" class="js__input-phone" placeholder="Номер телефона">
+										<input type="text" name="tel" class="js__input-phone" placeholder="Номер телефона">
 									</fieldset>
 									<fieldset>
-										<input type="text" placeholder="Email">
+										<input type="text" name="email" placeholder="Email">
 									</fieldset>
 									<fieldset>
-										<textarea name="" id="" placeholder="Сообщение"></textarea>
+										<textarea name="message" id="" placeholder="Сообщение"></textarea>
 									</fieldset>
 									<fieldset>
 										<div class="uk-grid">
@@ -194,11 +194,14 @@
 											</div>
 											<div class="uk-width-1-2@s">
 												<label for="contacts-file" class="custom-form-element-wrapper uk-flex uk-flex-middle uk-flex-wrap uk-flex-right@s">
-													<input id="contacts-file" type="file">
+													<input id="contacts-file" name="file" type="file">
 													<span class="custom-file"></span>
 													<span class="custom-label custom-label--green">Прикрепить файл</span>
 													<div class="file-name"></div>
+													<span class="file-remove"></span>
 												</label>
+												<div class="file-box"></div>
+												<div class="green-link uk-hidden uk-text-right uk-margin-small-top js__create-input">Еще</div>
 											</div>
 										</div>
 									</fieldset>
