@@ -205,7 +205,6 @@ nav.nav {
 			height: 100%;
 			opacity: 0;
 			transition: opacity .3s ease;
-			display: none;
 		}
 		span {
 			position: relative;
@@ -229,6 +228,7 @@ nav.nav {
 		&:nth-child(4) {
 			order: 3;
 			width: 32.3333%;
+			visibility: hidden;
 		}
 		&:nth-child(5) {
 			order: 5;
@@ -249,11 +249,11 @@ nav.nav {
 				width: auto;
 			}
 			&:nth-child(4) {
-				order: 4;
+				order: 5;
 				width: auto;
 			}
 			&:nth-child(5) {
-				order: 5;
+				order: 4;
 				width: auto;
 			}
 		};

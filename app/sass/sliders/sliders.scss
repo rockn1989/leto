@@ -287,6 +287,24 @@
 			color: $green;
 		}
 	}
+	&--three-elements {
+		.slick-list {
+			margin: 0 -20px;
+		}
+		.slick-slide {
+			margin: 0 20px;
+		}
+		.slider {
+			.slide {
+				text-align: left;
+			}
+		}
+		.recipe-post__img {
+			&:before {
+				display: none !important;
+			}
+		}
+	}
 }
 
 

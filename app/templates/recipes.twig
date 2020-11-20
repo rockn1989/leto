@@ -1,5 +1,5 @@
 {% extends "layouts/default.twig" %}
-{% set title="Факты и рцепты" %}
+{% set title="Рецепты" %}
 {% set theme="theme-green" %}
 {% block content %}
 
@@ -7,27 +7,208 @@
 			
 		<section class="content-section">
 			<div class="uk-container">
-				<h1 class="title-h2 uk-text-center">Рецепты и факты</h1>
-			</div>
-			<ul class="recipes-list" uk-scrollspy="target: .recipe-item; cls: slide-up;">
-				{% for i in 0..4 %}
-				<li class="recipe-item">
-					<div class="recipe-item__inner">
-						<div class="recipe-img">
-							<picture>
-								<source srcset="https://via.placeholder.com/1080x1080" media="(min-width: 961px)">
-								<source srcset="https://via.placeholder.com/780x780" media="(min-width: 641px) and (max-width: 960px)">
-								<source srcset="https://via.placeholder.com/480x480" media="(max-width: 640px)">
-								<img src="https://via.placeholder.com/1080x1080" alt="" loading="lazy">
-							</picture>
+				<h1 class="title-h1 uk-text-center">Рецепты</h1>
+
+				<!-- begin recipes-section -->
+				<section class="recipes-section" uk-scrollspy="target: .recipe-post; cls: slide-right; delay: 300">
+
+						<div class="recipes-row">
+						  <div class="uk-grid">
+						  	<div class="uk-width-1-2@s">
+
+						  		<article class="recipe-post recipe-post--big recipe-post--ellipse-1">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-490x480-1.png" alt="Вкусный омлет" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Вкусный омлет с брынзой <br> и зеленью</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Яйца, ветчина, сыр твёрдый, масло растительное, зелень петрушки
+											</div>
+											<a href="" class="green-link">Подробнее</a>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  	<div class="uk-width-1-2@s">
+
+						  		<article class="recipe-post recipe-post--big recipe-post--ellipse-2">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-490x480-2.png" alt="Салат весенний " uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Салат Весенний из яйца, <br> макарон и моркови</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Картофель, яйца, масло растительное, лук зелёный, соль
+											</div>
+											<a href="" class="green-link">Подробнее</a>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  </div>
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt enim alias minus id, architecto fugiat. Nostrum deserunt at consequuntur, alias, suscipit aut ea itaque nulla magnam, laborum odit. Dignissimos ullam quam nam reprehenderit, accusantium quod modi magnam neque cum optio ea, voluptate possimus numquam architecto ex minima! Suscipit numquam corporis tempore architecto necessitatibus laboriosam quibusdam quaerat deserunt est rem enim quos fuga odio fugiat deleniti alias aliquam adipisci illo rerum eos quod omnis, voluptatibus illum provident. Amet animi molestias vero repellendus rem dolorem deserunt, cupiditate fugit labore, aliquam fuga, ipsam architecto dolore sapiente laboriosam a atque distinctio maxime! Quod, eum.
-						</p>
-					</div>
-				</li>
-				{% endfor %}
-			</ul>
+
+						<div class="recipes-row">
+						  <div class="uk-grid">
+						  	<div class="uk-width-1-2@s uk-width-1-3@m">
+
+						  		<article class="recipe-post recipe-post--ellipse-1">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-small-314x302-1.png" alt="Салат весенний" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Яичные конвертики с сыром и ветчиной</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Описание ключевых ингредиентов, может быть в несколько строк
+											</div>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  	<div class="uk-width-1-2@s uk-width-1-3@m">
+
+						  		<article class="recipe-post recipe-post--ellipse-2">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-small-314x302-2.png" alt="Салат весенний" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Омлет с картофелем</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Картофель, яйца, масло растительное, лук зелёный, соль
+											</div>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  	<div class="uk-width-1-2@s uk-width-1-3@m">
+
+						  		<article class="recipe-post recipe-post--ellipse-3">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-small-314x302-3.png" alt="Салат весенний" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Яичный ролл (на завтрак)</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Хлеб белый, яйца, соль, перец, масло растительное
+											</div>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  </div>
+						</div>
+
+						<div class="recipes-row">
+							<div class="uk-grid uk-flex uk-flex-middle">
+								<div class="uk-width-1-2@s">
+									
+						  		<article class="recipe-post recipe-post--ellipse-4 uk-margin-auto">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-small-314x302-4.png" alt="Салат весенний" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Яичница в хлебе</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Хлеб белый, яйца, соль, перец, масло растительное
+											</div>
+						  			</div>
+						  		</article>
+
+								</div>
+								<div class="uk-width-1-2@s">
+									
+						  		<article class="recipe-post recipe-post--big recipe-post--ellipse-3">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-490x480-3.png" alt="Вкусный омлет" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Ленивая пицца на сковороде, <br> с помидорами, сыром и яичницей</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Мука пшеничная, сметана, майонез, яйца, соль, сыр твёрдый, помидоры, яйца, кетчуп, соль, перец чёрный молотый, масло растительное
+											</div>
+											<a href="" class="green-link">Подробнее</a>
+						  			</div>
+						  		</article>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="recipes-row">
+						  <div class="uk-grid">
+						  	<div class="uk-width-1-2@s uk-width-1-3@m">
+
+						  		<article class="recipe-post recipe-post--ellipse-5">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-small-314x302-5.png" alt="Салат весенний" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Яичные котлеты по-карельски</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Яйца, крупа манная, вода, соль, перец чёрный молотый, сухари панировочные
+											</div>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  	<div class="uk-width-1-2@s uk-width-1-3@m">
+
+						  		<article class="recipe-post recipe-post--ellipse-6">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-small-314x302-6.png" alt="Салат весенний" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Яичный рулет с колбасой, помидорами и зеленью</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Яйца, помидоры, колбаса вареная, зелень петрушки, соль, перец чёрный молотый, масло растительное
+											</div>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  	<div class="uk-width-1-2@s uk-width-1-3@m">
+
+						  		<article class="recipe-post recipe-post--ellipse-7">
+						  			<figure class="recipe-post__img">
+						  				<img data-src="/img/media/recipes/recipe-post-small-314x302-7.png" alt="Салат весенний" uk-img>
+						  			</figure>
+						  			<div class="recipe-post__content">
+											<div class="recipe-post__title">
+												<a href="">Яйца пашот</a>
+											</div>
+											<div class="recipe-post__short-desc">
+												Яйца, масло оливковое
+											</div>
+						  			</div>
+						  		</article>
+
+						  	</div>
+						  </div>
+						</div>
+
+				</section><!-- end recipes-section -->
+
+			</div>
+
 		</section>
 
 	</main>

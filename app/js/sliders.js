@@ -75,14 +75,27 @@ $(function() {
 		arrows: true,
 		dots: false,
 		slidesToShow: 1,
-		lazyLoad: 'progressive'
+		lazyLoad: 'progressive',
 	});	
 
 
 	/*______ Custom Slider ______*/
 
 	const $customSlider = $('.custom-slider .slider');
-	
+	let ammountSlides = {
+			desk: 1,
+			tablet: 1,
+			mob: 1
+		}
+
+	if($customSlider.parents('.custom-slider').hasClass('custom-slider--three-elements')) {
+		ammountSlides = {
+			desk: 3,
+			tablet: 2,
+			mob: 1
+		}
+	};
+	console.log(ammountSlides)
 	$.each($customSlider, function(idx, el) {
 		const customSliderLength = $(el).find('.slide').length;
 		if(customSliderLength == 1) {
@@ -103,8 +116,32 @@ $(function() {
 	$customSlider.slick({
 		arrows: true,
 		dots: false,
-		slidesToShow: 1,
-		lazyLoad: 'progressive'
+		slidesToShow: ammountSlides.desk,
+		lazyLoad: 'progressive',
+		responsive: [
+			{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: ammountSlides.desk,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: ammountSlides.tablet,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: ammountSlides.mob,
+					slidesToScroll: 1
+				}
+			}
+		]
 	});	
 
 

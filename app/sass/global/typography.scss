@@ -73,3 +73,101 @@ p {
 	}
 }
 
+ul.disc-list {
+	@include list-reset;
+	font-size: 18px;
+	line-height: 26px;
+	li {
+		position: relative;
+		margin-bottom: 10px;
+		padding-left: 16px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 0;
+			width: 4px;
+			height: 4px;
+			display: block;
+			background: $salat;
+			border-radius: 50%;
+		}
+	}
+}
+
+
+ol.numeric-list {
+	@include list-reset;
+	font-size: 18px;
+	line-height: 26px;
+	counter-reset: list;
+	li {
+		position: relative;
+		margin-bottom: 12px;
+		padding-top: 7px;
+		padding-left: 60px;
+		padding-bottom: 36px;
+		&:before {
+			counter-increment: list;
+			content: counter(list);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+			display: block;
+			background: $salat;
+			color: #ffffff;
+			font-size: 20px;
+			font-family: $secondFont;
+			font-weight: 700;
+			border-radius: 50%;
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			mask-position: center 0;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: 17px;
+			bottom: 0;
+			display: block;
+			width: 1px;
+			height: 24px;
+			background: #EAE2DB;
+		}
+		&:last-child {
+			&:before {
+				background: $yellow;
+			}
+			&:after {
+				display: none;
+			}
+		}
+		&:nth-child(1n) {
+			&:before {
+				mask-image: url('../img/icon-svg/ellipse-12.svg')
+			}	
+		}
+		&:nth-child(2n) {
+			&:before {
+				mask-image: url('../img/icon-svg/ellipse-11.svg')
+			}	
+		}
+		&:nth-child(3n) {
+			&:before {
+				mask-image: url('../img/icon-svg/ellipse-6.svg')
+			}	
+		}
+		&:nth-child(4n) {
+			&:before {
+				mask-image: url('../img/icon-svg/ellipse-3.svg')
+			}	
+		}
+	}
+}
