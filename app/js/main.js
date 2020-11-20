@@ -311,14 +311,6 @@ $(function () {
 	});
 
 
-	$('.custom-form').on('submit', function (e) {
-		e.preventDefault();
-		const data = new FormData(this)
-		for (var value of data.values()) {
-			console.log(value)
-		}
-	})
-
 	/*______ Таймер App ______*/
 
 	if ($("#timer-1").length > 0) {

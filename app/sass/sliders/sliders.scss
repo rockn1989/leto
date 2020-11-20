@@ -170,7 +170,8 @@
 		svg {
 			width: 100px;
 			@media (min-width: 1460px) {
-				width: auto;
+				width: 154px;
+				height: 29px;
 			};
 		}
 	}
@@ -248,6 +249,7 @@
 		transform: translateY(-50%);
 		cursor: pointer;
 		svg {
+			height: 29px;
 			@media (min-width: $mob-xs) {
 				width: 60px;
 			}
@@ -255,7 +257,8 @@
 				width: 100px;
 			};
 			@media (min-width: 1460px) {
-				width: auto;
+				width: 154px;
+				height: 29px;
 			};
 		}
 	}

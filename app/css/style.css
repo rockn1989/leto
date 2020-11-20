@@ -3833,6 +3833,13 @@ nav.nav {
 
 /*______ End Recipes detail ______*/
 
+.recipes-list .title-h3,
+.recipe-detail .title-h3 {
+  margin-bottom: 24px;
+  font-size: 30px;
+  line-height: 36px;
+}
+
 /*______ Tabs ______*/
 
 .tab-sw {
@@ -4618,6 +4625,11 @@ main.main-container {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.custom-slider .slide-prev svg,
+.custom-slider .slide-next svg {
+  height: 29px;
 }
 
 .custom-slider .slide-prev {
@@ -6841,7 +6853,8 @@ main.main-container {
 
   .composition-slider .slide-prev svg,
   .composition-slider .slide-next svg {
-    width: auto;
+    width: 154px;
+    height: 29px;
   }
 
   .composition-slider .slide-prev {
@@ -6858,7 +6871,8 @@ main.main-container {
 
   .custom-slider .slide-prev svg,
   .custom-slider .slide-next svg {
-    width: auto;
+    width: 154px;
+    height: 29px;
   }
 
   .custom-slider .slide-prev {
