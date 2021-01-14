@@ -6702,12 +6702,8 @@ main.main-container {
     padding-bottom: 130px;
   }
 
-  .recipe-detail__text {
-    margin-bottom: 140px;
-  }
-
   .recipe-detail__desc {
-    padding-top: 83px;
+    padding-top: 60px;
   }
 
   .tab-sw li a {
