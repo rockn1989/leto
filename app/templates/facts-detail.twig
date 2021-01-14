@@ -1,0 +1,128 @@
+{% extends "layouts/default.twig" %}
+{% set title="Факты детальная" %}
+{% set theme="theme-green" %}
+{% block content %}
+
+	<section class="content-section">
+		<div class="uk-container uk-container--small">
+			<h1 class="title-h2 uk-text-center">Можно ли определить цвет скорлупы яиц по курице?</h1>
+
+			<!-- begin recipe-detail -->
+			<section class="recipe-detail">
+				<div class="recipe-detail__main-img" uk-scrollspy="cls: slide-up;">
+					<img data-src="img/media/facts/facts-5.png" alt="" uk-img>
+				</div>
+
+				<div class="recipe-detail__text">
+					<div class="uk-grid">
+
+
+						<div class="uk-width-1-2@s">
+							<div class="recipe-detail__composition">
+								<h3 class="title-h3">Как на самом деле ?</h3>
+							</div>
+						</div>
+						<div class="uk-width-1-2@s">
+							<div class="recipe-detail__desc">
+								<p>
+									Действительно по несушке можно понять, какого цвета будут снесенные ею яйца, но обращать внимание нужно не на цвет оперения.
+								</p>
+								<p>
+									Именно по цвету сережек курицы можно определить цвет скорлупы яйца. Так, несушка с белыми сережками будет нести белые яйца, а с красными сережками – коричневые
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!-- end recipe-detail -->
+
+		</div>
+
+	</section>
+
+	<section class="slider-section wave-bg" uk-scrollspy="cls: wave-anim">
+		<div class="uk-container uk-container--medium">
+			<h2 class="uk-text-center" uk-scrollspy="cls:slide-up">Другие факты</h2>
+			<!-- begin composition-slider -->
+			<div class="custom-slider custom-slider--three-elements" uk-scrollspy="cls: slide-up; delay: 300">
+				<div class="uk-container">
+					<div class="slider">
+
+						<div class="slide">
+							<article class="recipe-post recipe-post--ellipse-5">
+								<figure class="recipe-post__img">
+									<img data-src="img/media/facts/facts-8.png" alt="Салат весенний" uk-img>
+								</figure>
+								<div class="recipe-post__content">
+									<div class="recipe-post__title">
+										<a href="">Как формируется яйцо в курице?</a>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<div class="slide">
+							<article class="recipe-post recipe-post--ellipse-5">
+								<figure class="recipe-post__img">
+									<img data-src="img/media/facts/facts-3.png" alt="Салат весенний" uk-img>
+								</figure>
+								<div class="recipe-post__content">
+									<div class="recipe-post__title">
+										<a href="">Почему у куриного яйца такая форма?</a>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<div class="slide">
+							<article class="recipe-post recipe-post--ellipse-5">
+								<figure class="recipe-post__img">
+									<img data-src="img/media/facts/facts-9.png" alt="Салат весенний" uk-img>
+								</figure>
+								<div class="recipe-post__content">
+									<div class="recipe-post__title">
+										<a href="">У куриных яиц есть поры?</a>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<div class="slide">
+							<article class="recipe-post recipe-post--ellipse-5">
+								<figure class="recipe-post__img">
+									<img data-src="img/media/facts/facts-7.png" alt="Салат весенний" uk-img>
+								</figure>
+								<div class="recipe-post__content">
+									<div class="recipe-post__title">
+										<a href="">Можно ли мыть яйца перед длительным хранением?</a>
+									</div>
+								</div>
+							</article>
+						</div>
+
+					</div>
+					<div class="slider__arrows">
+						<div class="slide-prev">
+							<svg width="154px" height="29px" class="slider-arrow">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-left"></use>
+							</svg>
+						</div>
+						<div class="slide-next">
+							<svg width="154px" height="29px" class="slider-arrow">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-right"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end composition-slider -->
+
+			<a href="" class="btn btn--yellow uk-margin-auto" uk-scrollspy="cls:slide-up">
+				<span>посмотреть все факты</span>
+			</a>
+		</div>
+	</section>
+
+{% endblock %}

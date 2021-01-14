@@ -3480,7 +3480,7 @@ nav.nav {
 
 .recipes-list .recipe-item:nth-child(even):before,
 .recipes-list .recipe-item:nth-child(even):after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -3507,7 +3507,7 @@ nav.nav {
 }
 
 .recipes-list .recipe-item:nth-child(even) a:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -3557,7 +3557,7 @@ nav.nav {
 
 .recipes-section:before,
 .recipes-section:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   display: block;
@@ -3591,7 +3591,7 @@ nav.nav {
 }
 
 .recipe-post .recipe-post__img:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   right: -37%;
@@ -3698,7 +3698,7 @@ nav.nav {
 
 .recipe-post--big .recipe-post__img {
   margin: 0;
-  padding-top: 15px;
+  padding-top: 75%;
   max-width: 534px;
   max-height: 494px;
   text-align: center;
@@ -3706,13 +3706,15 @@ nav.nav {
 }
 
 .recipe-post--big .recipe-post__img img {
-  position: relative;
+  position: absolute;
+  top: 15px;
+  left: 50%;
   max-width: 100%;
   max-height: 462px;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
 .recipe-post--big .recipe-post__img:before {
@@ -3720,7 +3722,7 @@ nav.nav {
 }
 
 .recipe-post--big .recipe-post__img:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -3806,7 +3808,11 @@ nav.nav {
 .recipe-detail__main-img img {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .recipe-detail__text:last-child {
@@ -4441,12 +4447,12 @@ main.main-container {
   transform: scale(0.5);
   border-radius: 50%;
   background-color: #ECE6E1;
-  -webkit-transition: background-color .3s, -webkit-transform .3s, -webkit-box-shadow .2s ease-in;
-  transition: background-color .3s, -webkit-transform .3s, -webkit-box-shadow .2s ease-in;
-  -o-transition: transform .3s, background-color .3s, box-shadow .2s ease-in;
-  -moz-transition: transform .3s, background-color .3s, box-shadow .2s ease-in, -moz-transform .3s;
-  transition: transform .3s, background-color .3s, box-shadow .2s ease-in;
-  transition: transform .3s, background-color .3s, box-shadow .2s ease-in, -webkit-transform .3s, -moz-transform .3s, -webkit-box-shadow .2s ease-in;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  -o-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  -moz-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -moz-transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -webkit-transform 0.3s, -moz-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
 }
 
 .brands-slider .slider .slick-dots li button:before {
@@ -4661,12 +4667,20 @@ main.main-container {
   text-align: left;
 }
 
+.custom-slider--three-elements .recipe-post__img img {
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .custom-slider--three-elements .recipe-post__img:before {
   display: none !important;
 }
 
 .wave-bg .slider .slide:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -4781,12 +4795,12 @@ main.main-container {
   transform: scale(0.5);
   border-radius: 50%;
   background-color: #ECE6E1;
-  -webkit-transition: background-color .3s, -webkit-transform .3s, -webkit-box-shadow .2s ease-in;
-  transition: background-color .3s, -webkit-transform .3s, -webkit-box-shadow .2s ease-in;
-  -o-transition: transform .3s, background-color .3s, box-shadow .2s ease-in;
-  -moz-transition: transform .3s, background-color .3s, box-shadow .2s ease-in, -moz-transform .3s;
-  transition: transform .3s, background-color .3s, box-shadow .2s ease-in;
-  transition: transform .3s, background-color .3s, box-shadow .2s ease-in, -webkit-transform .3s, -moz-transform .3s, -webkit-box-shadow .2s ease-in;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  -o-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  -moz-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -moz-transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -webkit-transform 0.3s, -moz-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
 }
 
 .tab-slider .slick-dots li button:before {

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Контакты</title>
+	<title>Факты</title>
 	<meta property="og:url" content="">
 	<meta property="og:type" content="Article">
 	<meta property="og:site_name" content="">
@@ -26,7 +26,12 @@
 	<![endif]-->
 </head>
 <body class="theme-green">
-			
+			<div class="preloader">
+			<div class="preloader__indicator">
+				<img src="img/preloader.gif" alt="">
+				<div class="preloader__indicator-value">0%</div>
+			</div>
+		</div>
 	
 	
 <!-- begin header -->
@@ -129,97 +134,192 @@
 
 	<main class="main-container">	
 		
-	<section class="content-section">
-		<div class="uk-container uk-container--medium">
-			<h1 class="uk-text-center">Drag&Drop</h1>
+	<main class="main-container">
 
-			<div class="some-content" style="display: none;">
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
-									<div class="some-div">
-						<img class="lazy_img" data-src="https://via.placeholder.com/1180x320" alt="">
-					</div>
+		<section class="content-section">
+			<div class="uk-container">
+				<h1 class="title-h1 uk-text-center">Факты</h1>
+
+				<!-- begin recipes-section -->
+				<section class="recipes-section" uk-scrollspy="target: .recipe-post; cls: slide-right; delay: 300">
+
+					<div class="recipes-row">
+						<div class="uk-grid">
+							<div class="uk-width-1-2@s">
+
+								<article class="recipe-post recipe-post--big recipe-post--ellipse-1">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-5.png" alt="Вкусный омлет" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">Можно ли определить цвет скорлупы яиц по курице?</a>
+										</div>
+										<a href="" class="green-link">Подробнее</a>
+									</div>
+								</article>
+
 							</div>
+							<div class="uk-width-1-2@s">
 
-			<div class="users-list-wrapper">
-				<ul class="users-list">
-											<li class="user-item">0</li>
-											<li class="user-item">1</li>
-											<li class="user-item">2</li>
-											<li class="user-item">3</li>
-											<li class="user-item">4</li>
-											<li class="user-item">5</li>
-											<li class="user-item">6</li>
-											<li class="user-item">7</li>
-											<li class="user-item">8</li>
-											<li class="user-item">9</li>
-											<li class="user-item">10</li>
-											<li class="user-item">11</li>
-											<li class="user-item">12</li>
-									</ul>
+								<article class="recipe-post recipe-post--big recipe-post--ellipse-2">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-8.png" alt="Салат весенний " uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">Как формируется яйцо в курице?</a>
+										</div>
+										<a href="" class="green-link">Подробнее</a>
+									</div>
+								</article>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="recipes-row">
+						<div class="uk-grid">
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+
+								<article class="recipe-post recipe-post--ellipse-1">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-3.png" alt="Салат весенний" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">Почему у куриного яйца такая форма?</a>
+										</div>
+									</div>
+								</article>
+
+							</div>
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+
+								<article class="recipe-post recipe-post--ellipse-2">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-9.png" alt="Салат весенний" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">У куриных яиц есть поры?</a>
+										</div>
+									</div>
+								</article>
+
+							</div>
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+
+								<article class="recipe-post recipe-post--ellipse-3">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-7.png" alt="Салат весенний" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">
+												Можно ли мыть яйца перед длительным хранением?</a>
+										</div>
+									</div>
+								</article>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="recipes-row">
+						<div class="uk-grid uk-flex uk-flex-middle">
+							<div class="uk-width-1-2@s">
+
+								<article class="recipe-post recipe-post--ellipse-4 uk-margin-auto">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-2.png" alt="Салат весенний" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">Есть ли холестерин в яйцах?</a>
+										</div>
+									</div>
+								</article>
+
+							</div>
+							<div class="uk-width-1-2@s">
+
+								<article class="recipe-post recipe-post--big recipe-post--ellipse-3">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-6.png" alt="Вкусный омлет" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">Влияет ли цвет скорлупы
+												<br>
+												на пользу яйца?</a>
+										</div>
+										<a href="" class="green-link">Подробнее</a>
+									</div>
+								</article>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="recipes-row">
+						<div class="uk-grid">
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+
+								<article class="recipe-post recipe-post--ellipse-5">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-10.png" alt="Салат весенний" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">
+												Сколько категорий куриных яиц существует?</a>
+										</div>
+									</div>
+								</article>
+
+							</div>
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+
+								<article class="recipe-post recipe-post--ellipse-6">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-4.png" alt="Салат весенний" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">
+												О чем говорит яркий желток?</a>
+										</div>
+									</div>
+								</article>
+
+							</div>
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+
+								<article class="recipe-post recipe-post--ellipse-7">
+									<figure class="recipe-post__img">
+										<img data-src="img/media/facts/facts-1.png" alt="Салат весенний" uk-img>
+									</figure>
+									<div class="recipe-post__content">
+										<div class="recipe-post__title">
+											<a href="">
+												Зачем курице крылья?</a>
+										</div>
+									</div>
+								</article>
+
+							</div>
+						</div>
+					</div>
+
+				</section>
+				<!-- end recipes-section -->
+
 			</div>
 
-			<ul class="task-list">
-				<li class="row">
-					<div class="task-card" draggable="true">
-						<div class="task-card__title">Task-1</div>
-						<div class="task-card__text">Lorem ipsum.</div>
-					</div>
-					<div class="task-card" draggable="true">
-						<div class="task-card__title">Task-2</div>
-						<div class="task-card__text">Lorem ipsum.</div>
-					</div>
-				</li>
-				<li class="row"></li>
-				<li class="row">
-					<div class="task-card" draggable="true">
-						<div class="task-card__title">Task-3</div>
-						<div class="task-card__text">Lorem ipsum.</div>
-					</div>
-				</li>
-				<li class="row">
-					<div class="task-card" draggable="true">
-						<div class="task-card__title">Task-4</div>
-						<div class="task-card__text">Lorem ipsum.</div>
-					</div>
-					<div class="task-card" draggable="true">
-						<div class="task-card__title">Task-5</div>
-						<div class="task-card__text">Lorem ipsum.</div>
-					</div>
-					<div class="task-card" draggable="true">
-						<div class="task-card__title">Task-6</div>
-						<div class="task-card__text">Lorem ipsum.</div>
-					</div>
-				</li>
-			</ul>
+		</section>
 
-		</div>
-	</section>
+	</main>
 
 	</main>
 	<!-- begin footer -->
