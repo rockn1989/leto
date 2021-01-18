@@ -4037,6 +4037,151 @@ nav.nav {
 
 /*______ End Tabs ______*/
 
+/*___ Pagination Start ___*/
+
+.uk-pagination {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.uk-pagination li:not([class]),
+.uk-pagination li.uk-active {
+  margin: 0 10px;
+  padding: 0;
+}
+
+.uk-pagination li:not([class]) a,
+.uk-pagination li:not([class]) span,
+.uk-pagination li.uk-active a,
+.uk-pagination li.uk-active span {
+  text-align: center;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+  color: #333e2c;
+  -webkit-mask-image: url("../img/icon-svg/ellipse-3.svg");
+  mask-image: url("../img/icon-svg/ellipse-3.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center 0;
+  mask-position: center 0;
+  -webkit-transition: background-color 0.3s, color 0.3s ease;
+  -o-transition: background-color 0.3s, color 0.3s ease;
+  -moz-transition: background-color 0.3s, color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s ease;
+}
+
+.uk-pagination li:not([class]) a:hover,
+.uk-pagination li.uk-active a:hover {
+  color: #ffffff;
+  background-color: #ffb422;
+}
+
+.uk-pagination li.uk-active span {
+  background: #9bc045;
+  color: #ffffff;
+  -webkit-mask-image: url("../img/icon-svg/ellipse-13.svg");
+  mask-image: url("../img/icon-svg/ellipse-13.svg");
+}
+
+.uk-pagination-prev,
+.uk-pagination-next {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: "Museo";
+  display: none;
+}
+
+.uk-pagination-prev a,
+.uk-pagination-next a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.uk-pagination-prev span,
+.uk-pagination-next span {
+  display: none;
+  color: #333e2c;
+  -webkit-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+.uk-pagination-prev svg,
+.uk-pagination-next svg {
+  -webkit-transition: stroke 0.3s ease-out, -webkit-transform 0.3s;
+  transition: stroke 0.3s ease-out, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, stroke 0.3s ease-out;
+  -moz-transition: transform 0.3s, stroke 0.3s ease-out, -moz-transform 0.3s;
+  transition: transform 0.3s, stroke 0.3s ease-out;
+  transition: transform 0.3s, stroke 0.3s ease-out, -webkit-transform 0.3s, -moz-transform 0.3s;
+  stroke: #333e2c;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.uk-pagination-prev:hover span,
+.uk-pagination-next:hover span {
+  color: #ffb422;
+}
+
+.uk-pagination-prev:hover svg,
+.uk-pagination-next:hover svg {
+  stroke: #ffb422;
+}
+
+.uk-pagination-prev {
+  margin-right: 20px;
+}
+
+.uk-pagination-prev span {
+  margin-left: 20px;
+}
+
+.uk-pagination-prev:hover svg {
+  -webkit-transform: translateX(-6px);
+  -moz-transform: translateX(-6px);
+  -ms-transform: translateX(-6px);
+  transform: translateX(-6px);
+  stroke: #ffb422;
+}
+
+.uk-pagination-next {
+  margin-left: 20px;
+}
+
+.uk-pagination-next span {
+  margin-right: 20px;
+}
+
+.uk-pagination-next:hover svg {
+  -webkit-transform: translateX(6px);
+  -moz-transform: translateX(6px);
+  -ms-transform: translateX(6px);
+  transform: translateX(6px);
+  stroke: #ffb422;
+}
+
+/*___ Pagination End ___*/
+
 /*______ Timer ______*/
 
 .timer-app.start .sort-list,
@@ -5262,8 +5407,12 @@ main.main-container {
     padding-bottom: 10px;
   }
 
+  .recipes-section__inner {
+    padding-bottom: 20px;
+  }
+
   .recipes-section {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 
   .recipes-row {
@@ -5608,6 +5757,11 @@ main.main-container {
     top: 180px;
   }
 
+  .uk-pagination-prev,
+  .uk-pagination-next {
+    display: block;
+  }
+
   .timer-app__countdown {
     font-size: 60px;
     line-height: 60px;
@@ -5885,8 +6039,12 @@ main.main-container {
     padding-bottom: 40px;
   }
 
+  .recipes-section__inner {
+    padding-bottom: 80px;
+  }
+
   .recipes-section {
-    padding-bottom: 90px;
+    padding-bottom: 80px;
   }
 
   .recipes-row {
@@ -5930,6 +6088,29 @@ main.main-container {
 
   .custom-tabs.all-brands .uk-switcher li {
     min-height: 550px;
+  }
+
+  .uk-pagination li:not([class]) a,
+  .uk-pagination li:not([class]) span,
+  .uk-pagination li.uk-active a,
+  .uk-pagination li.uk-active span {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    line-height: 48px;
+  }
+
+  .uk-pagination-prev span,
+  .uk-pagination-next span {
+    display: inline-block;
+  }
+
+  .uk-pagination-prev {
+    margin-right: 54px;
+  }
+
+  .uk-pagination-next {
+    margin-left: 54px;
   }
 
   .timer-app__label {
@@ -6712,8 +6893,12 @@ main.main-container {
     animation: scale 3s ease forwards, rotate 36s linear infinite 3s;
   }
 
+  .recipes-section__inner {
+    padding-bottom: 110px;
+  }
+
   .recipes-section {
-    padding-bottom: 130px;
+    padding-bottom: 110px;
   }
 
   .recipe-detail__desc {

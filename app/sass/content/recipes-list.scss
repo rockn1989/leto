@@ -104,14 +104,25 @@
 	&:after {
 		right: -100%;
 	}
+	&__inner {
+		@media (min-width: $mob-xs) {
+			padding-bottom: 20px;
+		}
+		@media (min-width: $tablet-w) {
+			padding-bottom: 80px;
+		}
+		@media (min-width: $desk-w) {
+			padding-bottom: 110px;
+		}
+	}
 	@media (min-width: $mob-xs) {
-		padding-bottom: 30px;
+		padding-bottom: 20px;
 	}
 	@media (min-width: $tablet-w) {
-		padding-bottom: 90px;
+		padding-bottom: 80px;
 	}
 	@media (min-width: $desk-w) {
-		padding-bottom: 130px;
+		padding-bottom: 110px;
 	}
 }
 
