@@ -34,7 +34,7 @@ gulp.task("purgecss", () => {
 
 gulp.task("critical", () => {
 	return gulp
-		.src("build/app/*.html")
+		.src("build/app/index.html")
 		.pipe(
 			critical({
 				base: "build/",
@@ -43,12 +43,38 @@ gulp.task("critical", () => {
 				width: 320,
 				height: 480,
 				css: ["build/app/css/style.css"],
+				ignore: ["@font-face"],
 			})
 		)
 		.on("error", (err) => {
 			log.error(err.message);
 		})
 		.pipe(gulp.dest("build/app"));
+});
+
+gulp.task("critical2", () => {
+	return gulp
+		.src("build/aevrika.html")
+		.pipe(
+			critical({
+				base: "build/",
+				inline: true,
+				minify: true,
+				width: 320,
+				height: 480,
+				css: ["build/all.css"],
+				target: {
+					css: "critical.css",
+					html: "aevrika.html",
+					uncritical: "uncritical.css",
+				},
+				ignore: ["@font-face"],
+			})
+		)
+		.on("error", (err) => {
+			log.error(err.message);
+		})
+		.pipe(gulp.dest("build/"));
 });
 
 /*______ Local-server ______*/
