@@ -1,33 +1,40 @@
-h1, .title-h1 ,
-h2, .title-h2 ,
-h3, .title-h3 ,
-h4, .title-h4 ,
-h5, .title-h5 {
+h1,
+.title-h1,
+h2,
+.title-h2,
+h3,
+.title-h3,
+h4,
+.title-h4,
+h5,
+.title-h5 {
 	font-family: $secondFont;
 }
 
-h1, .title-h1 {
-	
-	@include text-size(96,96);
+h1,
+.title-h1 {
+	@include text-size(96, 96);
 	@media (min-width: $mob-xs) {
 		margin-bottom: 30px;
-	};
+	}
 	@media (min-width: $tablet-w) {
 		margin-bottom: 50px;
-	};
+	}
 }
 
-h2, .title-h2 {
-	@include text-size(56,64);
+h2,
+.title-h2 {
+	@include text-size(56, 64);
 	@media (min-width: $mob-xs) {
 		margin-bottom: 30px;
-	};
+	}
 	@media (min-width: $tablet-w) {
 		margin-bottom: 50px;
-	};
+	}
 }
 
-h3, .title-h3 {
+h3,
+.title-h3 {
 	margin-bottom: 15px;
 	font-weight: bold;
 	@media (min-width: $mob-xs) {
@@ -37,17 +44,26 @@ h3, .title-h3 {
 	@media (min-width: $desk-w) {
 		font-size: 24px;
 		line-height: 29px;
-	};
+	}
 }
 
-h4, .title-h4 {
-
+h4,
+.title-h4 {
 }
 
-h5, .title-h5 {
-	
+h5,
+.title-h5 {
 }
 
+.small-title {
+	margin: 20px 0;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.yellow-text {
+	color: $yellow;
+}
 
 p {
 	font-size: 18px;
@@ -56,12 +72,12 @@ p {
 
 .content-section {
 	ul:not([class]),
-	ol:not([class])  {
-	    font-size: 18px;
-	    line-height: 26px;
-			li {
-				margin-bottom: 5px;
-			}
+	ol:not([class]) {
+		font-size: 18px;
+		line-height: 26px;
+		li {
+			margin-bottom: 5px;
+		}
 	}
 
 	ul:not([class]) {
@@ -69,7 +85,7 @@ p {
 	}
 
 	ol:not([class]) {
-	    padding-left: 20px;
+		padding-left: 20px;
 	}
 }
 
@@ -85,7 +101,7 @@ ul.disc-list {
 			margin-bottom: 0;
 		}
 		&:before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 10px;
 			left: 0;
@@ -97,7 +113,6 @@ ul.disc-list {
 		}
 	}
 }
-
 
 ol.numeric-list {
 	@include list-reset;
@@ -132,14 +147,14 @@ ol.numeric-list {
 			mask-position: center 0;
 		}
 		&:after {
-			content: '';
+			content: "";
 			position: absolute;
 			left: 17px;
 			bottom: 0;
 			display: block;
 			width: 1px;
 			height: 24px;
-			background: #EAE2DB;
+			background: #eae2db;
 		}
 		&:last-child {
 			&:before {
@@ -151,23 +166,23 @@ ol.numeric-list {
 		}
 		&:nth-child(1n) {
 			&:before {
-				mask-image: url('../img/icon-svg/ellipse-12.svg')
-			}	
+				mask-image: url("../img/icon-svg/ellipse-12.svg");
+			}
 		}
 		&:nth-child(2n) {
 			&:before {
-				mask-image: url('../img/icon-svg/ellipse-11.svg')
-			}	
+				mask-image: url("../img/icon-svg/ellipse-11.svg");
+			}
 		}
 		&:nth-child(3n) {
 			&:before {
-				mask-image: url('../img/icon-svg/ellipse-6.svg')
-			}	
+				mask-image: url("../img/icon-svg/ellipse-6.svg");
+			}
 		}
 		&:nth-child(4n) {
 			&:before {
-				mask-image: url('../img/icon-svg/ellipse-3.svg')
-			}	
+				mask-image: url("../img/icon-svg/ellipse-3.svg");
+			}
 		}
 	}
 }

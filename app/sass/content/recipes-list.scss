@@ -174,6 +174,22 @@
 				display: block;
 			}
 		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			right: -5px;
+			bottom: -5px;
+			width: auto;
+			height: auto;
+			max-width: none;
+			max-height: none;
+			display: block;
+			background-position: 0 center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
 		img {
 			position: absolute;
 			top: 50%;
@@ -281,19 +297,7 @@
 				display: none !important;
 			}
 			&:after {
-				content: "";
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
-				max-width: 100%;
-				max-height: 100%;
-				display: block;
-				background-size: contain;
-				background-position: center 0;
-				background-repeat: no-repeat;
-				z-index: 15;
+				/* display: none; */
 			}
 		}
 		.recipe-post__title {
@@ -366,6 +370,42 @@
 			}
 			img {
 				mask-image: url("../img/icon-svg/medium-ellipse-3.svg");
+			}
+		}
+	}
+	&__img {
+		&:after {
+			content: "";
+			position: absolute;
+
+			display: block;
+			background-size: contain;
+			background-position: center 0;
+			background-repeat: no-repeat;
+			z-index: 16;
+		}
+	}
+	&.recipe-post--ellipse-1,
+	&.recipe-post--ellipse-5 {
+		.recipe-post__img {
+			&:after {
+				background-image: url("../img/icon-svg/large-ellipse-3.svg");
+			}
+		}
+	}
+	&.recipe-post--ellipse-2,
+	&.recipe-post--ellipse-6 {
+		.recipe-post__img {
+			&:after {
+				background-image: url("../img/icon-svg/large-ellipse-2.svg");
+			}
+		}
+	}
+	&.recipe-post--ellipse-3,
+	&.recipe-post--ellipse-7 {
+		.recipe-post__img {
+			&:after {
+				background-image: url("../img/icon-svg/large-ellipse-6.svg");
 			}
 		}
 	}
