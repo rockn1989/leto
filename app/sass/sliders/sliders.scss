@@ -285,6 +285,11 @@
 		a {
 			color: $green;
 		}
+
+		&--small {
+			margin: 0 auto;
+			max-width: 525px;
+		}
 	}
 	&--three-elements {
 		.slick-list {
@@ -307,6 +312,11 @@
 				display: none !important;
 			}
 		}
+	}
+
+	.recipe-post--big {
+		max-width: 580px;
+		margin: 0 auto;
 	}
 }
 

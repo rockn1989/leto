@@ -205,65 +205,66 @@ $(function () {
 
 	/*______ Выбор файл в форме ______*/
 
-	const fileBox = $('.file-box');
+	const fileBox = $(".file-box");
 	let counter = 1;
 
-	const createInput = function() {
-
-		const label = $('<label>', {
-			for: 'contacts-file-' + counter,
-			class: 'custom-form-element-wrapper uk-flex uk-flex-middle uk-flex-wrap uk-flex-right@s'
+	const createInput = function () {
+		const label = $("<label>", {
+			for: "contacts-file-" + counter,
+			class:
+				"custom-form-element-wrapper uk-flex uk-flex-middle uk-flex-wrap uk-flex-right@s",
 		});
 
-		const input = $('<input>', {
-			id: 'contacts-file-' + counter,
-			name: 'file-' + counter,
-			type: 'file',
+		const input = $("<input>", {
+			id: "contacts-file-" + counter,
+			name: "file-" + counter,
+			type: "file",
 			css: {
-				visibility: 'hidden',
-				width: '1px',
-				height: '1px',
-				position: 'absolute'
+				visibility: "hidden",
+				width: "1px",
+				height: "1px",
+				position: "absolute",
 			},
 			on: {
-				change: function(e) {
-					const inputId = $(this).attr('id');
+				change: function (e) {
+					const inputId = $(this).attr("id");
 					const file = $(this).get(0).files[0];
-					console.log(file)
-					const fileName = $('<div>', {
-							text: file.name,
-							on: {
-								click: function(e) {
-									const attr = $(this).attr('input-id');
-									$('#'+attr).val('');
-									this.remove();
-								}
+					console.log(file);
+					const fileName = $("<div>", {
+						text: file.name,
+						on: {
+							click: function (e) {
+								const attr = $(this).attr("input-id");
+								$("#" + attr).val("");
+								this.remove();
 							},
-							'input-id': inputId
-						});
-
+						},
+						"input-id": inputId,
+					});
 
 					if (file) {
-						$(this).siblings('.file-name').html('');
-						$(this).siblings('.file-name').append(fileName);
-						$(this).siblings('.file-remove').addClass('visible');
-						$(this).parents('label').find('.custom-file').addClass('uk-hidden');
+						$(this).siblings(".file-name").html("");
+						$(this).siblings(".file-name").append(fileName);
+						$(this).siblings(".file-remove").addClass("visible");
+						$(this).parents("label").find(".custom-file").addClass("uk-hidden");
 					}
-				}
-			}
+				},
+			},
 		});
 
-		const fileRemove = $('<div>', {
-			class: 'file-remove',
+		const fileRemove = $("<div>", {
+			class: "file-remove",
 			on: {
-				click: function(e) {
+				click: function (e) {
 					e.preventDefault();
-					$(this).parent('label').remove()
-				}
-			}
-		})
+					$(this).parent("label").remove();
+				},
+			},
+		});
 
-		const text = $('<span class="custom-file"></span><span class="custom-label custom-label--green">Прикрепить файл</span><div class="file-name"></div>');
+		const text = $(
+			'<span class="custom-file"></span><span class="custom-label custom-label--green">Прикрепить файл</span><div class="file-name"></div>'
+		);
 
 		label.append(input);
 		label.append(text);
@@ -272,44 +273,43 @@ $(function () {
 		counter++;
 		return label;
 	};
-	
+
 	$('.custom-form input[type="file"]').on("change", function (e) {
-
-		const inputId = $(this).attr('id');
+		const inputId = $(this).attr("id");
 		const file = $(this).get(0).files[0];
-		const fileName = $('<div>', {
-				text: file.name,
-				on: {
-					click: function(e) {
-						const attr = $(this).attr('input-id');
-						$('#'+attr).val('');
-						this.remove();
-					}
+		const fileName = $("<div>", {
+			text: file.name,
+			on: {
+				click: function (e) {
+					const attr = $(this).attr("input-id");
+					$("#" + attr).val("");
+					this.remove();
 				},
-				'input-id': inputId
-			});
-
+			},
+			"input-id": inputId,
+		});
 
 		if (file) {
-			$(this).siblings('.file-name').html('');
-			$(this).siblings('.file-name').append(fileName);
-			$(this).siblings('.file-remove').addClass('visible');
-			$(this).parents('form').find('.js__create-input').removeClass('uk-hidden');
-			$(this).parents('label').find('.custom-file').addClass('uk-hidden');
-			$('.file-remove').on('click', function(e) {
+			$(this).siblings(".file-name").html("");
+			$(this).siblings(".file-name").append(fileName);
+			$(this).siblings(".file-remove").addClass("visible");
+			$(this)
+				.parents("form")
+				.find(".js__create-input")
+				.removeClass("uk-hidden");
+			$(this).parents("label").find(".custom-file").addClass("uk-hidden");
+			$(".file-remove").on("click", function (e) {
 				e.preventDefault();
-				$(this).parent('label').remove();
+				$(this).parent("label").remove();
 			});
 		}
 	});
 
-
-	$('.js__create-input').on('click', function(e) {
+	$(".js__create-input").on("click", function (e) {
 		e.preventDefault();
 		let field = createInput();
-		$(this).parents('form').find('.file-box').append(field);
+		$(this).parents("form").find(".file-box").append(field);
 	});
-
 
 	/*______ Таймер App ______*/
 
@@ -347,7 +347,12 @@ $(function () {
 	/*______ Яндекс карта ______*/
 
 	if ($("div").is("#map")) {
-		ymaps.ready(init);
+		let map = document.createElement("script");
+		map.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+		map.onload = function () {
+			document.querySelector("body").insertAdjacentElement("afterbegin", map);
+			ymaps.ready(init);
+		};
 	}
 
 	function init() {
