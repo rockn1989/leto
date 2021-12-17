@@ -1,0 +1,133 @@
+{% extends "layouts/default.twig" %}
+{% set title="Мясо кур-несушек" %}
+{% set theme="theme-green" %}
+{% 
+	set data = {
+		bgURL: {
+			desk: 'img/media/main-banner-6-1440x730.png',
+			tablet: 'img/media/main-banner-6-960x487-tablet.png',
+			mob: 'img/media/main-banner-6-640x325-mob-xs.png'
+		},
+		title: 'Мясо кур-несушек <br> I сорт',
+		subtitle: 'Легкий и полезный продукт для поддержки здоровья',
+		flyBox: {
+			isset: true,
+			img: 'img/media/chicken-meat-box.png'
+		}
+	} 
+%}
+
+{% block content %}
+
+	{% include './includes/components/main-banner.twig' with {'data': data} %}
+	{% include './includes/components/advantages-section.twig' with {'theme': 'chicken'} %}
+	{% include './includes/components/advantages-h-section.twig' with {'theme': 'chicken'} %}
+
+	{% include './includes/components/typebox-section.twig' with {'theme': 'chicken'} %}
+	<section class="slider-section">
+		<div class="uk-container uk-container--small">
+			<h2 class="uk-text-center" uk-scrollspy="cls:slide-up;">Рецепт с курицей</h2>
+			<h3 class="uk-text-center uk-margin-medium-bottom">Просто и вкусно</h3>
+			<div class="custom-slider">
+				<div class="slider">
+					<div class="slide">
+						<article class="recipe-post recipe-post--big recipe-post--ellipse-3 uk-text-left">
+							<figure class="recipe-post__img">
+								<img data-src="img/media/recipes/recipe-7.png" alt="Вкусный омлет" uk-img>
+							</figure>
+							<div class="recipe-post__content">
+								<div class="recipe-post__title">
+									<a href="">
+										Салат с яйцом и авокадо</a>
+								</div>
+								<div class="recipe-post__short-desc">
+									Куриное яйцо, авокадо, салатный микс, подсолнечное/оливковое масло, соль, перец, лимонный сок
+								</div>
+								<a href="" class="green-link">Подробнее</a>
+							</div>
+						</article>
+					</div>
+					<div class="slide">
+						<article class="recipe-post recipe-post--big recipe-post--ellipse-3 uk-text-left">
+							<figure class="recipe-post__img">
+								<img data-src="img/media/recipes/recipe-7.png" alt="Вкусный омлет" uk-img>
+							</figure>
+							<div class="recipe-post__content">
+								<div class="recipe-post__title">
+									<a href="">
+										Салат с яйцом и авокадо</a>
+								</div>
+								<div class="recipe-post__short-desc">
+									Куриное яйцо, авокадо, салатный микс, подсолнечное/оливковое масло, соль, перец, лимонный сок
+								</div>
+								<a href="" class="green-link">Подробнее</a>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="slider__arrows">
+					<div class="slide-prev">
+						<svg width="154px" height="29px" class="slider-arrow">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-left"></use>
+						</svg>
+					</div>
+					<div class="slide-next">
+						<svg width="154px" height="29px" class="slider-arrow">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-right"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="slider-section wave-bg" uk-scrollspy="cls: wave-anim">
+		<div
+			class="uk-container uk-container--small">
+			<!-- begin composition-slider -->
+			<div class="custom-slider">
+				<div class="uk-container">
+					<div class="slider">
+						<div class="slide">
+							<img data-lazy="https://leto-group.ru/media/10_23042021.jpg" alt="Состав яйца">
+							<div class="custom-slider__text custom-slider__text--small">
+								<div class="title-h3">Зачем курице крылья?</div>
+								<p>
+									Крылья позволяют курице подниматься в воздух, как и любой другой птице.
+								</p>
+								<a href="" class="icon-chevron-right">Подробнее</a>
+							</div>
+						</div>
+						<div class="slide">
+							<img data-lazy="https://leto-group.ru/media/10_23042021.jpg" alt="Состав яйца">
+							<div class="custom-slider__text custom-slider__text--small">
+								<div class="title-h3">Зачем курице крылья?</div>
+								<p>
+									Крылья позволяют курице подниматься в воздух, как и любой другой птице.
+								</p>
+								<a href="" class="icon-chevron-right">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="slider__arrows">
+						<div class="slide-prev">
+							<svg width="154px" height="29px" class="slider-arrow">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-left"></use>
+							</svg>
+						</div>
+						<div class="slide-next">
+							<svg width="154px" height="29px" class="slider-arrow">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#big-arrow-right"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end composition-slider -->
+
+		</div>
+	</section>
+
+
+{% endblock %}

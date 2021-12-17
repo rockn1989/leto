@@ -186,3 +186,22 @@ ol.numeric-list {
 		}
 	}
 }
+
+.icon-chevron-right {
+	position: relative;
+	padding-right: 15px;
+	display: inline-block;
+	font-family: $mainFont !important;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 8px;
+		height: 8px;
+		border: 1px solid $green;
+		border-left: none;
+		border-top: none;
+		transform: translateY(-50%) rotate(-45deg);
+	}
+}

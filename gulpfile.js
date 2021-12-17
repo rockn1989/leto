@@ -201,7 +201,7 @@ function Imagemin() {
 		.pipe(
 			imagemin([
 				imagemin.optipng({ optimizationLevel: 3 }),
-				imagemin.jpegtran({ progressive: true }),
+				imagemin.mozjpeg({ progressive: true }),
 			])
 		)
 		.pipe(gulp.dest("build/app/img"));
