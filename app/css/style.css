@@ -4447,12 +4447,12 @@ main.main-container {
   transform: scale(0.5);
   border-radius: 50%;
   background-color: #ECE6E1;
-  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
-  transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
-  -o-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
-  -moz-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -moz-transform 0.3s;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -webkit-transform 0.3s, -moz-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  -o-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  -moz-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -moz-transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -webkit-transform 0.3s, -moz-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
 }
 
 .brands-slider .slider .slick-dots li button:before {
@@ -4795,12 +4795,12 @@ main.main-container {
   transform: scale(0.5);
   border-radius: 50%;
   background-color: #ECE6E1;
-  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
-  transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
-  -o-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
-  -moz-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -moz-transform 0.3s;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -webkit-transform 0.3s, -moz-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  transition: background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
+  -o-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  -moz-transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -moz-transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.2s ease-in, -webkit-transform 0.3s, -moz-transform 0.3s, -webkit-box-shadow 0.2s ease-in;
 }
 
 .tab-slider .slick-dots li button:before {
