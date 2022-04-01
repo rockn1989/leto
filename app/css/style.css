@@ -2345,6 +2345,7 @@ nav.nav {
   transform: translateX(-50%);
   z-index: 980;
   min-width: 320px;
+  text-align: center;
   -webkit-transition: bottom .35s linear;
   -o-transition: bottom .35s linear;
   -moz-transition: bottom .35s linear;
@@ -2360,6 +2361,7 @@ nav.nav {
 }
 
 .fly-box img {
+  max-height: 69vw;
   opacity: 1;
   -webkit-transition: opacity .5s, visibility .5s ease;
   -o-transition: opacity .5s, visibility .5s ease;

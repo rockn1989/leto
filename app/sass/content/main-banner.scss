@@ -144,6 +144,7 @@
 	transform: translateX(-50%);
 	z-index: 980;
 	min-width: 320px;
+	text-align: center;
 	transition: bottom .35s linear;
 	transition: opacity .5s, visibility .5s ease;
 	@media (min-width: $mob-xs) {
@@ -160,6 +161,7 @@
 		visibility: visible;
 	}
 	img {
+		max-height: 69vw;
 		opacity: 1;
 		transition: opacity .5s, visibility .5s ease;
 	}
